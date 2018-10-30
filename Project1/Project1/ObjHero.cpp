@@ -11,8 +11,8 @@ using namespace GameL;
 //イニシャライズ
 void CObjHero::Init()
 {
-	m_x = 0;
-	m_y = 0;
+	m_px = 0.0f;
+	m_py = 0.0f;
 	m_vx = 0.0f;
 	m_vy = 0.0f;
 }
@@ -47,8 +47,8 @@ void CObjHero::Action()
 	UnitVec(&m_vy, &m_vx);
 
 	//移動ベクトルを座標に加算する
-	m_x += m_vx * 5.0f;
-	m_y += m_vy * 5.0f;
+	m_px += m_vx * 5.0f;
+	m_py += m_vy * 5.0f;
 }
 
 //ドロー
@@ -68,10 +68,10 @@ void CObjHero::Draw()
 
 
 				//表示位置の設定
-	dst.m_top	= 0.0f +m_y;
-	dst.m_left	= 0.0f +m_x;
-	dst.m_right =32.0f +m_x;
-	dst.m_bottom=32.0f +m_y;
+	dst.m_top	= 0.0f +m_py;
+	dst.m_left	= 0.0f +m_px;
+	dst.m_right =32.0f +m_px;
+	dst.m_bottom=32.0f +m_py;
 
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
