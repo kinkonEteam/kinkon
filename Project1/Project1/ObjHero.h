@@ -14,9 +14,12 @@ public:
 	void Action();	//アクション
 	void Draw();	//ドロー
 private:
-					//主人公の位置と移動用
+//主人公の位置と移動用
 	float m_px;		//位置
 	float m_py;
 	float m_vx;		//移動ベクトル用変数
 	float m_vy;
+	float m_posture;//姿勢
+
+	int m_ani_time; //アニメーションフレーム動作間隔
 };
