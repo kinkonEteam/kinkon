@@ -2,6 +2,8 @@
 #include"GameL\DrawTexture.h"
 #include"GameHead.h"
 #include"ObjHero.h"
+#include "UtilityModule.h"
+#include "GameL\WinInputs.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -9,13 +11,44 @@ using namespace GameL;
 //イニシャライズ
 void CObjHero::Init()
 {
-
+	m_x = 0;
+	m_y = 0;
+	m_vx = 0.0f;
+	m_vy = 0.0f;
 }
 
 //アクション
 void CObjHero::Action()
 {
+	//ベクトル初期化
+	m_vx = 0.0f;
+	m_vy = 0.0f;
 
+	//主人公機の移動にベクトルを入れる
+	if (Input::GetVKey(VK_RIGHT) == true)
+	{
+		m_vx += 1.0f;
+	}
+	if (Input::GetVKey(VK_UP) == true)
+	{
+		m_vy -= 1.0f;
+	}
+	if (Input::GetVKey(VK_DOWN) == true)
+	{
+		m_vy += 1.0f;
+	}
+
+	if (Input::GetVKey(VK_LEFT) == true)
+	{
+		m_vx -= 1.0f;
+	}
+
+	//移動ベクトルの正規化
+	UnitVec(&m_vy, &m_vx);
+
+	//移動ベクトルを座標に加算する
+	m_x += m_vx * 5.0f;
+	m_y += m_vy * 5.0f;
 }
 
 //ドロー
@@ -29,15 +62,17 @@ void CObjHero::Draw()
 
 				//切り取り位置の設定
 	src.m_top	= 0.0f;
-	src.m_left	= 0.0f;
-	src.m_right	=32.0f;
-	src.m_bottom=32.0f;
+	src.m_left	= 48.0f;
+	src.m_right	=96.0f;
+	src.m_bottom=50.0f;
+
 
 				//表示位置の設定
-	dst.m_top	= 0.0f ;
-	dst.m_left	= 0.0f ;
-	dst.m_right =32.0f ;
-	dst.m_bottom=32.0f ;
+	dst.m_top	= 0.0f +m_y;
+	dst.m_left	= 0.0f +m_x;
+	dst.m_right =32.0f +m_x;
+	dst.m_bottom=32.0f +m_y;
+
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 
