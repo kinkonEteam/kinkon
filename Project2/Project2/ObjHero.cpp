@@ -18,7 +18,7 @@ void CObjHero::Init()
 
 	m_posture = 0.0f;	//正面(0.0f)左(1.0f) 右(2.0f) 背面(3.0f)
 	m_ani_time = 0;
-	m_ani_frame = 1;
+	m_ani_frame = 1;	//静止フレーム
 }
 
 //アクション
