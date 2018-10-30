@@ -63,6 +63,9 @@
     <ClCompile Include="GameL\WinInputs.cpp">
       <Filter>リソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="UtilityModule.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SceneMain.h">
@@ -115,6 +118,9 @@
     </ClInclude>
     <ClInclude Include="GameL\WinInputs.h">
       <Filter>リソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilityModule.h">
+      <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
