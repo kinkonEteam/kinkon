@@ -36,12 +36,19 @@ void CSceneMain::InitScene()
 	Audio::LoadAudio(0, L"", SOUND_TYPE::EFFECT);
 
 
-	//外部グラフィックを読みk味0番に登録(512×512ピクセル)
+	//外部グラフィックを読み込み0番に登録(512×512ピクセル)
 	Draw::LoadImage(L"桃太郎.png", 0,TEX_SIZE_512);
+
+	//外部グラフィックを読み込み1番に登録(512×512ピクセル)
+	Draw::LoadImage(L"アイテム.png", 1, TEX_SIZE_512);
 
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero();//オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 1);//マネージャに登録
+
+	//アイテムオブジェクト作成
+	CObjItem* i = new CObjItem();//オブジェクト作成
+	Objs::InsertObj(i, OBJ_ITEM, 1);//マネージャに登録
 
 }
 
