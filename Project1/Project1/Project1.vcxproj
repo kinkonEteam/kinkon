@@ -110,6 +110,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ObjEnemy.cpp" />
+    <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="GameL\Audio.cpp" />
     <ClCompile Include="GameL\DirectXDevice.cpp" />
     <ClCompile Include="GameL\Draw2DTex_Source.cpp" />
@@ -145,8 +147,6 @@
     <ClInclude Include="GameL\WICTextureLoader.h" />
     <ClInclude Include="GameL\WinInputs.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="ObjHero.h" />
-    <ClInclude Include="ObjItem.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="UtilityModule.h" />
   </ItemGroup>
