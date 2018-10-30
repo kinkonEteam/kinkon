@@ -35,20 +35,19 @@ void CObjHero::Action()
 		m_posture = 2.0f;
 		m_ani_time += 1;
 	}
-	if (Input::GetVKey(VK_UP) == true)	//↑
+	else if (Input::GetVKey(VK_UP) == true)	//↑
 	{
 		m_vy -= 1.0f;
 		m_posture = 3.0f;
 		m_ani_time += 1;
 	}
-	if (Input::GetVKey(VK_DOWN) == true)//↓
+	else if (Input::GetVKey(VK_DOWN) == true)//↓
 	{
 		m_vy += 1.0f;
 		m_posture = 0.0f;
 		m_ani_time += 1;
 	}
-
-	if (Input::GetVKey(VK_LEFT) == true)//←
+	else if (Input::GetVKey(VK_LEFT) == true)//←
 	{
 		m_vx -= 1.0f;
 		m_posture = 1.0f;
@@ -60,7 +59,7 @@ void CObjHero::Action()
 		m_ani_time = 0;		
 	}
 
-	if (m_ani_time > 6)		//アニメーション動作間隔
+	if (m_ani_time > 6)		//アニメーション動作間隔(※ここでアニメーション速度変更出来る)
 	{
 		m_ani_frame += 1;
 		m_ani_time = 0;
@@ -89,8 +88,8 @@ void CObjHero::Draw()
 
 				//切り取り位置の設定
 	src.m_top	=50.0f *  m_posture;
-	src.m_left  = 0.0f + AniData[m_ani_frame] * 48;
-	src.m_right	=48.0f + AniData[m_ani_frame] * 48;
+	src.m_left  = 0.0f + (AniData[m_ani_frame] * 48);
+	src.m_right	=48.0f + (AniData[m_ani_frame] * 48);
 	src.m_bottom=50.0f * (m_posture + 1);
 
 
