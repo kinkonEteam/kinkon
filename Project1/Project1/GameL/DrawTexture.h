@@ -1,4 +1,3 @@
-+
 #pragma once
 
 //STLデバッグ機能をOFFにする

@@ -10,10 +10,7 @@ class  CSceneTitle : public CScene
 public:
 	 CSceneTitle() {};
 	~CSceneTitle() {};
-	void Init();
-	void Action();
-	void Draw();
+	void InitScene(); //ゲームタイトルの初期化メソッド
+	void Scene();     //ゲームタイトルの実行中メソッド
 private:
-	void InitScene();
-	void Scene();
 };

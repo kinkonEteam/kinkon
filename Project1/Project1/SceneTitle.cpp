@@ -4,6 +4,7 @@
 
 //GameLで使用するヘッダー
 #include"GameL\SceneObjManager.h"
+#include"GameL\DrawFont.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -12,25 +13,19 @@ using namespace GameL;
 #include"SceneMain.h"
 #include"GameHead.h"
 
-//コントラスタ
-CSceneTitle::CSceneTitle()
-{
-
-}
-
-//デストラクタ
-CSceneTitle::~CSceneTitle()
-{
-
-}
 
 //ゲームメイン初期化メソッド
 void CSceneTitle::InitScene()
 {
+	//出力させる文字のグラフィック
+	Font::SetStrTex(L"桃太郎最強伝説");
 
+	//タイトルオブジェクト作成
+	CObjTitle* obj = new CObjTitle();
+	Objs::InsertObj(obj, OBJ_TITLE, 10);
 }
 
-//ゲームメイン
+//ゲームメイン実行中メソッド
 void CSceneTitle::Scene()
 {
 
