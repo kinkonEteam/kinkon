@@ -125,6 +125,7 @@
     <ClCompile Include="GameL\WICTextureLoader.cpp" />
     <ClCompile Include="GameL\WinInputs.cpp" />
     <ClCompile Include="ObjHero.cpp" />
+    <ClCompile Include="ObjItem.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="UtilityModule.cpp" />
   </ItemGroup>
@@ -145,6 +146,7 @@
     <ClInclude Include="GameL\WinInputs.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="ObjHero.h" />
+    <ClInclude Include="ObjItem.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="UtilityModule.h" />
   </ItemGroup>
