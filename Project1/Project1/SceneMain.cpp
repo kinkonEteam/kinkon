@@ -28,7 +28,7 @@ CSceneMain::~CSceneMain()
 //ゲームメイン初期化メソッド
 void CSceneMain::InitScene()
 {
-
+	
 }
 
 //ゲームメイン実行中メソッド
