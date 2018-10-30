@@ -38,10 +38,10 @@ void CObjDog::Draw()
 	src.m_bottom = 31.0f;
 
 	//ï\é¶à íuÇÃê›íË
-	dst.m_top = 128.0f;
-	dst.m_left = 128.0f;
-	dst.m_right = 32.0f + 128.0f;
-	dst.m_bottom = 32.0f + 128.0f;
+	dst.m_top = 100.0f;
+	dst.m_left = 100.0f;
+	dst.m_right = 32.0f + 100.0f;
+	dst.m_bottom = 32.0f + 100.0f;
 
 	//ï`âÊ
 	Draw::Draw(2, &src, &dst, c, 0.0f);

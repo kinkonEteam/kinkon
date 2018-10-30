@@ -54,8 +54,8 @@ void CSceneMain::InitScene()
 	Objs::InsertObj(i, OBJ_ITEM, 1);//マネージャに登録
 
 	//犬オブジェクト作成
-	CObjDog* obj = new CObjDog();//オブジェクト作成
-	Objs::InsertObj(obj, OBJ_DOG, 2);//マネージャに登録
+	CObjDog* D = new CObjDog();//オブジェクト作成
+	Objs::InsertObj(D, OBJ_DOG, 2);//マネージャに登録
 
 }
 
