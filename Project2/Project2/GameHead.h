@@ -9,11 +9,6 @@ enum OBJ_NAME
 	OBJ_HERO,
 	OBJ_ITEM,
 	OBJ_ENEMY,
-	//ゲームで使うオブジェクトの名前
-	//OBJ_○○,と表記
-	OBJ_HERO,
-	OBJ_ITEM,
-
 };
 //------------------------------------------------
 
