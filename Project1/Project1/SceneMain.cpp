@@ -32,6 +32,10 @@ void CSceneMain::InitScene()
 {
 	//外部グラフィックを読みk味0番に登録(512×512ピクセル)
 	Draw::LoadImage(L"桃太郎.png", 0,TEX_SIZE_512);
+
+	//主人公オブジェクト作成
+	CObjHero* obj = new CObjHero();//オブジェクト作成
+	Objs::InsertObj(obj, OBJ_HERO, 1);//マネージャに登録
 }
 
 //ゲームメイン実行中メソッド
