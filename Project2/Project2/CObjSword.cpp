@@ -6,6 +6,14 @@
 //使用するネームスペース
 using namespace GameL;
 
+//コンストラクタ
+CObjSword::CObjSword(float x, float y, int m_pos)//渡されるだけの変数
+{//渡された位置と向きデータをDrawで使える変数に代入
+	m_x = x;
+	m_y = y;
+	pos = m_pos;
+}
+
 //イニシャライズ
 void CObjSword::Init()
 {
@@ -31,14 +39,14 @@ void CObjSword::Draw()
 				//切り取り位置の設定
 	src.m_top	= 0.0f;
 	src.m_left	= 0.0f;
-	src.m_right =50.0f;
+	src.m_right =32.0f;
 	src.m_bottom=40.0f;
 
 	//表示位置の設定
-	dst.m_top	= 0.0f;
-	dst.m_left	= 0.0f;
-	dst.m_right =50.0f;
-	dst.m_bottom=40.0f;
+	dst.m_top	= 0.0f + m_y;
+	dst.m_left	= 0.0f + m_x;
+	dst.m_right =32.0f + m_x;
+	dst.m_bottom=40.0f + m_y;
 
 	//描画
 	Draw::Draw(3, &src, &dst, c, 0.0f);

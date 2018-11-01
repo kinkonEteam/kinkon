@@ -2,8 +2,8 @@
 #include"GameL\DrawTexture.h"
 #include"GameHead.h"
 #include"ObjHero.h"
-#include "UtilityModule.h"
-#include "GameL\WinInputs.h"
+#include"UtilityModule.h"
+#include"GameL\WinInputs.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -27,6 +27,14 @@ void CObjHero::Action()
 	//ベクトル初期化
 	m_vx = 0.0f;
 	m_vy = 0.0f;
+
+	//攻撃の入力判定と処理
+	if (Input::GetVKey('A') == true)
+	{
+		//剣オブジェクト作成
+		CObjSword* swd = new CObjSword(m_px,m_py, m_posture);	//剣オブジェクト作成
+		Objs::InsertObj(swd, OBJ_SWORD, 3);	//マネージャーに登録
+	}
 
 	//主人公の移動にベクトルを入れる
 	if (Input::GetVKey(VK_RIGHT) == true)//→
@@ -87,10 +95,10 @@ void CObjHero::Draw()
 	RECT_F dst; //描画先表示位置
 
 				//切り取り位置の設定
-	src.m_top	=50.0f *  m_posture;
+	src.m_top = 50.0f *  m_posture - 1;			//微調整-1
 	src.m_left  = 0.0f + (AniData[m_ani_frame] * 48);
 	src.m_right	=48.0f + (AniData[m_ani_frame] * 48);
-	src.m_bottom=50.0f * (m_posture + 1);
+	src.m_bottom = 50.0f * (m_posture + 1) - 3;	//微調整-3
 
 				//表示位置の設定
 	dst.m_top	= 0.0f +m_py;
