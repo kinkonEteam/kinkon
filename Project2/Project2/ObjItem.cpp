@@ -3,6 +3,7 @@
 #include "GameL\WinInputs.h"
 #include "GameL\SceneManager.h"
 #include "GameL\DrawFont.h"
+#include "GameL\HitBoxManager.h"
 
 #include <stdlib.h>
 #include <time.h>
@@ -16,14 +17,43 @@ using namespace GameL;
 //イニシャライズ
 void CObjItem::Init()
 {
-	srand(time(NULL));
-	m_id = ITEM_PEACH + rand() % ITEM_CLUB;
+	m_x = 128; //当たり判定（場所）（仮）
+	m_y = 128;	//当たり判定（場所）（仮）
+
+	srand(time(NULL));		
+	m_id = ITEM_PEACH + rand() % ITEM_CLUB;	//0番（桃）から6番（棍棒）まででランダムにm_idに代入
+
+	//アイテムのヒットボックスを作成
+	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_ITEM, OBJ_ITEM, 1);
 }
 
 //アクション
 void CObjItem::Action()
 {
+	switch (m_id)
+	{
+	case ITEM_PEACH:
 
+		break;
+	case ITEM_YELLOW_PEACH:
+
+		break;
+	case ITEM_PLUM:
+
+		break;
+	case ITEM_HORN:
+
+		break;
+	case ITEM_GOLD_BULLION:
+
+		break;
+	case ITEM_SILVER_BULLION:
+
+		break;
+	case ITEM_CLUB:
+
+		break;
+	}
 }
 
 void CObjItem::Draw()

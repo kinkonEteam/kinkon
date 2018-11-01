@@ -24,6 +24,8 @@ public:
 	void Action();	//アクション
 	void Draw();	//ドロー
 private:
+	float m_x;	//アイテムヒットボックス用
+	float m_y;	//アイテムヒットボックス用
 	int m_id;	//アイテムID
 
 
