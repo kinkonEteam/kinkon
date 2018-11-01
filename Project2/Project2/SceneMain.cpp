@@ -46,7 +46,7 @@ void CSceneMain::InitScene()
 	Draw::LoadImage(L"OTOMO.GIF", 2, TEX_SIZE_512);
 
 	//外部グラフィックを読み込み3番に登録(512×512ピクセル)
-	Draw::LoadImage(L"testimage.png", 3, TEX_SIZE_512);
+	Draw::LoadImage(L"Sword.png", 3, TEX_SIZE_512);
 	
 	
 	//主人公オブジェクト作成

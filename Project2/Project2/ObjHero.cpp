@@ -7,6 +7,25 @@
 
 //使用するネームスペース
 using namespace GameL;
+//位置変更用
+void CObjHero::SetX(float x)
+{
+	m_px = x;
+}
+void CObjHero::SetY(float y)
+{
+	m_py = y;
+}
+//位置取得用
+float CObjHero::GetX()
+{
+	return m_px;
+}
+float CObjHero::GetY()
+{
+	return m_py;
+}
+
 
 //イニシャライズ
 void CObjHero::Init()
@@ -19,6 +38,7 @@ void CObjHero::Init()
 	m_posture = 0.0f;	//正面(0.0f) 左(1.0f) 右(2.0f) 背面(3.0f)
 	m_ani_time = 0;
 	m_ani_frame = 1;	//静止フレーム
+	m_f = true;			//攻撃制御
 }
 
 //アクション
@@ -28,13 +48,18 @@ void CObjHero::Action()
 	m_vx = 0.0f;
 	m_vy = 0.0f;
 
-	//攻撃の入力判定と処理
-	if (Input::GetVKey('A') == true)
-	{
-		//剣オブジェクト作成
-		CObjSword* swd = new CObjSword(m_px,m_py, m_posture);	//剣オブジェクト作成
-		Objs::InsertObj(swd, OBJ_SWORD, 3);	//マネージャーに登録
+	//攻撃の入力判定、押しっぱなし制御
+	if (Input::GetVKey('A') == true){
+		if (m_f == true) {
+			//剣オブジェクト作成		 //ここで剣に座標と向きを渡す
+			CObjSword* swd = new CObjSword(m_px, m_py, m_posture);	//剣オブジェクト作成
+			Objs::InsertObj(swd, OBJ_SWORD, 3);	//マネージャーに登録
+
+			m_f = false;
+		}
 	}
+	else
+		m_f = true;
 
 	//主人公の移動にベクトルを入れる
 	if (Input::GetVKey(VK_RIGHT) == true)//→
