@@ -95,16 +95,16 @@ void CObjHero::Draw()
 	RECT_F dst; //描画先表示位置
 
 				//切り取り位置の設定
-	src.m_top = 50.0f *  m_posture - 1;			//微調整-1
+	src.m_top   =50.0f *  m_posture - 1;		//微調整-1
 	src.m_left  = 0.0f + (AniData[m_ani_frame] * 48);
 	src.m_right	=48.0f + (AniData[m_ani_frame] * 48);
-	src.m_bottom = 50.0f * (m_posture + 1) - 3;	//微調整-3
+	src.m_bottom=50.0f * (m_posture + 1) - 3;	//微調整-3
 
 				//表示位置の設定
-	dst.m_top	= 0.0f +m_py;
-	dst.m_left	= 0.0f +m_px;
-	dst.m_right =32.0f +m_px;
-	dst.m_bottom=32.0f +m_py;
+	dst.m_top   = 0.0f + m_py;
+	dst.m_left	= 0.0f + m_px;
+	dst.m_right =32.0f + m_px;
+	dst.m_bottom=32.0f + m_py;
 
 	Draw::Draw(0, &src, &dst, c, 0.0f);
 

@@ -3,6 +3,7 @@
 #include "GameL\DrawTexture.h"
 //使用するネームスペース
 using namespace GameL;
+
 bool UnitVec(float* vx, float* vy)
 {
 	//ベクトルの長さを求める(三平方の定理)
@@ -22,6 +23,16 @@ bool UnitVec(float* vx, float* vy)
 		(*vx) = 1.0f / r*(*vx);
 		(*vy) = 1.0f / r*(*vy);
 	}
+	//計算成功
+	return true;
+}
+
+bool Trade(float *a, float b)
+{
+	float c = 0;
+	c = *a;
+	*a = b;
+	b = c;
 	//計算成功
 	return true;
 }
