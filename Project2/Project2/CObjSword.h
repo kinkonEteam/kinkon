@@ -8,10 +8,13 @@ using namespace GameL;
 class CObjSword :public CObj
 {
 public:
-	CObjSword() {};
+	CObjSword(float x, float y,int m_pos);//コンストラクタ
 	~CObjSword() {};
 	void Init();	//イニシャライズ
 	void Action();	//アクション
 	void Draw();	//ドロー
 private:
+	float m_x;		//位置
+	float m_y;
+	int pos;
 };

@@ -50,20 +50,16 @@ void CSceneMain::InitScene()
 	
 	
 	//主人公オブジェクト作成
-	CObjHero* obj = new CObjHero();//オブジェクト作成
-	Objs::InsertObj(obj, OBJ_HERO, 1);//マネージャに登録
+	CObjHero* obj = new CObjHero();		//オブジェクト作成
+	Objs::InsertObj(obj, OBJ_HERO, 1);	//マネージャに登録
 
 	//アイテムオブジェクト作成
-	CObjItem* i = new CObjItem();//オブジェクト作成
-	Objs::InsertObj(i, OBJ_ITEM, 1);//マネージャに登録
+	CObjItem* i = new CObjItem();		//オブジェクト作成
+	Objs::InsertObj(i, OBJ_ITEM, 1);	//マネージャに登録
 
 	//犬オブジェクト作成
-	CObjDog* D = new CObjDog();//オブジェクト作成
-	Objs::InsertObj(D, OBJ_DOG, 2);//マネージャに登録
-
-	//オブジェクト作成
-	CObjSword* sod = new CObjSword();//オブジェクト作成
-	Objs::InsertObj(sod, OBJ_SWORD, 3);//マネージャに登録
+	CObjDog* D = new CObjDog();			//オブジェクト作成
+	Objs::InsertObj(D, OBJ_DOG, 2);		//マネージャに登録
 }
 
 //ゲームメイン実行中メソッド
