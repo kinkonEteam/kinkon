@@ -110,6 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CObjSword.h" />
     <ClInclude Include="ObjDog.h" />
     <ClInclude Include="GameHead.h" />
     <ClInclude Include="GameL\Audio.h" />
@@ -133,6 +134,7 @@
     <ClInclude Include="UtilityModule.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CObjSword.cpp" />
     <ClCompile Include="ObjDog.cpp" />
     <ClCompile Include="GameL\Audio.cpp" />
     <ClCompile Include="GameL\DirectXDevice.cpp" />

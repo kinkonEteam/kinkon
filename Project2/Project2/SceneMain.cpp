@@ -44,6 +44,10 @@ void CSceneMain::InitScene()
 	
 	//外部グラフィックを読み込み2番に登録(512×512ピクセル)
 	Draw::LoadImage(L"OTOMO.GIF", 2, TEX_SIZE_512);
+
+	//外部グラフィックを読み込み3番に登録(512×512ピクセル)
+	Draw::LoadImage(L"testimage.png", 3, TEX_SIZE_512);
+	
 	
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero();//オブジェクト作成
@@ -57,6 +61,9 @@ void CSceneMain::InitScene()
 	CObjDog* D = new CObjDog();//オブジェクト作成
 	Objs::InsertObj(D, OBJ_DOG, 2);//マネージャに登録
 
+	//オブジェクト作成
+	CObjSword* sod = new CObjSword();//オブジェクト作成
+	Objs::InsertObj(sod, OBJ_SWORD, 3);//マネージャに登録
 }
 
 //ゲームメイン実行中メソッド

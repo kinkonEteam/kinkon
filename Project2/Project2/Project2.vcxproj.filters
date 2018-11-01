@@ -78,6 +78,9 @@
     <ClInclude Include="ObjDog.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="CObjSword.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ObjEnemy.cpp">
@@ -138,6 +141,9 @@
       <Filter>リソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="ObjDog.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjSword.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
