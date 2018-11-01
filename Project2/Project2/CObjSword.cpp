@@ -67,25 +67,6 @@ void CObjSword::Draw()
 	dst.m_left	=(  0.0f + m_x) + (32 * px);
 	dst.m_right =( 32.0f + m_x) + (32 * px);
 	dst.m_bottom=( 32.0f + m_y) + (32 * py);
-
-	//ålŒöŒü‚«‚Å•\¦‚·‚éŒ•‚ğ‰ñ“]
-	if (pos == 0)     //«
-	{
-		Trade(&dst.m_top, dst.m_left);
-		Trade(&dst.m_bottom, dst.m_right);
-	}
-	else if (pos == 1)//©
-	{
-		
-	}
-	else if (pos == 2)//¨
-	{
-		
-	}
-	else               //ª
-	{
-		
-	}
 		
 	//•`‰æ
 	Draw::Draw(3, &src, &dst, c, 0.0f);

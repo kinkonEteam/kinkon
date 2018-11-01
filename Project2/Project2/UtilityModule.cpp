@@ -26,13 +26,3 @@ bool UnitVec(float* vx, float* vy)
 	//ŒvZ¬Œ÷
 	return true;
 }
-
-bool Trade(float *a, float b)
-{
-	float c = 0;
-	c = *a;
-	*a = b;
-	b = c;
-	//ŒvZ¬Œ÷
-	return true;
-}
