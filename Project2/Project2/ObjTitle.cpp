@@ -1,7 +1,7 @@
 //使用するヘッダーファイル
 #include"GameL\DrawFont.h"
 #include"GameL\WinInputs.h"
-#include"GameL\SceneManager.h"
+#include"GameL\SceneObjManager.h"
 
 #include"GameHead.h"
 #include"ObjTitle.h"

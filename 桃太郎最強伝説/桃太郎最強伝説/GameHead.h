@@ -69,6 +69,7 @@ enum ITEM_ID
 //------------------------------------------------
 
 //ゲームシーンオブジェクトヘッダ------------------
+#include "SceneTitle.h"
 #include "ObjMap1.h"
 #include "ObjMap2.h"
 #include "ObjMap3.h"
@@ -76,26 +77,28 @@ enum ITEM_ID
 #include "ObjMap5.h"
 #include "ObjBoss.h"
 #include "ObjHero.h"
-#include"ObjItem.h"
-#include"ObjDog.h"
-#include"CObjSword.h"
-#include"ObjEnemy.h"
-#include"ObjTite.h"
+#include "ObjItem.h"
+#include "ObjDog.h"
+#include "CObjSword.h"
+#include "ObjEnemy.h"
+#include "ObjTite.h"
 
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
+
 #include "Scenefloor1.h"
 #include "Scenefloor2.h"
 #include "Scenefloor3.h"
 #include "Scenefloor4.h"
 #include "Scenefloor5.h"
+
 #include "SceneMain.h"
-#include"SceneTitle.h"
+
 
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
 //ゲーム開始時のシーンクラス登録
-#define SET_GAME_START  CSceneTtile
+#define SET_GAME_START  CSceneTitle
 //-----------------------------------------------
