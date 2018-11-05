@@ -4,6 +4,7 @@
 #include"ObjHero.h"
 #include "UtilityModule.h"
 #include "GameL\WinInputs.h"
+#include "GameL\HitBoxManager.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -16,9 +17,14 @@ void CObjHero::Init()
 	m_vx = 0.0f;		//移動ベクトル
 	m_vy = 0.0f;
 
+	m_hp = 5;				//初期HP
+
 	m_posture = 0.0f;	//正面(0.0f)左(1.0f) 右(2.0f) 背面(3.0f)
 	m_ani_time = 0;
 	m_ani_frame = 1;	//静止フレーム
+
+						//HitBox作成とサイズ、エレメント、オブジェクトを設定
+	Hits::SetHitBox(this, m_px, m_py, 50, 50, ELEMENT_PLAYER, OBJ_HERO, 1);
 }
 
 //アクション
@@ -27,6 +33,23 @@ void CObjHero::Action()
 	//ベクトル初期化
 	m_vx = 0.0f;
 	m_vy = 0.0f;
+
+	
+	if (Input::GetVKey('A') == true) //攻撃
+	{
+		if (m_f == true)
+		{
+			//剣オブジェクト作成
+			CObjSword* obj = new CObjSword(m_px, m_py, m_posture); //弾丸オブジェクト作成
+			Objs::InsertObj(obj, OBJ_SWORD, 100);//弾丸オブジェクトをマネージャーに登録
+
+			m_f = false;
+		}
+	}
+	else
+	{
+		m_f = true;
+	}
 
 	//主人公の移動にベクトルを入れる
 	if (Input::GetVKey(VK_RIGHT) == true)//→
@@ -108,6 +131,24 @@ void CObjHero::Action()
 		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vx, &m_vy,
 		&m_block_type
 	);*/
+
+	//HitBoxの内容を更新
+	CHitBox*hit = Hits::GetHitBox(this);
+	hit->SetPos(m_px, m_py);
+
+	if (hit->CheckObjNameHit(OBJ_HERO) != nullptr)
+	{
+		m_hp -= 1;
+	}
+
+	//HPが0になったら破棄
+	if (m_hp <= 0)
+	{
+		this->SetStatus(false);
+		Hits::DeleteHitBox(this);
+
+		/*Scene::SetScene(new CSceneClear());*/
+	}
 }
 
 //ドロー
