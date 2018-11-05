@@ -132,7 +132,10 @@
     <ClCompile Include="SceneMain.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="E:\D\STG\STG\SceneTitle.cpp">
+    <ClCompile Include="..\..\Project2\Project2\ObjTitle.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Project2\Project2\SceneTitle.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -236,7 +239,10 @@
     <ClInclude Include="SceneMain.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="E:\D\STG\STG\SceneTitle.h">
+    <ClInclude Include="E:\D\STG\STG\ObjTitle.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Project2\Project2\SceneTitle.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>

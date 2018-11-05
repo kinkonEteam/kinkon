@@ -110,8 +110,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Project2\Project2\ObjTitle.cpp" />
+    <ClCompile Include="..\..\Project2\Project2\SceneTitle.cpp" />
     <ClCompile Include="CObjSword.cpp" />
-    <ClCompile Include="E:\D\STG\STG\SceneTitle.cpp" />
     <ClCompile Include="ObjBoss.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -157,8 +158,9 @@
     <ClCompile Include="UtilityModule.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Project2\Project2\SceneTitle.h" />
     <ClInclude Include="CObjSword.h" />
-    <ClInclude Include="E:\D\STG\STG\SceneTitle.h" />
+    <ClInclude Include="E:\D\STG\STG\ObjTitle.h" />
     <ClInclude Include="ObjBoss.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>
