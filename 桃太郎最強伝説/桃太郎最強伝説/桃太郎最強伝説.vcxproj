@@ -111,14 +111,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CObjSword.cpp" />
-    <ClCompile Include="E:\D\STG\STG\SceneTitle.cpp" />
     <ClCompile Include="ObjBoss.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ObjDog.cpp" />
     <ClCompile Include="ObjEnemy.cpp" />
+    <ClCompile Include="ObjEnemy2.cpp" />
+    <ClCompile Include="ObjEnemy3.cpp" />
     <ClCompile Include="ObjHero.cpp" />
     <ClCompile Include="ObjItem.cpp" />
+    <ClCompile Include="ObjTitle.cpp" />
     <ClCompile Include="Scenefloor2.cpp" />
     <ClCompile Include="GameL\Audio.cpp" />
     <ClCompile Include="GameL\DirectXDevice.cpp" />
@@ -154,18 +156,21 @@
     <ClCompile Include="Scenefloor4.cpp" />
     <ClCompile Include="Scenefloor5.cpp" />
     <ClCompile Include="SceneMain.cpp" />
+    <ClCompile Include="SceneTitle.cpp" />
     <ClCompile Include="UtilityModule.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CObjSword.h" />
-    <ClInclude Include="E:\D\STG\STG\SceneTitle.h" />
     <ClInclude Include="ObjBoss.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ObjDog.h" />
     <ClInclude Include="ObjEnemy.h" />
+    <ClInclude Include="ObjEnemy2.h" />
+    <ClInclude Include="ObjEnemy3.h" />
     <ClInclude Include="ObjHero.h" />
     <ClInclude Include="ObjItem.h" />
+    <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="Scenefloor4.h" />
     <ClInclude Include="Scenefloor2.h" />
     <ClInclude Include="GameHead.h" />
@@ -202,6 +207,7 @@
     <ClInclude Include="Scenefloor3.h" />
     <ClInclude Include="Scenefloor5.h" />
     <ClInclude Include="SceneMain.h" />
+    <ClInclude Include="SceneTitle.h" />
     <ClInclude Include="UtilityModule.h" />
   </ItemGroup>
   <ItemGroup>
