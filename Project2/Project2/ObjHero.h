@@ -32,4 +32,6 @@ private:
 	int m_ani_frame;//•`‰æƒtƒŒ[ƒ€
 
 	bool m_f;		//UŒ‚§Œä—p(true‚©false‚¾‚¯)
+
+	int m_hp;		//HP
 };

@@ -21,6 +21,6 @@ private:
 	int m_sy;
 
 	int m_ani_time; //アニメーションタイム
-	int m_ani_frame;//アニメーションフレーム
+	int m_ani_frame;//フレーム
 	int m_s;		//ani_timeを徐々に加速させる変数
 };

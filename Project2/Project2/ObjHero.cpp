@@ -4,6 +4,7 @@
 #include"ObjHero.h"
 #include"UtilityModule.h"
 #include"GameL\WinInputs.h"
+#include"GameL\HitBoxManager.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -35,10 +36,15 @@ void CObjHero::Init()
 	m_vx = 0.0f;		//移動ベクトル
 	m_vy = 0.0f;
 
+	m_hp = 5;			//初期HP５
+
 	m_posture = 0.0f;	//正面(0.0f) 左(1.0f) 右(2.0f) 背面(3.0f)
 	m_ani_time = 0;
 	m_ani_frame = 1;	//静止フレーム
 	m_f = true;			//攻撃制御
+
+			//HitBox作成座標x,yとサイズx,y、エレメントとオブジェクトを設定
+	Hits::SetHitBox(this, m_px, m_py, 32, 32, ELEMENT_PLAYER, OBJ_HERO, 1);
 }
 
 //アクション
@@ -107,6 +113,26 @@ void CObjHero::Action()
 	//移動ベクトルを座標に加算する(※ここで移動速度変更出来る)
 	m_px += m_vx * 2.0f;			
 	m_py += m_vy * 2.0f;
+
+	//HitBoxの内容を更新
+	CHitBox*hit = Hits::GetHitBox(this);
+	hit->SetPos(m_px, m_py);
+
+	//弾丸と接触したらHPを減らす
+	if (0/*hit->CheckObjNameHit(OBJ_BULLET) != nullptr*/)
+	{
+		m_hp -= 1;
+	}
+
+	//HPが0になったら破棄
+	if (m_hp <= 0)
+	{
+		this->SetStatus(false);
+		Hits::DeleteHitBox(this);
+
+		//クリアシーンに移動
+		//Scene::SetScene(new CSceneClear());
+	}
 }
 
 //ドロー

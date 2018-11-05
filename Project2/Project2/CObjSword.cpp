@@ -17,11 +17,12 @@ CObjSword::CObjSword(float x, float y, int pos)//渡されるだけの変数
 //イニシャライズ
 void CObjSword::Init()
 {
-	m_sx = 0;
+	m_sx = 0;			//Swordの座標	
 	m_sy = 0;
-	m_ani_time = 0;
-	m_ani_frame = 0;
-	m_s = 1;
+
+	m_ani_time = 0;		//アニメーションタイム
+	m_ani_frame = 0;	//フレーム
+	m_s = 1;			//アニメーション緩急
 }
 
 //アクション
