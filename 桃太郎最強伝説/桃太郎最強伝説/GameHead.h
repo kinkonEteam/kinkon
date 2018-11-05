@@ -19,6 +19,7 @@ enum OBJ_NAME
 	OBJ_ENEMY2,
 	OBJ_ENEMY3,
 	OBJ_DOG,
+
 	OBJ_TITLE,
 };
 //------------------------------------------------
