@@ -16,7 +16,11 @@ enum OBJ_NAME
 	OBJ_SWORD,
 	OBJ_ITEM,
 	OBJ_ENEMY,
+	OBJ_ENEMY2,
+	OBJ_ENEMY3,
 	OBJ_DOG,
+
+	OBJ_TITLE,
 };
 //------------------------------------------------
 
@@ -78,6 +82,9 @@ enum ITEM_ID
 #include"ObjDog.h"
 #include"CObjSword.h"
 #include"ObjEnemy.h"
+#include"ObjEnemy2.h"
+#include"ObjEnemy3.h"
+#include"ObjTitle.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -87,9 +94,10 @@ enum ITEM_ID
 #include "Scenefloor4.h"
 #include "Scenefloor5.h"
 #include "SceneMain.h"
+#include "SceneTitle.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
 //ゲーム開始時のシーンクラス登録
-#define SET_GAME_START  CSceneMain
+#define SET_GAME_START  CSceneTitle
 //-----------------------------------------------
