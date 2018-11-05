@@ -27,6 +27,7 @@ private:
 	float m_x;	//アイテムヒットボックス用
 	float m_y;	//アイテムヒットボックス用
 	int m_id;	//アイテムID
+	int pb;
 
 
 };

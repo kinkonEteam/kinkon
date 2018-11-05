@@ -83,10 +83,10 @@ void CObjSword::Draw()
 	src.m_bottom=32.0f + (32.0f*m_pos);
 
 	//ï\é¶à íuÇÃê›íË
-	dst.m_top	=(  0.0f + m_y) + (32 * m_sy);
-	dst.m_left	=(  0.0f + m_x) + (32 * m_sx);
-	dst.m_right =( 32.0f + m_x) + (32 * m_sx);
-	dst.m_bottom=( 32.0f + m_y) + (32 * m_sy);
+	dst.m_top	=(  0.0f + m_y) + (50.0f * m_sy);
+	dst.m_left	=(  0.0f + m_x) + (50.0f * m_sx);
+	dst.m_right =( 50.0f + m_x) + (50.0f * m_sx);
+	dst.m_bottom=( 50.0f + m_y) + (50.0f * m_sy);
 		
 	//ï`âÊ
 	Draw::Draw(3, &src, &dst, c, 0.0f);
