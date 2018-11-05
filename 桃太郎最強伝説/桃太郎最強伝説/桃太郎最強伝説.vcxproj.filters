@@ -129,9 +129,6 @@
     <ClCompile Include="ObjItem.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="SceneMain(1).cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="SceneMain.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -240,12 +237,6 @@
   <ItemGroup>
     <None Include="GameL\DirectXTex.inl">
       <Filter>リソース ファイル</Filter>
-    </None>
-    <None Include="Project2.vcxproj">
-      <Filter>ソース ファイル</Filter>
-    </None>
-    <None Include="Project2.vcxproj.filters">
-      <Filter>ソース ファイル</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

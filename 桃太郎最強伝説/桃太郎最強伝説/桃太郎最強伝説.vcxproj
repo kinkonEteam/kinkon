@@ -152,7 +152,6 @@
     <ClCompile Include="Scenefloor3.cpp" />
     <ClCompile Include="Scenefloor4.cpp" />
     <ClCompile Include="Scenefloor5.cpp" />
-    <ClCompile Include="SceneMain(1).cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="UtilityModule.cpp" />
   </ItemGroup>
@@ -205,8 +204,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="GameL\DirectXTex.inl" />
-    <None Include="Project2.vcxproj" />
-    <None Include="Project2.vcxproj.filters" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="GameL\DirectXTex.lib" />

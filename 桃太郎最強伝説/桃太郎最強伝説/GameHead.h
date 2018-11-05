@@ -13,6 +13,10 @@ enum OBJ_NAME
 	OBJ_MAP5,
 	OBJ_BOSS,
 	OBJ_HERO,
+	OBJ_SWORD,
+	OBJ_ITEM,
+	OBJ_ENEMY,
+	OBJ_DOG,
 };
 //------------------------------------------------
 
@@ -46,9 +50,16 @@ struct UserData
 
 
 //ゲーム内で使用されるグローバル変数・定数・列挙--
-
-
-
+enum ITEM_ID
+{
+	ITEM_PEACH,				//アイテム　桃
+	ITEM_YELLOW_PEACH,		//アイテム　黄桃
+	ITEM_PLUM,				//アイテム　すもも
+	ITEM_HORN,				//アイテム　つの
+	ITEM_GOLD_BULLION,		//アイテム　金の延べ棒
+	ITEM_SILVER_BULLION,	//アイテム　銀の延べ棒
+	ITEM_CLUB,				//アイテム　棍棒
+};
 //------------------------------------------------
 //ゲーム内で使用するクラスヘッダ------------------
 
@@ -63,6 +74,10 @@ struct UserData
 #include "ObjMap5.h"
 #include "ObjBoss.h"
 #include "ObjHero.h"
+#include"ObjItem.h"
+#include"ObjDog.h"
+#include"CObjSword.h"
+#include"ObjEnemy.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -71,9 +86,10 @@ struct UserData
 #include "Scenefloor3.h"
 #include "Scenefloor4.h"
 #include "Scenefloor5.h"
+#include "SceneMain.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
 //ゲーム開始時のシーンクラス登録
-#define SET_GAME_START  CScenefloor1
+#define SET_GAME_START  CSceneMain
 //-----------------------------------------------
