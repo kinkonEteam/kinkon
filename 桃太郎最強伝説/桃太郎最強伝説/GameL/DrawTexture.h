@@ -21,6 +21,7 @@ namespace GameL
 	enum TEX_SIZE
 	{
 		TEX_SIZE_141_47 = 141 * 47,
+		TEX_SIZE_151_200 = 151 * 200,
 		TEX_SIZE_64   =	  64,
 		TEX_SIZE_128  =	 128,
 		TEX_SIZE_145_201 =145 * 201,
