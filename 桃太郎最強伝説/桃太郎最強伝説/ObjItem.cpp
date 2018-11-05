@@ -20,9 +20,18 @@ void CObjItem::Init()
 	m_x = 128; //当たり判定（場所）（仮）
 	m_y = 128;	//当たり判定（場所）（仮）
 
-	srand(time(NULL));		
-	m_id = rand() % 100;	//0～100
+	srand((unsigned)time(NULL)); // 乱数の初期化
 
+	pb = rand() % 100;
+
+	if (0 <= pb  && pb <= 50)
+	{
+		m_id = ITEM_CLUB;
+	}
+	else
+	{
+		m_id = ITEM_GOLD_BULLION;
+	}
 
 	//アイテムのヒットボックスを作成
 	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_ITEM, OBJ_ITEM, 1);
