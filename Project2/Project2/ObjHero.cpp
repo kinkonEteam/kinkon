@@ -31,10 +31,11 @@ float CObjHero::GetY()
 //イニシャライズ
 void CObjHero::Init()
 {
-	m_px = 368.0f;		//位置(ここで変更出来る)
+	m_px = 368.0f;		//初期位置(ここで変更出来る)
 	m_py = 268.0f;
 	m_vx = 0.0f;		//移動ベクトル
 	m_vy = 0.0f;
+
 
 	m_hp = 5;			//初期HP５
 
