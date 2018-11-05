@@ -87,9 +87,10 @@ enum ITEM_ID
 #include "Scenefloor4.h"
 #include "Scenefloor5.h"
 #include "SceneMain.h"
+
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
 //ゲーム開始時のシーンクラス登録
-#define SET_GAME_START  CSceneMain
+#define SET_GAME_START  CSceneTtile
 //-----------------------------------------------
