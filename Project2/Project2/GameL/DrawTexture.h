@@ -20,7 +20,8 @@ namespace GameL
 	//テクスチャイメージサイズ　８乗ｵﾝﾘ-設定
 	enum TEX_SIZE
 	{
-		TEX_SIZE_64   =	  64,
+		TEX_SIZE_64 = 64,
+		TEX_SIZE_151_200 = 151 * 200,
 		TEX_SIZE_128  =	 128,
 		TEX_SIZE_256  =	 256,
 		TEX_SIZE_512  =	 512,
