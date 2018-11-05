@@ -82,6 +82,6 @@ void CObjItem::Draw()
 	dst.m_bottom = dst.m_top+ITEM_SIZE;
 
 	//•`‰æ
-	Draw::Draw(1, &src, &dst, c, 0.0f);
+	Draw::Draw(4, &src, &dst, c, 0.0f);
 
 }
