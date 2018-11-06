@@ -86,6 +86,7 @@ enum ITEM_ID
 #include"ObjEnemy2.h"
 #include"ObjEnemy3.h"
 #include"ObjTitle.h"
+#include"Inventory.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
