@@ -110,8 +110,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Project2\Project2\ObjTitle.cpp" />
-    <ClCompile Include="..\..\Project2\Project2\SceneTitle.cpp" />
+    <ClCompile Include="..\..\Project2\Project2\ObjTitle.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\Project2\Project2\SceneTitle.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="CObjFlyKiji.cpp" />
     <ClCompile Include="CObjSword.cpp" />
     <ClCompile Include="Inventory.cpp" />
