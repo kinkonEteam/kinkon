@@ -17,8 +17,8 @@ private:
 	float m_x;		//渡された位置格納
 	float m_y;
 	int m_pos;		//主人公の向き格納
-	int m_sx;		//向きによる位置変更用x,y
-	int m_sy;
+	int m_px;		//向きによる位置変更用x,y
+	int m_py;
 
 	int m_ani_time; //アニメーションタイム
 	int m_ani_frame;//フレーム
