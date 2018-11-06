@@ -159,6 +159,9 @@
     <ClCompile Include="Inventory.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="CObjFlyKiji.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameL\Audio.h">
@@ -279,6 +282,9 @@
       <Filter>ソース ファイル\Character\主人公</Filter>
     </ClInclude>
     <ClInclude Include="Inventory.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjFlyKiji.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>

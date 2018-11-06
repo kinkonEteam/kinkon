@@ -136,7 +136,8 @@ void CObjHero::Action()
 	CHitBox*hit = Hits::GetHitBox(this);
 	hit->SetPos(m_px, m_py);
 
-	if (hit->CheckObjNameHit(OBJ_HERO) != nullptr)
+	//ƒGƒŒƒƒ“ƒg“G‚É“–‚½‚é‚ÆHP-1
+	if (hit->CheckObjNameHit(ELEMENT_ENEMY) != nullptr)
 	{
 		m_hp -= 1;
 	}
@@ -176,7 +177,7 @@ void CObjHero::Action()
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
 
-		/*Scene::SetScene(new CSceneClear());*/
+		/*Scene::SetScene(new CSceneGameOver());*/
 	}
 }
 
