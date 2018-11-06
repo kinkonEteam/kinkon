@@ -136,18 +136,48 @@ void CObjHero::Action()
 	CHitBox*hit = Hits::GetHitBox(this);
 	hit->SetPos(m_px, m_py);
 
-	if (hit->CheckObjNameHit(OBJ_HERO) != nullptr)
+	//エレメント敵に当たるとHP-1
+	if (hit->CheckObjNameHit(ELEMENT_ENEMY) != nullptr)
 	{
 		m_hp -= 1;
 	}
 
+	if (hit->CheckObjNameHit(ITEM_PEACH) != nullptr)
+	{
+		m_hp += 1; //HPを1回復
+	}
+	else if (hit->CheckObjNameHit(ITEM_PLUM) != nullptr)
+	{
+		m_hp += 3; //HPを３回復
+	}
+	/*
+	else if (hit->CheckObjNameHit(ITEM_PLUM) != nullptr)
+	{
+		m_hp += 3;
+	}
+	else if (hit->CheckObjNameHit(ITEM_HORN) != nullptr)
+	{
+		m_hp += 3;
+	}
+	else if (hit->CheckObjNameHit(ITEM_CLUB) != nullptr)
+	{
+		m_hp += 3;
+	}
+	else if (hit->CheckObjNameHit(ITEM_GOLD_BULLION) != nullptr)
+	{
+		m_hp += 3;
+	}
+	else if (hit->CheckObjNameHit(ITEM_SILVER_BULLION) != nullptr)
+	{
+		;
+	}　アイテム効果試作*/
 	//HPが0になったら破棄
 	if (m_hp <= 0)
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
 
-		/*Scene::SetScene(new CSceneClear());*/
+		/*Scene::SetScene(new CSceneGameOver());*/
 	}
 }
 

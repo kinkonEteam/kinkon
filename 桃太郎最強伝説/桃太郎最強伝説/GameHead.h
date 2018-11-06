@@ -14,11 +14,13 @@ enum OBJ_NAME
 	OBJ_BOSS,
 	OBJ_HERO,
 	OBJ_SWORD,
+	OBJ_FLYKIJI,
 	OBJ_ITEM,
 	OBJ_ENEMY,
 	OBJ_ENEMY2,
 	OBJ_ENEMY3,
 	OBJ_DOG,
+	
 
 	OBJ_TITLE,
 	OBJ_GAME_OVER,
@@ -87,6 +89,7 @@ enum ITEM_ID
 #include"ObjEnemy2.h"
 #include"ObjEnemy3.h"
 #include"ObjTitle.h"
+#include"Inventory.h"
 #include"ObjGameOver.h"
 //------------------------------------------------
 
@@ -105,6 +108,6 @@ enum ITEM_ID
 
 //シーンスタートクラス---------------------------
 //ゲーム開始時のシーンクラス登録
-//#define SET_GAME_START  CSceneMain
+#define SET_GAME_START  CSceneMain
 #define SET_GAME_START  CSceneTitle
 //-----------------------------------------------

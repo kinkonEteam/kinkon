@@ -156,6 +156,12 @@
     <ClCompile Include="ObjHero.cpp">
       <Filter>ソース ファイル\Character\主人公</Filter>
     </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjFlyKiji.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
     <ClCompile Include="SceneGameOver.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -274,6 +280,12 @@
     </ClInclude>
     <ClInclude Include="ObjHero.h">
       <Filter>ソース ファイル\Character\主人公</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjFlyKiji.h">
+      <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="SceneGameOver.h">
       <Filter>ソース ファイル</Filter>
