@@ -126,8 +126,11 @@
     <ClCompile Include="ObjEnemy.cpp" />
     <ClCompile Include="ObjEnemy2.cpp" />
     <ClCompile Include="ObjEnemy3.cpp" />
+    <ClCompile Include="ObjGameOver.cpp" />
     <ClCompile Include="ObjHero.cpp" />
     <ClCompile Include="ObjItem.cpp" />
+    <ClCompile Include="ObjMonke.cpp" />
+    <ClCompile Include="ObjPheasant.cpp" />
     <ClCompile Include="ObjTitle.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
@@ -165,6 +168,7 @@
     <ClCompile Include="Scenefloor3.cpp" />
     <ClCompile Include="Scenefloor4.cpp" />
     <ClCompile Include="Scenefloor5.cpp" />
+    <ClCompile Include="SceneGameOver.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneTitle.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
@@ -172,7 +176,6 @@
     <ClCompile Include="UtilityModule.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Project2\Project2\SceneTitle.h" />
     <ClInclude Include="CObjFlyKiji.h" />
     <ClInclude Include="CObjSword.h" />
     <ClInclude Include="E:\D\STG\STG\SceneTitle.h">
@@ -187,8 +190,11 @@
     <ClInclude Include="ObjEnemy.h" />
     <ClInclude Include="ObjEnemy2.h" />
     <ClInclude Include="ObjEnemy3.h" />
+    <ClInclude Include="ObjGameOver.h" />
     <ClInclude Include="ObjHero.h" />
     <ClInclude Include="ObjItem.h" />
+    <ClInclude Include="ObjMonke.h" />
+    <ClInclude Include="ObjPheasant.h" />
     <ClInclude Include="ObjTitle.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
@@ -227,6 +233,7 @@
     <ClInclude Include="Scenefloor1.h" />
     <ClInclude Include="Scenefloor3.h" />
     <ClInclude Include="Scenefloor5.h" />
+    <ClInclude Include="SceneGameOver.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneTitle.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>

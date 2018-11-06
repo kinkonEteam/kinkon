@@ -68,6 +68,8 @@ enum ITEM_ID
 //------------------------------------------------
 
 //ゲームシーンオブジェクトヘッダ------------------
+
+
 #include"ObjHero.h"
 #include"ObjItem.h"
 #include"ObjEnemy.h"
