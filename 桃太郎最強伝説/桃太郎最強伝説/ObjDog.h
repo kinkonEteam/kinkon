@@ -17,7 +17,8 @@ public:
 	void Action();	//アクション
 	void Draw();	//ドロー
 private:
-
+	float m_x;	//お供ヒットボックス用
+	float m_y;	//お供ヒットボックス用
 
 };
 
