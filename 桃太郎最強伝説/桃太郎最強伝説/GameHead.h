@@ -92,10 +92,6 @@ enum ITEM_ID
 #include"ObjTitle.h"
 #include"Inventory.h"
 #include"ObjGameOver.h"
-#include"ObjEnemy2.h"
-#include"ObjEnemy3.h"
-#include"ObjTitle.h"
-#include"Inventory.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -107,7 +103,6 @@ enum ITEM_ID
 #include "Scenefloor5.h"
 
 #include "SceneMain.h"
-#include "SceneTitle.h"
 #include "SceneTitle.h"
 #include"SceneGameOver.h"
 //-----------------------------------------------

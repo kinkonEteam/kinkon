@@ -136,7 +136,6 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="SceneTitle.cpp">
-    <ClCompile Include="SceneTitle.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="ObjBoss.cpp">
@@ -163,29 +162,9 @@
     <ClCompile Include="CObjFlyKiji.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="ObjBoss.cpp">
-      <Filter>ソース ファイル\Character\BOSS</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjDog.cpp">
-      <Filter>ソース ファイル\Character\おとも</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjEnemy.cpp">
-      <Filter>ソース ファイル\Character\敵</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjEnemy2.cpp">
-      <Filter>ソース ファイル\Character\敵</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjEnemy3.cpp">
-      <Filter>ソース ファイル\Character\敵</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjHero.cpp">
-      <Filter>ソース ファイル\Character\主人公</Filter>
-    </ClCompile>
-    <ClCompile Include="Inventory.cpp">
     <ClCompile Include="SceneGameOver.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="CObjFlyKiji.cpp">
     <ClCompile Include="ObjGameOver.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -267,7 +246,6 @@
       <Filter>ソース ファイル\Map\floor5</Filter>
     </ClInclude>
     <ClInclude Include="UtilityModule.h">
-    <ClInclude Include="UtilityModule.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="CObjSword.h">
@@ -289,7 +267,6 @@
       <Filter>ソース ファイル\Character\BOSS</Filter>
     </ClInclude>
     <ClInclude Include="ObjDog.h">
-    <ClInclude Include="ObjItem.h">
       <Filter>ソース ファイル\Character\おとも</Filter>
     </ClInclude>
     <ClInclude Include="ObjEnemy.h">
@@ -303,46 +280,16 @@
     </ClInclude>
     <ClInclude Include="ObjHero.h">
       <Filter>ソース ファイル\Character\主人公</Filter>
-    <ClInclude Include="SceneMain.h">
-      <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Inventory.h">
-    <ClInclude Include="ObjTitle.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="SceneTitle.h">
     <ClInclude Include="CObjFlyKiji.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Project2\Project2\SceneTitle.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="E:\D\STG\STG\ObjTitle.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjBoss.h">
-      <Filter>ソース ファイル\Character\BOSS</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjDog.h">
-      <Filter>ソース ファイル\Character\おとも</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjEnemy.h">
-      <Filter>ソース ファイル\Character\敵</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjEnemy2.h">
-      <Filter>ソース ファイル\Character\敵</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjEnemy3.h">
-      <Filter>ソース ファイル\Character\敵</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjHero.h">
-      <Filter>ソース ファイル\Character\主人公</Filter>
-    </ClInclude>
-    <ClInclude Include="Inventory.h">
     <ClInclude Include="SceneGameOver.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="CObjFlyKiji.h">
     <ClInclude Include="ObjGameOver.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
