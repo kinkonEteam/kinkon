@@ -136,6 +136,13 @@ void CObjHero::Action()
 	CHitBox*hit = Hits::GetHitBox(this);
 	hit->SetPos(m_px, m_py);
 
+	//ELEMENT_ENEMYを持つオブジェクトと接触したら
+	if (hit->CheckElementHit(ELEMENT_ENEMY) == true)
+	{
+		this->SetStatus(false);
+		Hits::DeleteHitBox(this);
+	}
+
 	//エレメント敵に当たるとHP-1
 	if (hit->CheckObjNameHit(ELEMENT_ENEMY) != nullptr)
 	{
