@@ -2,6 +2,7 @@
 #include "GameHead.h"
 #include "CObjSword.h"
 #include "GameL\DrawTexture.h"
+#include "GameL\HitBoxManager.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -23,6 +24,9 @@ void CObjSword::Init()
 	m_ani_time = 0;		//アニメーションタイム
 	m_ani_frame = 0;	//フレーム
 	m_s = 1;			//アニメーション緩急
+
+						//当たり判定用HitBoxを作成
+	Hits::SetHitBox(this, m_x, m_y, 50, 50, ELEMENT_MAGIC, OBJ_SWORD, 1);
 }
 
 //アクション
@@ -52,18 +56,22 @@ void CObjSword::Action()
 	}
 
 
-	m_ani_time+=m_s;			//削除されるまで常に足し続ける
-	if (m_ani_time > 5)		//アニメーション動作間隔(※ここでアニメーション速度変更出来る)
+	m_ani_time+=m_s;	//削除されるまで常に足し続ける
+	if (m_ani_time > 5)	//アニメーション動作間隔(※ここでアニメーション速度変更出来る)
 	{
 		m_ani_frame += 1;
 		m_ani_time = 0;
 		m_s++;
 	}
 
+	//HitBoxの内容を更新
+	CHitBox*hit = Hits::GetHitBox(this);
+	hit->SetPos(m_x + (50.0f * m_sx), m_y + (50.0f * m_sy));
+
 	if (m_ani_frame == 4)
 	{
-		this->SetStatus(false);	//オブジェクト削除
-		//Hits::DeleteHitBox;		//HitBox削除
+		this->SetStatus(false);	 //オブジェクト削除
+		Hits::DeleteHitBox(this);//HitBox削除
 	}
 }
 
@@ -83,10 +91,10 @@ void CObjSword::Draw()
 	src.m_bottom=32.0f + (32.0f*m_pos);
 
 	//表示位置の設定
-	dst.m_top	=(  0.0f + m_y) + (32 * m_sy);
-	dst.m_left	=(  0.0f + m_x) + (32 * m_sx);
-	dst.m_right =( 32.0f + m_x) + (32 * m_sx);
-	dst.m_bottom=( 32.0f + m_y) + (32 * m_sy);
+	dst.m_top	=(  0.0f + m_y) + (50.0f * m_sy);
+	dst.m_left	=(  0.0f + m_x) + (50.0f * m_sx);
+	dst.m_right =( 50.0f + m_x) + (50.0f * m_sx);
+	dst.m_bottom=( 50.0f + m_y) + (50.0f * m_sy);
 		
 	//描画
 	Draw::Draw(3, &src, &dst, c, 0.0f);

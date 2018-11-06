@@ -3,11 +3,11 @@
 #include"GameL\SceneObjManager.h"
 using namespace GameL;
 
-class CObjEnemy :public CObj
+class CObjEnemy3 :public CObj
 {
 public:
-	CObjEnemy() {};
-	~CObjEnemy() {};
+	CObjEnemy3() {};
+	~CObjEnemy3() {};
 	void Init();
 	void Action();
 	void Draw();
@@ -16,4 +16,4 @@ private:
 	float m_y;
 	float m_vx;
 	float m_vy;
-};
+}; 

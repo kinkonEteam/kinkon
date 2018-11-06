@@ -6,18 +6,26 @@
 using namespace GameL;
 
 
-
 //オブジェクト：キャラクターブロック
-class CObjDog : public CObj
+class CObjInventory : public CObj
 {
 public:
-	CObjDog() {};
-	~CObjDog() {};
+	CObjInventory() {};
+	~CObjInventory() {};
 	void Init();	//イニシャライズ
 	void Action();	//アクション
 	void Draw();	//ドロー
 private:
+	float m_x;	//アイテムヒットボックス用
+	float m_y;	//アイテムヒットボックス用
+	int m_id;	//アイテムID
+	int pb;		//確率用変数
+	bool m_del;	//削除チェック
 
 
 };
+
+
+
+
 
