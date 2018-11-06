@@ -138,12 +138,6 @@
     <ClCompile Include="SceneTitle.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Project2\Project2\ObjTitle.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Project2\Project2\SceneTitle.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="ObjBoss.cpp">
       <Filter>ソース ファイル\Character\BOSS</Filter>
     </ClCompile>
@@ -161,6 +155,12 @@
     </ClCompile>
     <ClCompile Include="ObjHero.cpp">
       <Filter>ソース ファイル\Character\主人公</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGameOver.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjGameOver.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -257,12 +257,6 @@
     <ClInclude Include="SceneTitle.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Project2\Project2\SceneTitle.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="E:\D\STG\STG\ObjTitle.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="ObjBoss.h">
       <Filter>ソース ファイル\Character\BOSS</Filter>
     </ClInclude>
@@ -280,6 +274,12 @@
     </ClInclude>
     <ClInclude Include="ObjHero.h">
       <Filter>ソース ファイル\Character\主人公</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGameOver.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjGameOver.h">
+      <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -110,8 +110,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Project2\Project2\ObjTitle.cpp" />
-    <ClCompile Include="..\..\Project2\Project2\SceneTitle.cpp" />
     <ClCompile Include="CObjSword.cpp" />
     <ClCompile Include="ObjBoss.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -120,6 +118,7 @@
     <ClCompile Include="ObjEnemy.cpp" />
     <ClCompile Include="ObjEnemy2.cpp" />
     <ClCompile Include="ObjEnemy3.cpp" />
+    <ClCompile Include="ObjGameOver.cpp" />
     <ClCompile Include="ObjHero.cpp" />
     <ClCompile Include="ObjItem.cpp" />
     <ClCompile Include="ObjTitle.cpp" />
@@ -157,14 +156,13 @@
     <ClCompile Include="Scenefloor3.cpp" />
     <ClCompile Include="Scenefloor4.cpp" />
     <ClCompile Include="Scenefloor5.cpp" />
+    <ClCompile Include="SceneGameOver.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
     <ClCompile Include="UtilityModule.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Project2\Project2\SceneTitle.h" />
     <ClInclude Include="CObjSword.h" />
-    <ClInclude Include="E:\D\STG\STG\ObjTitle.h" />
     <ClInclude Include="ObjBoss.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>
@@ -172,6 +170,7 @@
     <ClInclude Include="ObjEnemy.h" />
     <ClInclude Include="ObjEnemy2.h" />
     <ClInclude Include="ObjEnemy3.h" />
+    <ClInclude Include="ObjGameOver.h" />
     <ClInclude Include="ObjHero.h" />
     <ClInclude Include="ObjItem.h" />
     <ClInclude Include="ObjTitle.h" />
@@ -210,6 +209,7 @@
     <ClInclude Include="Scenefloor1.h" />
     <ClInclude Include="Scenefloor3.h" />
     <ClInclude Include="Scenefloor5.h" />
+    <ClInclude Include="SceneGameOver.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneTitle.h" />
     <ClInclude Include="UtilityModule.h" />
