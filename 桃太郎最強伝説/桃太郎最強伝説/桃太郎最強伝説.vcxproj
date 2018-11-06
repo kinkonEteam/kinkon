@@ -111,7 +111,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CObjSword.cpp" />
-    <ClCompile Include="E:\D\STG\STG\SceneTitle.cpp" />
+    <ClCompile Include="E:\D\STG\STG\SceneTitle.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="ObjBoss.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -158,7 +160,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CObjSword.h" />
-    <ClInclude Include="E:\D\STG\STG\SceneTitle.h" />
+    <ClInclude Include="E:\D\STG\STG\SceneTitle.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="ObjBoss.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>

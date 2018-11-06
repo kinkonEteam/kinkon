@@ -77,6 +77,8 @@ void CSceneMain::InitScene()
 
 	//外部グラフィックを読み込み4番に登録(512×512ピクセル)
 	Draw::LoadImage(L"アイテム.png", 4, TEX_SIZE_512);
+
+
 	
 	
 	//主人公オブジェクト作成
