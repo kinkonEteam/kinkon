@@ -85,6 +85,7 @@ enum ITEM_ID
 #include"ObjItem.h"
 #include"ObjDog.h"
 #include"CObjSword.h"
+#include "CObjFlyKiji.h"
 #include"ObjEnemy.h"
 #include"ObjEnemy2.h"
 #include"ObjEnemy3.h"

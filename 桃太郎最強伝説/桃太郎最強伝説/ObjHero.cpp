@@ -22,7 +22,8 @@ void CObjHero::Init()
 	m_posture = 0.0f;	//正面(0.0f) 左(1.0f) 右(2.0f) 背面(3.0f)
 	m_ani_time = 0;
 	m_ani_frame = 1;	//静止フレーム
-	m_f = true;			//攻撃制御
+	m_Sf = true;			//攻撃制御
+	m_Kf = true;			//キジ攻撃制御
 
 	//HitBox作成座標とサイズx,y、エレメントとオブジェクトを設定
 	Hits::SetHitBox(this, m_px, m_py, 50, 50, ELEMENT_PLAYER, OBJ_HERO, 1);
@@ -39,17 +40,32 @@ void CObjHero::Action()
 	//攻撃の入力判定、押しっぱなし制御
 	if (Input::GetVKey('A') == true) 
 	{
-		if (m_f == true) 
+		if (m_Sf == true) 
 		{
 			//剣オブジェクト作成		ここで剣に座標と向きを渡す
 			CObjSword* swd = new CObjSword(m_px, m_py, m_posture);//作成
 			Objs::InsertObj(swd, OBJ_SWORD, 3);	//マネージャーに登録
 
-			m_f = false;
+			m_Sf = false;
 		}
 	}
 	else
-		m_f = true;
+		m_Sf = true;
+
+	//キジ攻撃の入力判定、押しっぱなし制御
+	if (Input::GetVKey('S') == true)
+	{
+		if (m_Kf == true)
+		{
+			//キジオブジェクト作成				キジに座標と向きを渡す
+			CObjFlyKiji* kiji = new CObjFlyKiji(m_px, m_py, m_posture);//作成
+			Objs::InsertObj(kiji, OBJ_FLYKIJI, 3);	//マネージャーに登録
+
+			m_Kf = false;
+		}
+	}
+	else
+		m_Kf = true;
 
 	//主人公の移動にベクトルを入れる
 	if (Input::GetVKey(VK_RIGHT) == true)//→
