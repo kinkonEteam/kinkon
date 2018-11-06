@@ -20,9 +20,18 @@ void CObjItem::Init()
 	m_x = 128; //当たり判定（場所）（仮）
 	m_y = 128;	//当たり判定（場所）（仮）
 
-	srand(time(NULL));		
-	m_id = rand() % 100;	//0～100
+	srand((unsigned)time(NULL)); // 乱数の初期化
 
+	pb = rand() % 100;
+
+	if (0 <= pb  && pb <= 50)
+	{
+		m_id = ITEM_CLUB;
+	}
+	else
+	{
+		m_id = ITEM_GOLD_BULLION;
+	}
 
 	//アイテムのヒットボックスを作成
 	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_ITEM, OBJ_ITEM, 1);
@@ -33,30 +42,16 @@ void CObjItem::Init()
 //アクション
 void CObjItem::Action()
 {
-	switch (m_id)
+
+
+	CHitBox* hit = Hits::GetHitBox(this);
+
+	//主人公と接触しているかどうかを調べる
+	if (hit->CheckObjNameHit(OBJ_HERO) != nullptr)
 	{
-	case ITEM_PEACH:
-				
+		this->SetStatus(false);//自身に削除命令を出す
+		Hits::DeleteHitBox(this);//アイテムが所有するHitBoxを削除する
 
-		break;
-	case ITEM_YELLOW_PEACH:
-
-		break;
-	case ITEM_PLUM:
-
-		break;
-	case ITEM_HORN:
-
-		break;
-	case ITEM_GOLD_BULLION:
-
-		break;
-	case ITEM_SILVER_BULLION:
-
-		break;
-	case ITEM_CLUB:
-
-		break;
 	}
 }
 

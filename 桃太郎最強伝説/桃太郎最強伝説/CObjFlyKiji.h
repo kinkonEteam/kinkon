@@ -5,11 +5,11 @@
 using namespace GameL;
 
 //オブジェクト：剣
-class CObjSword :public CObj
+class CObjFlyKiji :public CObj
 {
 public:	    //ここで位置と向きを渡される
-	CObjSword(float x, float y,int m_pos);//コンストラクタ
-	~CObjSword() {};
+	CObjFlyKiji(float x, float y, int m_pos);//コンストラクタ
+	~CObjFlyKiji() {};
 	void Init();	//イニシャライズ
 	void Action();	//アクション
 	void Draw();	//ドロー
@@ -20,7 +20,9 @@ private:
 	int m_sx;		//向きによる位置変更用x,y
 	int m_sy;
 
+	/*
 	int m_ani_time; //アニメーションタイム
 	int m_ani_frame;//フレーム
 	int m_s;		//ani_timeを徐々に加速させる変数
+	*/
 };

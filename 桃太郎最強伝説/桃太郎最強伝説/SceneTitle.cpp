@@ -10,9 +10,8 @@
 using namespace GameL;
 
 //使用ヘッダー
-#include"GameHead.h"
 #include"SceneTitle.h"
-
+#include"GameHead.h"
 
 
 

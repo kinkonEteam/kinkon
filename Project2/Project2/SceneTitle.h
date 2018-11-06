@@ -5,7 +5,7 @@
 using namespace GameL;
 
 //オブジェクト：タイトル
-class  CSceneTitle : public CScene
+class CSceneTitle : public CScene
 {
 public:
 	CSceneTitle() {};

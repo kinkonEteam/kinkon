@@ -27,6 +27,8 @@ private:
 	float m_x;	//アイテムヒットボックス用
 	float m_y;	//アイテムヒットボックス用
 	int m_id;	//アイテムID
+	int pb;		//確率用変数
+	bool m_del;	//削除チェック
 
 
 };
