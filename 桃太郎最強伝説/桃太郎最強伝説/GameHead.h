@@ -14,11 +14,13 @@ enum OBJ_NAME
 	OBJ_BOSS,
 	OBJ_HERO,
 	OBJ_SWORD,
+	OBJ_FLYKIJI,
 	OBJ_ITEM,
 	OBJ_ENEMY,
 	OBJ_ENEMY2,
 	OBJ_ENEMY3,
 	OBJ_DOG,
+	
 
 	OBJ_TITLE,
 };
@@ -102,6 +104,6 @@ enum ITEM_ID
 
 //シーンスタートクラス---------------------------
 //ゲーム開始時のシーンクラス登録
-//#define SET_GAME_START  CSceneMain
+#define SET_GAME_START  CSceneMain
 #define SET_GAME_START  CSceneTitle
 //-----------------------------------------------

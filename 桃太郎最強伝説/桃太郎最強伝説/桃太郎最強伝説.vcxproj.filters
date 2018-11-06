@@ -162,6 +162,9 @@
     <ClCompile Include="ObjHero.cpp">
       <Filter>ソース ファイル\Character\主人公</Filter>
     </ClCompile>
+    <ClCompile Include="CObjFlyKiji.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameL\Audio.h">
@@ -280,6 +283,9 @@
     </ClInclude>
     <ClInclude Include="ObjHero.h">
       <Filter>ソース ファイル\Character\主人公</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjFlyKiji.h">
+      <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

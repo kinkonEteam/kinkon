@@ -136,18 +136,19 @@ void CObjHero::Action()
 	CHitBox*hit = Hits::GetHitBox(this);
 	hit->SetPos(m_px, m_py);
 
-	if (hit->CheckObjNameHit(OBJ_HERO) != nullptr)
+	//エレメント敵に当たるとHP-1
+	if (hit->CheckObjNameHit(ELEMENT_ENEMY) != nullptr)
 	{
 		m_hp -= 1;
 	}
 
-	//HPが0になったら破棄
+	//HPが0になったら破棄、シーン切り替え
 	if (m_hp <= 0)
 	{
 		this->SetStatus(false);
 		Hits::DeleteHitBox(this);
 
-		/*Scene::SetScene(new CSceneClear());*/
+		/*Scene::SetScene(new CSceneGameOver());*/
 	}
 }
 
