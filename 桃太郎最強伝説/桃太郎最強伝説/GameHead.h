@@ -14,9 +14,15 @@ enum OBJ_NAME
 	OBJ_BOSS,
 	OBJ_HERO,
 	OBJ_SWORD,
+	OBJ_FLYKIJI,
 	OBJ_ITEM,
 	OBJ_ENEMY,
+	OBJ_ENEMY2,
+	OBJ_ENEMY3,
 	OBJ_DOG,
+	
+
+	OBJ_TITLE,
 };
 //------------------------------------------------
 
@@ -52,7 +58,7 @@ struct UserData
 //ゲーム内で使用されるグローバル変数・定数・列挙--
 enum ITEM_ID
 {
-	ITEM_PEACH,				//アイテム　桃
+	ITEM_PEACH,				//アイテム　桃です
 	ITEM_YELLOW_PEACH,		//アイテム　黄桃
 	ITEM_PLUM,				//アイテム　すもも
 	ITEM_HORN,				//アイテム　つの
@@ -67,6 +73,7 @@ enum ITEM_ID
 //------------------------------------------------
 
 //ゲームシーンオブジェクトヘッダ------------------
+#include "SceneTitle.h"
 #include "ObjMap1.h"
 #include "ObjMap2.h"
 #include "ObjMap3.h"
@@ -78,16 +85,21 @@ enum ITEM_ID
 #include"ObjDog.h"
 #include"CObjSword.h"
 #include"ObjEnemy.h"
+#include"ObjEnemy2.h"
+#include"ObjEnemy3.h"
+#include"ObjTitle.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
+
 #include "Scenefloor1.h"
 #include "Scenefloor2.h"
 #include "Scenefloor3.h"
 #include "Scenefloor4.h"
 #include "Scenefloor5.h"
-#include "SceneMain.h"
 
+#include "SceneMain.h"
+#include "SceneTitle.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------

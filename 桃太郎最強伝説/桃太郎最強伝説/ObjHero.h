@@ -30,12 +30,15 @@ class CObjHero :public CObj
 		float m_py;
 		float m_vx;		 //移動ベクトル用変数
 		float m_vy;
+
 		float m_posture; //姿勢
+
+		int m_hp;		 //HP
 		int m_map[56][56];//マップ情報
 
 		int m_ani_time;  //アニメーションフレーム動作間隔
-		int m_ani_frame;//描画フレーム
-
+		int m_ani_frame;	//描画フレーム
+		bool m_f;			//攻撃間隔制御
 		//blockとの衝突状態確認用
 		bool m_hit_up;
 		bool m_hit_down;

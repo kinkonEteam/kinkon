@@ -78,7 +78,14 @@ void CSceneMain::InitScene()
 	//外部グラフィックを読み込み4番に登録(512×512ピクセル)
 	Draw::LoadImage(L"アイテム.png", 4, TEX_SIZE_512);
 
+	//外部グラフィックを読み込み5番に登録(151*200ピクセル)
+	Draw::LoadImage(L"鬼原画 青鬼 新二.png", 5, TEX_SIZE_151_200);
 
+	//外部グラフィックを読み込み6番に登録(151*200ピクセル)
+	Draw::LoadImage(L"鬼原画 黄鬼 新二.png", 6, TEX_SIZE_151_200);
+
+	//外部グラフィックを読み込み7番に登録(151*200ピクセル)
+	Draw::LoadImage(L"鬼原画 緑鬼 新二.png", 7, TEX_SIZE_151_200);
 	
 	
 	//主人公オブジェクト作成
@@ -92,6 +99,18 @@ void CSceneMain::InitScene()
 	//犬オブジェクト作成
 	CObjDog* D = new CObjDog();			//オブジェクト作成
 	Objs::InsertObj(D, OBJ_DOG, 2);		//マネージャに登録
+
+	//青鬼オブジェクト作成
+	CObjEnemy* e = new CObjEnemy();
+	Objs::InsertObj(e, OBJ_ENEMY, 1);
+
+	//黄鬼オブジェクト作成
+	CObjEnemy2* e2 = new CObjEnemy2();
+	Objs::InsertObj(e2, OBJ_ENEMY2, 1);
+
+	//緑鬼オブジェクト作成
+	CObjEnemy3* e3 = new CObjEnemy3();
+	Objs::InsertObj(e3, OBJ_ENEMY3, 1);
 
 	//階層1オブジェクト作成
 	CObjMap1* objb = new CObjMap1(map);

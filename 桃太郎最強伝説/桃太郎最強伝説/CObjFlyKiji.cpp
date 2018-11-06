@@ -1,13 +1,14 @@
 //使用するヘッダーファイル
 #include "GameHead.h"
-#include "CObjSword.h"
+#include "CObjFlyKiji.h"
 #include "GameL\DrawTexture.h"
+#include "GameL\HitBoxManager.h"
 
 //使用するネームスペース
 using namespace GameL;
 
 //コンストラクタ
-CObjSword::CObjSword(float x, float y, int pos)//渡されるだけの変数
+CObjFlyKiji::CObjFlyKiji(float x, float y, int pos)//渡されるだけの変数
 {						//渡されたデータをDrawで使えるメンバ変数に代入
 	m_x = x;
 	m_y = y;
@@ -15,18 +16,19 @@ CObjSword::CObjSword(float x, float y, int pos)//渡されるだけの変数
 }
 
 //イニシャライズ
-void CObjSword::Init()
+void CObjFlyKiji::Init()
 {
 	m_sx = 0;			//Swordの座標	
 	m_sy = 0;
-
+	/*
 	m_ani_time = 0;		//アニメーションタイム
 	m_ani_frame = 0;	//フレーム
-	m_s = 1;			//アニメーション緩急
+	m_s = 1;			//アニメーション緩急*/
+	
 }
 
 //アクション
-void CObjSword::Action()
+void CObjFlyKiji::Action()
 {
 	//主人公の位置を常に取得し、代入
 	CObjHero* obj = (CObjHero*)Objs::GetObj(OBJ_HERO);
@@ -51,8 +53,8 @@ void CObjSword::Action()
 		m_sy = -1;
 	}
 
-
-	m_ani_time+=m_s;			//削除されるまで常に足し続ける
+	/*
+	m_ani_time += m_s;			//削除されるまで常に足し続ける
 	if (m_ani_time > 5)		//アニメーション動作間隔(※ここでアニメーション速度変更出来る)
 	{
 		m_ani_frame += 1;
@@ -62,13 +64,13 @@ void CObjSword::Action()
 
 	if (m_ani_frame == 4)
 	{
-		this->SetStatus(false);	//オブジェクト削除
-		//Hits::DeleteHitBox;		//HitBox削除
-	}
+		this->SetStatus(false);	 //オブジェクト削除
+		Hits::DeleteHitBox(this);//HitBox削除
+	}*/
 }
 
 //ドロー
-void CObjSword::Draw()
+void CObjFlyKiji::Draw()
 {
 	//描画カラー情報　R=Red　G=Green　B=Blue　A=alpha(透過情報)
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f, };
@@ -76,18 +78,18 @@ void CObjSword::Draw()
 	RECT_F src; //描画元切り取り位置
 	RECT_F dst; //描画先表示位置
 
-	//切り取り位置の設定
-	src.m_top	= 0.0f + (32.0f*m_pos);
-	src.m_left	= 0.0f + (32.0f*m_ani_frame);
-	src.m_right =32.0f + (32.0f*m_ani_frame);
+				//切り取り位置の設定
+	src.m_top   = 0.0f + (32.0f*m_pos);
+	src.m_left  = 0.0f;
+	src.m_right =32.0f;
 	src.m_bottom=32.0f + (32.0f*m_pos);
 
 	//表示位置の設定
-	dst.m_top	=(  0.0f + m_y) + (32 * m_sy);
-	dst.m_left	=(  0.0f + m_x) + (32 * m_sx);
-	dst.m_right =( 32.0f + m_x) + (32 * m_sx);
-	dst.m_bottom=( 32.0f + m_y) + (32 * m_sy);
-		
+	dst.m_top   =( 0.0f + m_y) + (50.0f * m_sy);
+	dst.m_left  =( 0.0f + m_x) + (50.0f * m_sx);
+	dst.m_right =(50.0f + m_x) + (50.0f * m_sx);
+	dst.m_bottom=(50.0f + m_y) + (50.0f * m_sy);
+
 	//描画
 	Draw::Draw(3, &src, &dst, c, 0.0f);
 }
