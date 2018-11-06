@@ -168,10 +168,8 @@
     <ClCompile Include="UtilityModule.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Project2\Project2\SceneTitle.h" />
     <ClInclude Include="CObjFlyKiji.h" />
     <ClInclude Include="CObjSword.h" />
-    <ClInclude Include="E:\D\STG\STG\ObjTitle.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="ObjBoss.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
