@@ -3,6 +3,8 @@
 #include "CObjFlyKiji.h"
 #include "GameL\DrawTexture.h"
 #include "GameL\HitBoxManager.h"
+#include "UtilityModule.h"
+
 
 //使用するネームスペース
 using namespace GameL;
@@ -24,7 +26,8 @@ void CObjFlyKiji::Init()
 	m_ani_time = 0;		//アニメーションタイム
 	m_ani_frame = 0;	//フレーム
 	m_s = 1;			//アニメーション緩急*/
-	
+
+	Hits::SetHitBox(this, m_x, m_y, 50, 50, ELEMENT_MAGIC, OBJ_SWORD, 1);
 }
 
 //アクション
@@ -60,13 +63,16 @@ void CObjFlyKiji::Action()
 		m_ani_frame += 1;
 		m_ani_time = 0;
 		m_s++;
-	}
-
-	if (m_ani_frame == 4)
-	{
-		this->SetStatus(false);	 //オブジェクト削除
-		Hits::DeleteHitBox(this);//HitBox削除
 	}*/
+
+
+	//UtilityModuleのチェック関数に場所と領域を渡し、領域外か判定
+	bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 800.0f, 600.0f);
+	if (check == false)
+	{
+		this->SetStatus(false);  //自身を削除
+		Hits::DeleteHitBox(this);//HitBoxを削除
+	}
 }
 
 //ドロー
