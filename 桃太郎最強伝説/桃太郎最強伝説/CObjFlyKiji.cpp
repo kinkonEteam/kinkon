@@ -96,16 +96,16 @@ void CObjFlyKiji::Draw()
 	RECT_F dst; //描画先表示位置
 
 				//切り取り位置の設定
-	src.m_top   =  0.0f + (32.0f*m_px);
-	src.m_left  = 96.0f;
-	src.m_right =128.0f;
-	src.m_bottom= 32.0f + (32.0f*m_px);
+	src.m_top   =  0.0f;
+	src.m_left  = 96.0f + (32.0f * m_px*m_px);
+	src.m_right =128.0f + (32.0f * m_px*m_px);
+	src.m_bottom= 32.0f;
 
-	//表示位置の設定
-	dst.m_top   =( 0.0f + m_y) + (50.0f * m_py);
-	dst.m_left  =( 0.0f + m_x) + (50.0f * m_px);
-	dst.m_right =(50.0f + m_x) + (50.0f * m_px);
-	dst.m_bottom=(50.0f + m_y) + (50.0f * m_py);
+	//表示 Heroと同じ位置に向き方向に50.0fずらして、
+	dst.m_top   =( 0.0f + m_y) + (50.0f * m_py) + (50.0f * (m_py + m_py * m_py) / 2);
+	dst.m_left  =( 0.0f + m_x) + (50.0f * m_px) + (50.0f * (m_px + m_px * m_px) / 2);
+	dst.m_right =(50.0f + m_x) + (50.0f * m_px) - (50.0f * (m_px + m_px * m_px) / 2);
+	dst.m_bottom=(50.0f + m_y) + (50.0f * m_py) - (50.0f * (m_py + m_py * m_py) / 2);
 
 	//描画
 	Draw::Draw(2, &src, &dst, c, 0.0f);
