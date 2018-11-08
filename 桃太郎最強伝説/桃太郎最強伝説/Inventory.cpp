@@ -3,6 +3,7 @@
 #include "GameL\WinInputs.h"
 #include "GameL\SceneManager.h"
 #include "GameL\DrawFont.h"
+#include "GameL\HitBoxManager.h"
 
 #include <stdlib.h>
 #include <time.h>
@@ -11,12 +12,21 @@
 
 void CObjInventory::Init()
 {
+ 	bool item_id[ITEM_KIND][ITEM_NUM] =
+	{
+		true, false, false, false, false,  	//0î‘Å@Ç∑Ç‡Ç‡
+	};
+
+
 }
 
 void CObjInventory::Action()
 {
+
+
 }
 
 void CObjInventory::Draw()
 {
+
 }

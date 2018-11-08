@@ -5,7 +5,7 @@
 #include "UtilityModule.h"
 #include "GameL\WinInputs.h"
 #include "GameL\HitBoxManager.h"
-
+#include "Inventory.h"
 //使用するネームスペース
 using namespace GameL;
 
@@ -158,7 +158,7 @@ void CObjHero::Action()
 		m_hp -= 1;
 	}
 
-	if (hit->CheckObjNameHit(ITEM_PEACH) != nullptr)
+	else if (hit->CheckObjNameHit(ITEM_PEACH) != nullptr)
 	{
 		m_hp += 1; //HPを1回復
 	}
@@ -166,10 +166,9 @@ void CObjHero::Action()
 	{
 		m_hp += 3; //HPを３回復
 	}
-	/*
 	else if (hit->CheckObjNameHit(ITEM_PLUM) != nullptr)
 	{
-		m_hp += 3;
+		//item_id[0] += 1;
 	}
 	else if (hit->CheckObjNameHit(ITEM_HORN) != nullptr)
 	{
@@ -186,7 +185,7 @@ void CObjHero::Action()
 	else if (hit->CheckObjNameHit(ITEM_SILVER_BULLION) != nullptr)
 	{
 		;
-	}　アイテム効果試作*/
+	}
 	//HPが0になったら破棄
 	if (m_hp <= 0)
 	{

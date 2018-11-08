@@ -59,7 +59,7 @@ struct UserData
 //ゲーム内で使用されるグローバル変数・定数・列挙--
 enum ITEM_ID
 {
-	ITEM_PEACH,				//アイテム　桃です
+	ITEM_PEACH,				//アイテム　桃
 	ITEM_YELLOW_PEACH,		//アイテム　黄桃
 	ITEM_PLUM,				//アイテム　すもも
 	ITEM_HORN,				//アイテム　つの

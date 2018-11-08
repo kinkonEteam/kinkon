@@ -5,6 +5,9 @@
 //使用するネームスペース
 using namespace GameL;
 
+#define ITEM_KIND (2)
+#define ITEM_NUM (6)
+
 
 //オブジェクト：キャラクターブロック
 class CObjInventory : public CObj
@@ -18,11 +21,9 @@ public:
 private:
 	float m_x;	//アイテムヒットボックス用
 	float m_y;	//アイテムヒットボックス用
-	int m_id;	//アイテムID
-	int pb;		//確率用変数
-	bool m_del;	//削除チェック
+	bool item_id[ITEM_KIND][ITEM_NUM];//アイテム保存用:[種類][個数]
 
-
+	
 };
 
 
