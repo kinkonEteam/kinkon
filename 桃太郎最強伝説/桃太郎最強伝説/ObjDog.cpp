@@ -3,7 +3,9 @@
 #include "GameL\WinInputs.h"
 #include "GameL\SceneManager.h"
 #include "GameL\DrawFont.h"
+#include "GameL\HitBoxManager.h"
 
+#include <stdlib.h>
 #include "ObjDog.h"
 #include "GameHead.h"
 
@@ -14,7 +16,11 @@ using namespace GameL;
 //イニシャライズ
 void CObjDog::Init()
 {
+	m_x = 100; //当たり判定（場所）（仮）
+	m_y = 100;	//当たり判定（場所）（仮）
 
+	//お供のヒットボックスを作成
+	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_RED, OBJ_DOG, 1);
 }
 
 //アクション

@@ -3,49 +3,26 @@
 #include"GameL\HitBoxManager.h"
 
 #include"GameHead.h"
-#include"ObjEnemy3.h"
+#include"ObjEnemy2.h"
 
 //使用するネームスペース
 using namespace GameL;
 //イニシャライズ
-void CObjEnemy3::Init()
+void CObjEnemy2::Init()
 {
-	m_x = 600;
-	m_y = 300;
+	m_x = 0;
+	m_y = 0;
 
-	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_ENEMY, OBJ_ENEMY3, 1);
+	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_ENEMY, OBJ_ENEMY2, 1);
 }
 //アクション
-void CObjEnemy3::Action()
+void CObjEnemy2::Action()
 {
-
-	m_vx = -1.0f;
-	m_vy = 0.0f;
-
-	float r = 0.0f;
-	r = m_vx*m_vx + m_vy*m_vy;
-	r = sqrt(r);
-	if (r == 0.0f)
-	{
-		;
-	}
-	else
-	{
-		m_vx = 1.0f / r*m_vx;
-		m_vy = 1.0f / r*m_vy;
-	}
-	m_vx *= 3.0f;
-	m_vy *= 3.0f;
-
-	m_x += m_vx;
-	m_y *= m_vy;
-
 	CHitBox* hit = Hits::GetHitBox(this);
 	hit->SetPos(m_x, m_y);
-
 }
 //ドロー
-void CObjEnemy3::Draw()
+void CObjEnemy2::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
@@ -62,5 +39,5 @@ void CObjEnemy3::Draw()
 	dst.m_right = 0.0f + m_x;
 	dst.m_bottom = 32.0f + m_y;
 
-	Draw::Draw(7, &src, &dst, c, 0.0f);
+	Draw::Draw(1, &src, &dst, c, 0.0f);
 }

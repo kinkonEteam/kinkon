@@ -12,14 +12,41 @@ void CObjEnemy::Init()
 {
 	m_x = 600;
 	m_y = 400;
+	m_vx = 0.0f;
+	m_vy = 0.0f;
+
 
 	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_ENEMY, OBJ_ENEMY, 1);
+
+	m_hit_up = false;
+	m_hit_down = false;
+	m_hit_left = false;
+	m_hit_right = false;
+
 }
 //アクション
 void CObjEnemy::Action()
 {
-	CHitBox* hit = Hits::GetHitBox(this);
-	hit->SetPos(m_x, m_y);
+	m_vx = -10.0f;
+	m_vy = 0.0f;
+
+	float r = 0.0f;
+	r = m_vx*m_vx + m_vy*m_vy;
+	r = sqrt(r);
+	if (r == 0.0f)
+	{
+		;
+	}
+	else
+	{
+		m_vx = 1.0f / r*m_vx;
+		m_vy = 1.0f / r*m_vy;
+	}
+	m_vx *= 2.0f;
+	m_vy *= 2.0f;
+
+	m_x += m_vx;
+	m_y *= m_vy;
 }
 //ドロー
 void CObjEnemy::Draw()
