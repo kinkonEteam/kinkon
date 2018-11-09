@@ -49,7 +49,7 @@ void CObjHero::Action()
 			m_Sf = false;
 		}
 	}
-	else
+	else//放している場合
 		m_Sf = true;
 
 	//キジ攻撃の入力判定、押しっぱなし制御
@@ -64,9 +64,10 @@ void CObjHero::Action()
 			m_Kf = false;
 		}
 	}
-	else
+	else//放している場合
+	{
 		m_Kf = true;
-
+	}
 	//主人公の移動にベクトルを入れる
 	if (Input::GetVKey(VK_RIGHT) == true)//→
 	{

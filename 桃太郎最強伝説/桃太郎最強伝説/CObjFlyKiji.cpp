@@ -20,7 +20,7 @@ CObjFlyKiji::CObjFlyKiji(float x, float y, int pos)//渡されるだけの変数
 //イニシャライズ
 void CObjFlyKiji::Init()
 {
-	m_px = 0;			//Swordの座標	
+	m_px = 0;			//Kijiの座標	
 	m_py = 0;
 	m_vx = 0;    //X方向の速度用変数
 	m_vy = 0;    //Y方向の速度用変数
@@ -78,7 +78,7 @@ void CObjFlyKiji::Action()
 	hit->SetPos(m_x + (50.0f * m_px), m_y + (50.0f * m_py));
 
 	//UtilityModuleのチェック関数に場所と領域を渡し、領域外か判定
-	bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 800.0f, 600.0f);
+	bool check = CheckWindow(m_x, m_y, 0.0f, 0.0f, 800.0f, 600.0f);
 	if (check == false)
 	{
 		this->SetStatus(false);  //自身を削除
