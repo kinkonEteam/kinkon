@@ -66,7 +66,10 @@ void CObjHero::Action()
 	}
 	else//放している場合
 	{
-		m_Kf = true;
+		/*if (m_Kf == false) {
+				CObjFlyKiji* kiji = (CObjFlyKiji*)Objs::GetObj(OBJ_FLYKIJI);
+				m_Kf = kiji->GetF();
+		}*/
 	}
 	//主人公の移動にベクトルを入れる
 	if (Input::GetVKey(VK_RIGHT) == true)//→
@@ -117,30 +120,12 @@ void CObjHero::Action()
 
 	//スクロール
 	CObjMap1*b = (CObjMap1*)Objs::GetObj(OBJ_MAP1);
-	//左方
-//	if (m_px < 80)
-	{
-		m_px = 0;
-		b->SetScroll(b->GetScroll());
-	}
-	//右方
-//	if (m_px > 300)
-	{
+
 		m_px = 400;
 		b->SetScroll(b->GetScroll());
-	}
-	//上方
-	//	if (m_py > 80)
-	{
-		m_py = 0;
-		b->SetScrolly(b->GetScrolly());
-	}
-	//下方
-	//	if (m_py > 80)
-	{
+
 		m_py = 300;
 		b->SetScrolly(b->GetScrolly());
-	}
 
 /*	//ブロックとの当たり判定
 	CObjMap1*pb = (CObjMap1*)Objs::GetObj(OBJ_MAP1);

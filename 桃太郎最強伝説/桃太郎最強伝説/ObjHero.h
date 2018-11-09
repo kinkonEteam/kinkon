@@ -23,6 +23,8 @@ class CObjHero :public CObj
 		void SetY(float y) { m_py = y; }
 		void SetVY(float vy) { m_vy = vy; }
 		void SetVX(float vx) { m_vx = vx; }
+
+		void SetKf(float f) { m_Kf = f; }
 	private:
 	//主人公の位置と移動用
 		int x, y;		//初期位置設定用変数

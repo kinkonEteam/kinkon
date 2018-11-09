@@ -28,6 +28,7 @@ void CObjFlyKiji::Init()
 	m_ani_time = 0;		//アニメーションタイム
 	m_ani_frame = 0;	//フレーム
 	m_s = 1;			//アニメーション緩急*/
+	m_f = false;
 
 	Hits::SetHitBox(this, m_x, m_y, 50, 50, ELEMENT_MAGIC, OBJ_FLYKIJI, 1);
 }
@@ -81,6 +82,9 @@ void CObjFlyKiji::Action()
 	bool check = CheckWindow(m_x, m_y, 0.0f, 0.0f, 800.0f, 600.0f);
 	if (check == false)
 	{
+		//主人公の位置を取得
+		CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
+		hero->SetKf(true);
 		this->SetStatus(false);  //自身を削除
 		Hits::DeleteHitBox(this);//HitBoxを削除
 	}

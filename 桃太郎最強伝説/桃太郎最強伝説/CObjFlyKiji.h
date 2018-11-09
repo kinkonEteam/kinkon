@@ -16,7 +16,7 @@ public:	    //‚±‚±‚ÅˆÊ’u‚ÆŒü‚«‚ğ“n‚³‚ê‚é
 
 	float GetF() { return m_f; }
 private:
-	bool m_f;		//UŒ‚§Œä
+	bool m_f = true;//UŒ‚§Œä
 
 	int m_pos;		//ålŒö‚ÌŒü‚«Ši”[
 	int m_px;		//Œü‚«‚É‚æ‚éˆÊ’u•ÏX—px,y
