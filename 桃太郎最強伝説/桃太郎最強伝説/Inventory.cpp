@@ -12,16 +12,16 @@
 
 void CObjInventory::Init()
 {
- 	bool item_id[ITEM_KIND][ITEM_NUM] =
-	{
-		true, false, false, false, false,  	//0î‘Å@Ç∑Ç‡Ç‡
-	};
-
+	PEACH +1;
 
 }
 
 void CObjInventory::Action()
 {
+	if (PLUM == true)
+	{
+
+	}
 
 
 }
