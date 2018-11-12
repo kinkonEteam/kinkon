@@ -52,8 +52,8 @@
     <Filter Include="ソース ファイル\GameTitle">
       <UniqueIdentifier>{08d31525-e54a-4624-8ff2-92956de210f5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Item">
-      <UniqueIdentifier>{74e159ce-7830-48b1-8ab8-135f7e97ade6}</UniqueIdentifier>
+    <Filter Include="ソース ファイル\Events">
+      <UniqueIdentifier>{df7492ec-fcd7-4943-a957-95358be37316}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -206,6 +206,9 @@
     </ClCompile>
     <ClCompile Include="ObjClub.cpp">
       <Filter>ソース ファイル\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjTalk.cpp">
+      <Filter>ソース ファイル\Events</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -361,6 +364,9 @@
     </ClInclude>
     <ClInclude Include="ObjPlum.h">
       <Filter>ソース ファイル\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjTalk.h">
+      <Filter>ソース ファイル\Events</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

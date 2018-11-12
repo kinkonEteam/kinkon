@@ -25,6 +25,8 @@ enum OBJ_NAME
 	OBJ_TITLE,
 	OBJ_GAME_OVER,
 	OBJ_CLEAR,
+	OBJ_TALK,
+
 };
 //------------------------------------------------
 
@@ -99,6 +101,7 @@ enum ITEM
 #include"Inventory.h"
 #include"ObjGameOver.h"
 #include"ObjClear.h"
+#include "ObjTalk.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
