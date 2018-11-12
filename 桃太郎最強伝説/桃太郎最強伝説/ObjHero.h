@@ -8,7 +8,7 @@ using namespace GameL;
 class CObjHero :public CObj
 {
 	public:
-		CObjHero() {};
+		CObjHero(float x, float y) ;
 		~CObjHero() {};
 		void Init();	 //イニシャライズ
 		void Action();	 //アクション
@@ -24,8 +24,8 @@ class CObjHero :public CObj
 		void SetVY(float vy) { m_vy = vy; }
 		void SetVX(float vx) { m_vx = vx; }
 	private:
+
 	//主人公の位置と移動用
-		int x, y;		//初期位置設定用変数
 		float m_px;		 //位置
 		float m_py;
 		float m_vx;		 //移動ベクトル用変数

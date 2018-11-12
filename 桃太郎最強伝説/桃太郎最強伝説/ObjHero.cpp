@@ -9,11 +9,15 @@
 //使用するネームスペース
 using namespace GameL;
 
+CObjHero::CObjHero(float x, float y)
+{
+	m_px = x;
+	m_py = y;
+}
+
 //イニシャライズ
 void CObjHero::Init()
 {
-	m_px = 0.0f;		//位置
-	m_py = 0.0f;
 	m_vx = 0.0f;		//移動ベクトル
 	m_vy = 0.0f;
 
@@ -23,7 +27,7 @@ void CObjHero::Init()
 	m_ani_time = 0;
 	m_ani_frame = 1;	//静止フレーム
 
-						//HitBox作成とサイズ、エレメント、オブジェクトを設定
+	//HitBox作成とサイズ、エレメント、オブジェクトを設定
 	Hits::SetHitBox(this, m_px, m_py, 50, 50, ELEMENT_PLAYER, OBJ_HERO, 1);
 }
 
@@ -100,37 +104,17 @@ void CObjHero::Action()
 
 	//スクロール
 	CObjMap1*b = (CObjMap1*)Objs::GetObj(OBJ_MAP1);
-	//左方
-//	if (m_px < 80)
-	{
-		m_px = 0;
-		b->SetScroll(b->GetScroll());
-	}
-	//右方
-//	if (m_px > 300)
-	{
 		m_px = 400;
-		b->SetScroll(b->GetScroll());
-	}
-	//上方
-	//	if (m_py > 80)
-	{
-		m_py = 0;
-		b->SetScrolly(b->GetScrolly());
-	}
-	//下方
-	//	if (m_py > 80)
-	{
+		b->SetScrollx(b->GetScrollx());
 		m_py = 300;
 		b->SetScrolly(b->GetScrolly());
-	}
 
-/*	//ブロックとの当たり判定
+	//ブロックとの当たり判定
 	CObjMap1*pb = (CObjMap1*)Objs::GetObj(OBJ_MAP1);
 	pb->Map1Hit(&m_px, &m_py, true,
 		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vx, &m_vy,
 		&m_block_type
-	);*/
+	);
 
 	//HitBoxの内容を更新
 	CHitBox*hit = Hits::GetHitBox(this);

@@ -7,29 +7,32 @@ using namespace GameL;
 
 #define ITEM_TOP	(111.0f)
 #define ITEM_LEFT	(256.0f)
-#define ITEM_SIZE	(32.0f)
+#define ITEM_SIZE	(50.0f)
 
 #define ITEM_LEFT_OFF_SET	(2)
 #define ITEM_TOP_OFF_SET	(1)
-#define ITEM_RESOURCE_TOP	(32.0f)
-#define ITEM_RESOURCE_SIZE	(32.0f)
+#define ITEM_RESOURCE_TOP	(50.0f)
+#define ITEM_RESOURCE_SIZE	(50.0f)
 
 //オブジェクト：キャラクターブロック
 class CObjItem : public CObj
 {
-public:
-	CObjItem() {};
-	~CObjItem() {};
-	void Init();	//イニシャライズ
-	void Action();	//アクション
-	void Draw();	//ドロー
-private:
-	float m_x;	//アイテムヒットボックス用
-	float m_y;	//アイテムヒットボックス用
-	int m_id;	//アイテムID
-	int pb;
+	public:
+		CObjItem(float x,float y);
+		~CObjItem() {};
+		void Init();	//イニシャライズ
+		void Action();	//アクション
+		void Draw();	//ドロー
+	private:
+		//アイテムヒットボックス用
+		float m_x;	
+		float m_y;
+		//マップ位置設定用
+		float m_px;
+		float m_py;
 
-
+		int m_id;	//アイテムID
+		int pb;
 };
 
 

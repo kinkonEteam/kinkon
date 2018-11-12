@@ -62,13 +62,11 @@ void CScenefloor1::InitScene()
 	//グラフィック読み込み
 	Draw::LoadImageW(L"マップチップ.png", 1, TEX_SIZE_141_47);	//マップ
 	Draw::LoadImage(L"桃太郎.png", 0, TEX_SIZE_512);	//桃太郎
+	Draw::LoadImage(L"アイテム.png", 4, TEX_SIZE_512);
 
 	//階層1オブジェクト作成
 	CObjMap1* objb = new CObjMap1(map);
 	Objs::InsertObj(objb, OBJ_MAP1, 1);
-	//主人公オブジェクト作成
-	CObjHero* obj = new CObjHero();//オブジェクト作成
-	Objs::InsertObj(obj, OBJ_HERO, 10);//マネージャに登録
 }
 
 //実行中メソッド
