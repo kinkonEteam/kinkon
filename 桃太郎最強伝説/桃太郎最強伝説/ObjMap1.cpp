@@ -3,6 +3,7 @@
 #include <time.h>
 #include"GameL\DrawTexture.h"
 #include"GameL\WinInputs.h"
+#include <Windows.h>
 #include"GameL\SceneManager.h"
 #include"GameL\SceneObjManager.h"
 

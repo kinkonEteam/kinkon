@@ -58,15 +58,15 @@ struct UserData
 
 
 //ゲーム内で使用されるグローバル変数・定数・列挙--
-enum ITEM_ID
+enum ITEM
 {
-	ITEM_PEACH,				//アイテム　桃
-	ITEM_YELLOW_PEACH,		//アイテム　黄桃
-	ITEM_PLUM,				//アイテム　すもも
-	ITEM_HORN,				//アイテム　つの
-	ITEM_GOLD_BULLION,		//アイテム　金の延べ棒
-	ITEM_SILVER_BULLION,	//アイテム　銀の延べ棒
-	ITEM_CLUB,				//アイテム　棍棒
+	PEACH,				//アイテム　桃
+	YELLOW_PEACH,		//アイテム　黄桃
+	PLUM,				//アイテム　すもも
+	HORN,				//アイテム　つの
+	GOLD_BULLION,		//アイテム　金の延べ棒
+	SILVER_BULLION,	//アイテム　銀の延べ棒
+	CLUB,				//アイテム　棍棒
 };
 //------------------------------------------------
 //ゲーム内で使用するクラスヘッダ------------------

@@ -26,11 +26,11 @@ void CObjItem::Init()
 
 	if (0 <= pb  && pb <= 50)
 	{
-		m_id = ITEM_CLUB;
+		m_id = CLUB;
 	}
 	else
 	{
-		m_id = ITEM_GOLD_BULLION;
+		m_id = GOLD_BULLION;
 	}
 
 	//アイテムのヒットボックスを作成
@@ -66,7 +66,7 @@ void CObjItem::Draw()
 	
 	//切り取り位置の設定
 	src.m_top =ITEM_RESOURCE_TOP;
-	src.m_left = ITEM_RESOURCE_SIZE*(m_id-ITEM_PEACH)+ITEM_LEFT_OFF_SET;
+	src.m_left = ITEM_RESOURCE_SIZE*(m_id-PEACH)+ITEM_LEFT_OFF_SET;
 	src.m_right = src.m_left + ITEM_SIZE + ITEM_LEFT_OFF_SET;
 	src.m_bottom = src.m_top + ITEM_SIZE - ITEM_TOP_OFF_SET;
 

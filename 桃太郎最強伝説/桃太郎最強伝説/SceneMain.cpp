@@ -16,6 +16,7 @@ using namespace GameL;
 #include "SceneMain.h"
 #include "GameHead.h"
 
+
 //コンストラクタ
 CSceneMain::CSceneMain()
 {
