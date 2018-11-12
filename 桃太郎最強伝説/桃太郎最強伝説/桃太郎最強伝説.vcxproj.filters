@@ -162,12 +162,6 @@
     <ClCompile Include="Inventory.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Project2\Project2\ObjTitle.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Project2\Project2\SceneTitle.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="SceneGameOver.cpp">
       <Filter>ソース ファイル\GameOver</Filter>
     </ClCompile>
@@ -185,6 +179,12 @@
     </ClCompile>
     <ClCompile Include="ObjPheasant.cpp">
       <Filter>ソース ファイル\Character\おとも</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneClear.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjClear.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -305,12 +305,6 @@
     <ClInclude Include="SceneTitle.h">
       <Filter>ソース ファイル\GameTitle</Filter>
     </ClInclude>
-    <ClInclude Include="E:\D\STG\STG\SceneTitle.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="E:\D\STG\STG\ObjTitle.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="ObjMonke.h">
       <Filter>ソース ファイル\Character\おとも</Filter>
     </ClInclude>
@@ -321,6 +315,12 @@
       <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="CObjFlyKiji.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ScecneClear.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjClear.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
