@@ -86,6 +86,9 @@ void CSceneMain::InitScene()
 
 	//外部グラフィックを読み込み7番に登録(151*200ピクセル)
 	Draw::LoadImage(L"鬼原画 緑鬼 新二.png", 7, TEX_SIZE_151_200);
+
+	//外部グラフィックを読み込み7番に登録(512*512)
+	Draw::LoadImage(L"word.png", 8, TEX_SIZE_512);
 	
 	
 	//主人公オブジェクト作成
@@ -119,6 +122,10 @@ void CSceneMain::InitScene()
 	//緑鬼オブジェクト作成
 	CObjEnemy3* e3 = new CObjEnemy3();
 	Objs::InsertObj(e3, OBJ_ENEMY3, 1);
+
+	//オブジェクト作成
+	CObjTalk* t = new CObjTalk();
+	Objs::InsertObj(t, OBJ_TALK, 3);
 
 	//階層1オブジェクト作成
 	CObjMap1* objb = new CObjMap1(map);
