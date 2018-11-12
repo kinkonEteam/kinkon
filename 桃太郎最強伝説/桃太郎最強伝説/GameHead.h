@@ -24,6 +24,7 @@ enum OBJ_NAME
 	OBJ_PHEASANT,
 	OBJ_TITLE,
 	OBJ_GAME_OVER,
+	OBJ_CLEAR,
 	OBJ_TALK,
 
 };
@@ -59,15 +60,15 @@ struct UserData
 
 
 //ゲーム内で使用されるグローバル変数・定数・列挙--
-enum ITEM_ID
+enum ITEM
 {
-	ITEM_PEACH,				//アイテム　桃
-	ITEM_YELLOW_PEACH,		//アイテム　黄桃
-	ITEM_PLUM,				//アイテム　すもも
-	ITEM_HORN,				//アイテム　つの
-	ITEM_GOLD_BULLION,		//アイテム　金の延べ棒
-	ITEM_SILVER_BULLION,	//アイテム　銀の延べ棒
-	ITEM_CLUB,				//アイテム　棍棒
+	PEACH,				//アイテム　桃
+	YELLOW_PEACH,		//アイテム　黄桃
+	PLUM,				//アイテム　すもも
+	HORN,				//アイテム　つの
+	GOLD_BULLION,		//アイテム　金の延べ棒
+	SILVER_BULLION,	//アイテム　銀の延べ棒
+	CLUB,				//アイテム　棍棒
 };
 //------------------------------------------------
 //ゲーム内で使用するクラスヘッダ------------------
@@ -84,7 +85,10 @@ enum ITEM_ID
 #include "ObjMap5.h"
 #include "ObjBoss.h"
 #include "ObjHero.h"
-#include"ObjItem.h"
+#include"ObjPeach.h"
+#include "ObjYellowPeach.h"
+#include "ObjPlum.h"
+#include "ObjHone.h"
 #include"ObjDog.h"
 #include"ObjMonke.h"
 #include"ObjPheasant.h"
@@ -96,6 +100,7 @@ enum ITEM_ID
 #include"ObjTitle.h"
 #include"Inventory.h"
 #include"ObjGameOver.h"
+#include"ObjClear.h"
 #include "ObjTalk.h"
 //------------------------------------------------
 
@@ -110,9 +115,10 @@ enum ITEM_ID
 #include "SceneMain.h"
 #include "SceneTitle.h"
 #include"SceneGameOver.h"
+#include"ScecneClear.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
 //ゲーム開始時のシーンクラス登録
-#define SET_GAME_START  CSceneTitle
+#define SET_GAME_START  CScenefloor1
 //-----------------------------------------------

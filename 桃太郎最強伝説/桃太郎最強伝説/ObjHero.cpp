@@ -9,11 +9,15 @@
 //使用するネームスペース
 using namespace GameL;
 
+CObjHero::CObjHero(float x, float y)
+{
+	m_px = x;
+	m_py = y;
+}
+
 //イニシャライズ
 void CObjHero::Init()
 {
-	m_px = 0.0f;		//位置
-	m_py = 0.0f;
 	m_vx = 0.0f;		//移動ベクトル
 	m_vy = 0.0f;
 
@@ -118,20 +122,18 @@ void CObjHero::Action()
 
 	//スクロール
 	CObjMap1*b = (CObjMap1*)Objs::GetObj(OBJ_MAP1);
-
 		m_px = 400;
-		b->SetScroll(b->GetScroll());
-
+		b->SetScrollx(b->GetScrollx());
 		m_py = 300;
 		b->SetScrolly(b->GetScrolly());
 
-/*	//ブロックとの当たり判定
+	//ブロックとの当たり判定
 	CObjMap1*pb = (CObjMap1*)Objs::GetObj(OBJ_MAP1);
 	pb->Map1Hit(&m_px, &m_py, true,
 		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vx, &m_vy,
 		&m_block_type
-	);*/
-	
+	);
+
 	//HitBoxの内容を更新
 	CHitBox*hit = Hits::GetHitBox(this);
 	hit->SetPos(m_px, m_py);
@@ -148,34 +150,27 @@ void CObjHero::Action()
 	{
 		m_hp -= 1;
 	}
+	//アイテムに当たった場合以下の処理をする
+	if (hit->CheckObjNameHit(ELEMENT_ITEM) != nullptr)
+	{
+		switch (ELEMENT_ITEM)
+		{
+		case PEACH:	
+			m_hp += 1; //HPを1回復
+		break;
 
-	else if (hit->CheckObjNameHit(ITEM_PEACH) != nullptr)
-	{
-		m_hp += 1; //HPを1回復
-	}
-	else if (hit->CheckObjNameHit(ITEM_PLUM) != nullptr)
-	{
-		m_hp += 3; //HPを３回復
-	}
-	else if (hit->CheckObjNameHit(ITEM_PLUM) != nullptr)
-	{
-		//item_id[0] += 1;
-	}
-	else if (hit->CheckObjNameHit(ITEM_HORN) != nullptr)
-	{
-		m_hp += 3;
-	}
-	else if (hit->CheckObjNameHit(ITEM_CLUB) != nullptr)
-	{
-		m_hp += 3;
-	}
-	else if (hit->CheckObjNameHit(ITEM_GOLD_BULLION) != nullptr)
-	{
-		m_hp += 3;
-	}
-	else if (hit->CheckObjNameHit(ITEM_SILVER_BULLION) != nullptr)
-	{
-		;
+		case YELLOW_PEACH: //HPを3回復
+			;
+		break;
+
+		case PLUM: //インベントリに追加
+			break;
+
+		case CLUB: //移動速度を0.8倍する。
+			break;
+		}
+
+		
 	}
 	//HPが0になったら破棄
 	if (m_hp <= 0)

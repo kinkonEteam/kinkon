@@ -16,6 +16,7 @@ using namespace GameL;
 #include "SceneMain.h"
 #include "GameHead.h"
 
+
 //コンストラクタ
 CSceneMain::CSceneMain()
 {
@@ -90,14 +91,25 @@ void CSceneMain::InitScene()
 	//外部グラフィックを読み込み7番に登録(512*512)
 	Draw::LoadImage(L"word.png", 8, TEX_SIZE_512);
 	
-	
+	//外部グラフィックファイルを読み込み8番に登録
+	Draw::LoadImage(L"鬼原画 赤鬼 新二.png", 8, TEX_SIZE_151_200);
+
 	//主人公オブジェクト作成
-	CObjHero* obj = new CObjHero();		//オブジェクト作成
-	Objs::InsertObj(obj, OBJ_HERO, 1);	//マネージャに登録
+//	CObjHero* obj = new CObjHero();		//オブジェクト作成
+	//Objs::InsertObj(obj, OBJ_HERO, 1);	//マネージャに登録
 
 	//アイテムオブジェクト作成
-	CObjItem* i = new CObjItem();		//オブジェクト作成
+	CObjPeach* i = new CObjPeach();		//オブジェクト作成
 	Objs::InsertObj(i, OBJ_ITEM, 1);	//マネージャに登録
+
+	CObjYellowPeach* yp = new CObjYellowPeach();		//オブジェクト作成
+	Objs::InsertObj(yp, OBJ_ITEM, 1);	//マネージャに登録
+
+	CObjPlum* pl = new CObjPlum();		//オブジェクト作成
+	Objs::InsertObj(pl, OBJ_ITEM, 1);	//マネージャに登録
+
+	CObjHone* h = new CObjHone();		//オブジェクト作成
+	Objs::InsertObj(h, OBJ_ITEM, 1);	//マネージャに登録
 
 	//犬オブジェクト作成
 	CObjDog* D = new CObjDog();			//オブジェクト作成
@@ -130,6 +142,10 @@ void CSceneMain::InitScene()
 	//階層1オブジェクト作成
 	CObjMap1* objb = new CObjMap1(map);
 	Objs::InsertObj(objb, OBJ_MAP1, 1);
+
+	//ボス敵機オブジェクト
+	CObjBoss*obj_boss_enemy = new CObjBoss(300, 300);
+	Objs::InsertObj(obj_boss_enemy, OBJ_BOSS,2);
 }
 
 //ゲームメイン実行中メソッド

@@ -8,7 +8,7 @@ using namespace GameL;
 class CObjHero :public CObj
 {
 	public:
-		CObjHero() {};
+		CObjHero(float x, float y) ;
 		~CObjHero() {};
 		void Init();	 //イニシャライズ
 		void Action();	 //アクション
@@ -26,8 +26,8 @@ class CObjHero :public CObj
 
 		void SetKf(float f) { m_Kf = f; }
 	private:
+
 	//主人公の位置と移動用
-		int x, y;		//初期位置設定用変数
 		float m_px;		 //位置
 		float m_py;
 		float m_vx;		 //移動ベクトル用変数
@@ -48,7 +48,8 @@ class CObjHero :public CObj
 		bool m_hit_left;
 		bool m_hit_right;
 
-
+		int item_num[5];	//アイテムの所持数確認用
 		//踏んでいるblockの種類を確認用
 		int m_block_type;
+
 };
