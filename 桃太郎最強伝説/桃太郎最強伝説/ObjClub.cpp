@@ -14,6 +14,12 @@
 //使用するネームスペース
 using namespace GameL;
 
+CObjItem::CObjItem(float x, float y)
+{
+	m_px = x;
+	m_py = y;
+}
+
 //イニシャライズ
 void CObjPeach::Init()
 {

@@ -26,6 +26,7 @@ void CObjMap2::Init()
 	y = -1250;
 	m_scroll = 0.0f;
 
+
 	//ŠK’ioŒ»ˆÊ’u‚Ìİ’è
 	while (1)
 	{

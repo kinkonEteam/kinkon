@@ -110,12 +110,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Project2\Project2\ObjTitle.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\Project2\Project2\SceneTitle.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="CObjFlyKiji.cpp" />
     <ClCompile Include="CObjSword.cpp" />
     <ClCompile Include="Inventory.cpp" />
@@ -150,6 +144,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ObjYellowPeach.cpp" />
+    <ClCompile Include="SceneClear.cpp" />
     <ClCompile Include="Scenefloor2.cpp" />
     <ClCompile Include="GameL\Audio.cpp" />
     <ClCompile Include="GameL\DirectXDevice.cpp" />
@@ -194,10 +189,6 @@
   <ItemGroup>
     <ClInclude Include="CObjFlyKiji.h" />
     <ClInclude Include="CObjSword.h" />
-    <ClInclude Include="E:\D\STG\STG\SceneTitle.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="E:\D\STG\STG\ObjTitle.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="ObjBoss.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -205,6 +196,7 @@
     <ClInclude Include="ObjClub.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
+    <ClInclude Include="ObjClear.h" />
     <ClInclude Include="ObjDog.h" />
     <ClInclude Include="ObjEnemy.h" />
     <ClInclude Include="ObjEnemy2.h" />
@@ -230,6 +222,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ObjYellowPeach.h" />
+    <ClInclude Include="ScecneClear.h" />
     <ClInclude Include="Scenefloor4.h" />
     <ClInclude Include="Scenefloor2.h" />
     <ClInclude Include="GameHead.h" />

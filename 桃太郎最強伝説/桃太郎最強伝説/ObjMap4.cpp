@@ -119,6 +119,10 @@ void CObjMap4::Draw()
 
 				BlockDraw(94.0f, 0.0f, &dst, c);
 			}
+			else if (m_map[i][j] == 5)
+			{
+				
+			}
 			else if(m_map[i][j] == 0)
 			{
 				//•Ç

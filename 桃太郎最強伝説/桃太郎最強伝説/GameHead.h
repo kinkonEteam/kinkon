@@ -24,6 +24,7 @@ enum OBJ_NAME
 	OBJ_PHEASANT,
 	OBJ_TITLE,
 	OBJ_GAME_OVER,
+	OBJ_CLEAR,
 };
 //------------------------------------------------
 
@@ -97,6 +98,7 @@ enum ITEM
 #include"ObjTitle.h"
 #include"Inventory.h"
 #include"ObjGameOver.h"
+#include"ObjClear.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -110,9 +112,10 @@ enum ITEM
 #include "SceneMain.h"
 #include "SceneTitle.h"
 #include"SceneGameOver.h"
+#include"ScecneClear.h"
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
 //ゲーム開始時のシーンクラス登録
-#define SET_GAME_START  CSceneTitle
+#define SET_GAME_START  CScenefloor1
 //-----------------------------------------------
