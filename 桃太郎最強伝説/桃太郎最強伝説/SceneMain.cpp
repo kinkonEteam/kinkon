@@ -92,12 +92,12 @@ void CSceneMain::InitScene()
 	Draw::LoadImage(L"鬼原画 赤鬼 新二.png", 8, TEX_SIZE_151_200);
 
 	//主人公オブジェクト作成
-	CObjHero* obj = new CObjHero();		//オブジェクト作成
-	Objs::InsertObj(obj, OBJ_HERO, 1);	//マネージャに登録
+//	CObjHero* obj = new CObjHero();		//オブジェクト作成
+	//Objs::InsertObj(obj, OBJ_HERO, 1);	//マネージャに登録
 
-	//アイテムオブジェクト作成
+/*	//アイテムオブジェクト作成
 	CObjItem* i = new CObjItem();		//オブジェクト作成
-	Objs::InsertObj(i, OBJ_ITEM, 1);	//マネージャに登録
+	Objs::InsertObj(i, OBJ_ITEM, 1);	//マネージャに登録*/
 
 	//犬オブジェクト作成
 	CObjDog* D = new CObjDog();			//オブジェクト作成

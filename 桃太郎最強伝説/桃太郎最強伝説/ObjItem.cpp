@@ -14,11 +14,15 @@
 //使用するネームスペース
 using namespace GameL;
 
+CObjItem::CObjItem(float x, float y)
+{
+	m_px = x;
+	m_py = y;
+}
+
 //イニシャライズ
 void CObjItem::Init()
 {
-	m_x = 128; //当たり判定（場所）（仮）
-	m_y = 128;	//当たり判定（場所）（仮）
 
 	srand((unsigned)time(NULL)); // 乱数の初期化
 
@@ -34,7 +38,7 @@ void CObjItem::Init()
 	}
 
 	//アイテムのヒットボックスを作成
-	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_ITEM, OBJ_ITEM, 1);
+	Hits::SetHitBox(this, m_px, m_py, 50, 50, ELEMENT_ITEM, OBJ_ITEM, 1);
 
 
 }
@@ -71,10 +75,10 @@ void CObjItem::Draw()
 	src.m_bottom = src.m_top + ITEM_SIZE - ITEM_TOP_OFF_SET;
 
 	//表示位置の設定
-	dst.m_top = 128.0f ;
-	dst.m_left = 128.0f;
-	dst.m_right = dst.m_left+ITEM_SIZE;
-	dst.m_bottom = dst.m_top+ITEM_SIZE;
+	dst.m_top = 0.0f + m_py;
+	dst.m_left = 0.0f + m_px;
+	dst.m_right = 50.0f	+ m_px;
+	dst.m_bottom = 50.0f + m_py;
 
 	//描画
 	Draw::Draw(4, &src, &dst, c, 0.0f);
