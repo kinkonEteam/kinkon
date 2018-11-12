@@ -88,7 +88,9 @@ void CSceneMain::InitScene()
 	//外部グラフィックを読み込み7番に登録(151*200ピクセル)
 	Draw::LoadImage(L"鬼原画 緑鬼 新二.png", 7, TEX_SIZE_151_200);
 	
-	
+	//外部グラフィックファイルを読み込み8番に登録
+	Draw::LoadImage(L"鬼原画 赤鬼 新二.png", 8, TEX_SIZE_151_200);
+
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero();		//オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 1);	//マネージャに登録
@@ -124,6 +126,10 @@ void CSceneMain::InitScene()
 	//階層1オブジェクト作成
 	CObjMap1* objb = new CObjMap1(map);
 	Objs::InsertObj(objb, OBJ_MAP1, 1);
+
+	//ボス敵機オブジェクト
+	CObjBoss*obj_boss_enemy = new CObjBoss(300, 300);
+	Objs::InsertObj(obj_boss_enemy, OBJ_BOSS,2);
 }
 
 //ゲームメイン実行中メソッド
