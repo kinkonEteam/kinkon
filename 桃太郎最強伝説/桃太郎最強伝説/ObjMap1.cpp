@@ -30,7 +30,7 @@ void CObjMap1::Init()
 
 
 
-	//アイテム出現
+/*	//アイテム出現
 	for (int a = 0; a < 56; a++)
 	{
 		for (int b = 0; b < 56; b++)
@@ -44,7 +44,7 @@ void CObjMap1::Init()
 			}
 		}
 	}
-
+	*/
 	//主人公出現
 	for (int i = 0; i < 56; i++)
 	{

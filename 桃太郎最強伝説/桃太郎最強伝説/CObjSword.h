@@ -16,6 +16,8 @@ class CObjSword :public CObj
 	private:
 		float m_x;		//“n‚³‚ê‚½ˆÊ’uŠi”[
 		float m_y;
+		float m_px;
+		float m_py;
 		int m_pos;		//ålŒö‚ÌŒü‚«Ši”[
 		int m_sx;		//Œü‚«‚É‚æ‚éˆÊ’u•ÏX—px,y
 		int m_sy;
