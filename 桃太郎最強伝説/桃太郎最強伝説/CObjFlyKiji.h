@@ -4,7 +4,7 @@
 //使用するネームスペース
 using namespace GameL;
 
-//オブジェクト：剣
+//オブジェクト：キジ
 class CObjFlyKiji :public CObj
 {
 public:	    //ここで位置と向きを渡される
@@ -13,12 +13,17 @@ public:	    //ここで位置と向きを渡される
 	void Init();	//イニシャライズ
 	void Action();	//アクション
 	void Draw();	//ドロー
+
+	float GetF() { return m_f; }
 private:
-	float m_x;		//渡された位置格納
-	float m_y;
+	bool m_f = true;//攻撃制御
+
 	int m_pos;		//主人公の向き格納
 	int m_px;		//向きによる位置変更用x,y
 	int m_py;
+
+	float m_x;		//渡された位置格納
+	float m_y;
 	float m_vx;    //X方向の速度用変数
 	float m_vy;    //Y方向の速度用変数
 

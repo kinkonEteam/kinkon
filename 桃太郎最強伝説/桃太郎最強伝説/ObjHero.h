@@ -23,6 +23,8 @@ class CObjHero :public CObj
 		void SetY(float y) { m_py = y; }
 		void SetVY(float vy) { m_vy = vy; }
 		void SetVX(float vx) { m_vx = vx; }
+
+		void SetKf(float f) { m_Kf = f; }
 	private:
 	//主人公の位置と移動用
 		int x, y;		//初期位置設定用変数
@@ -38,8 +40,8 @@ class CObjHero :public CObj
 
 		int m_ani_time;  //アニメーションフレーム動作間隔
 		int m_ani_frame;	//描画フレーム
-		bool m_Sf;			//攻撃間隔制御
-		bool m_Kf;			//キジ攻撃間隔制御
+		bool m_Sf;			//ソード攻撃制御
+		bool m_Kf;			//キジ攻撃制御
 		//blockとの衝突状態確認用
 		bool m_hit_up;
 		bool m_hit_down;

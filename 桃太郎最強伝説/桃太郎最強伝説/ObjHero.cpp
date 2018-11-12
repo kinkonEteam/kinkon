@@ -49,7 +49,7 @@ void CObjHero::Action()
 			m_Sf = false;
 		}
 	}
-	else
+	else//放している場合
 		m_Sf = true;
 
 	//キジ攻撃の入力判定、押しっぱなし制御
@@ -64,8 +64,10 @@ void CObjHero::Action()
 			m_Kf = false;
 		}
 	}
-	else
-		m_Kf = true;
+	else //押してない場合
+	{
+		;//何もしない
+	}
 
 	//主人公の移動にベクトルを入れる
 	if (Input::GetVKey(VK_RIGHT) == true)//→
@@ -116,30 +118,12 @@ void CObjHero::Action()
 
 	//スクロール
 	CObjMap1*b = (CObjMap1*)Objs::GetObj(OBJ_MAP1);
-	//左方
-//	if (m_px < 80)
-	{
-		m_px = 0;
-		b->SetScroll(b->GetScroll());
-	}
-	//右方
-//	if (m_px > 300)
-	{
+
 		m_px = 400;
 		b->SetScroll(b->GetScroll());
-	}
-	//上方
-	//	if (m_py > 80)
-	{
-		m_py = 0;
-		b->SetScrolly(b->GetScrolly());
-	}
-	//下方
-	//	if (m_py > 80)
-	{
+
 		m_py = 300;
 		b->SetScrolly(b->GetScrolly());
-	}
 
 /*	//ブロックとの当たり判定
 	CObjMap1*pb = (CObjMap1*)Objs::GetObj(OBJ_MAP1);

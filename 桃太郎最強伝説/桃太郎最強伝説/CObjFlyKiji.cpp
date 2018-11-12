@@ -20,7 +20,7 @@ CObjFlyKiji::CObjFlyKiji(float x, float y, int pos)//渡されるだけの変数
 //イニシャライズ
 void CObjFlyKiji::Init()
 {
-	m_px = 0;			//Swordの座標	
+	m_px = 0;			//Kijiの座標	
 	m_py = 0;
 	m_vx = 0;    //X方向の速度用変数
 	m_vy = 0;    //Y方向の速度用変数
@@ -28,6 +28,7 @@ void CObjFlyKiji::Init()
 	m_ani_time = 0;		//アニメーションタイム
 	m_ani_frame = 0;	//フレーム
 	m_s = 1;			//アニメーション緩急*/
+	m_f = false;
 
 	Hits::SetHitBox(this, m_x, m_y, 50, 50, ELEMENT_MAGIC, OBJ_FLYKIJI, 1);
 }
@@ -78,9 +79,12 @@ void CObjFlyKiji::Action()
 	hit->SetPos(m_x + (50.0f * m_px), m_y + (50.0f * m_py));
 
 	//UtilityModuleのチェック関数に場所と領域を渡し、領域外か判定
-	bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 800.0f, 600.0f);
+	bool check = CheckWindow(m_x, m_y, 0.0f, 0.0f, 800.0f, 600.0f);
 	if (check == false)
 	{
+		//主人公の位置を取得
+		CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
+		hero->SetKf(true);
 		this->SetStatus(false);  //自身を削除
 		Hits::DeleteHitBox(this);//HitBoxを削除
 	}
@@ -96,16 +100,16 @@ void CObjFlyKiji::Draw()
 	RECT_F dst; //描画先表示位置
 
 				//切り取り位置の設定
-	src.m_top   =  0.0f + (32.0f*m_px);
-	src.m_left  = 96.0f;
-	src.m_right =128.0f;
-	src.m_bottom= 32.0f + (32.0f*m_px);
+	src.m_top   =  0.0f;
+	src.m_left  = 96.0f + (32.0f * m_px*m_px);
+	src.m_right =128.0f + (32.0f * m_px*m_px);
+	src.m_bottom= 32.0f;
 
-	//表示位置の設定
-	dst.m_top   =( 0.0f + m_y) + (50.0f * m_py);
-	dst.m_left  =( 0.0f + m_x) + (50.0f * m_px);
-	dst.m_right =(50.0f + m_x) + (50.0f * m_px);
-	dst.m_bottom=(50.0f + m_y) + (50.0f * m_py);
+	//表示 Heroと同じ位置に向き方向に50.0fずらして、
+	dst.m_top   =( 0.0f + m_y) + (50.0f * m_py) + (50.0f * (m_py + m_py * m_py) / 2);
+	dst.m_left  =( 0.0f + m_x) + (50.0f * m_px) + (50.0f * (m_px + m_px * m_px) / 2);
+	dst.m_right =(50.0f + m_x) + (50.0f * m_px) - (50.0f * (m_px + m_px * m_px) / 2);
+	dst.m_bottom=(50.0f + m_y) + (50.0f * m_py) - (50.0f * (m_py + m_py * m_py) / 2);
 
 	//描画
 	Draw::Draw(2, &src, &dst, c, 0.0f);
