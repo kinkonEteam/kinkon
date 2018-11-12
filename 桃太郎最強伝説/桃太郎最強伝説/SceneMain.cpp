@@ -16,6 +16,7 @@ using namespace GameL;
 #include "SceneMain.h"
 #include "GameHead.h"
 
+
 //コンストラクタ
 CSceneMain::CSceneMain()
 {
@@ -99,6 +100,14 @@ void CSceneMain::InitScene()
 	//犬オブジェクト作成
 	CObjDog* D = new CObjDog();			//オブジェクト作成
 	Objs::InsertObj(D, OBJ_DOG, 2);		//マネージャに登録
+	
+	//サルオブジェクト作成
+	CObjMonke* M = new CObjMonke();			//オブジェクト作成
+	Objs::InsertObj(M, OBJ_MONKE, 2);		//マネージャに登録
+	
+	//キジオブジェクト作成
+	CObjPheasant* P = new CObjPheasant();			//オブジェクト作成
+	Objs::InsertObj(P, OBJ_PHEASANT, 2);		//マネージャに登録
 
 	//青鬼オブジェクト作成
 	CObjEnemy* e = new CObjEnemy();

@@ -30,11 +30,11 @@ void CObjItem::Init()
 
 	if (0 <= pb  && pb <= 50)
 	{
-		m_id = ITEM_CLUB;
+		m_id = CLUB;
 	}
 	else
 	{
-		m_id = ITEM_GOLD_BULLION;
+		m_id = GOLD_BULLION;
 	}
 
 	//アイテムのヒットボックスを作成
@@ -46,30 +46,16 @@ void CObjItem::Init()
 //アクション
 void CObjItem::Action()
 {
-	switch (m_id)
+
+
+	CHitBox* hit = Hits::GetHitBox(this);
+
+	//主人公と接触しているかどうかを調べる
+	if (hit->CheckObjNameHit(OBJ_HERO) != nullptr)
 	{
-	case ITEM_PEACH:
-				
+		this->SetStatus(false);//自身に削除命令を出す
+		Hits::DeleteHitBox(this);//アイテムが所有するHitBoxを削除する
 
-		break;
-	case ITEM_YELLOW_PEACH:
-
-		break;
-	case ITEM_PLUM:
-
-		break;
-	case ITEM_HORN:
-
-		break;
-	case ITEM_GOLD_BULLION:
-
-		break;
-	case ITEM_SILVER_BULLION:
-
-		break;
-	case ITEM_CLUB:
-
-		break;
 	}
 }
 
@@ -83,10 +69,10 @@ void CObjItem::Draw()
 
 	
 	//切り取り位置の設定
-	src.m_top = 31.0f;
-	src.m_left = 0.0f;
-	src.m_right = 0.0f;
-	src.m_bottom = 31.0f;
+	src.m_top =ITEM_RESOURCE_TOP;
+	src.m_left = ITEM_RESOURCE_SIZE*(m_id-PEACH)+ITEM_LEFT_OFF_SET;
+	src.m_right = src.m_left + ITEM_SIZE + ITEM_LEFT_OFF_SET;
+	src.m_bottom = src.m_top + ITEM_SIZE - ITEM_TOP_OFF_SET;
 
 	//表示位置の設定
 	dst.m_top = 0.0f + m_py;

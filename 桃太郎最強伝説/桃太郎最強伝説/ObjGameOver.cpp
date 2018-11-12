@@ -1,23 +1,24 @@
 //使用するヘッダーファイル
 #include"GameL\DrawFont.h"
 #include"GameL\WinInputs.h"
-#include"GameL\SceneObjManager.h"
+#include"GameL\SceneManager.h"
 
 #include"GameHead.h"
-#include"ObjTitle.h"
+#include"ObjGameOver.h"
 
 //使用するネームスペース
 using namespace GameL;
 
 //イニシャライズ
-void CObjTitle::Init()
+void CObjGameOver::Init()
 {
-	m_key_flag = false;
+	m_key_flag = false;//キーフラグ
 }
+
 //アクション
-void CObjTitle::Action()
+void CObjGameOver::Action()
 {
-	//エンターキーを押してシーン：ゲームメインに移行する
+	//エンターキーを押してシーン：ゲームメインTitleに移行する
 	if (Input::GetVKey(VK_RETURN) == true)
 	{
 		if (m_key_flag == true)
@@ -31,12 +32,19 @@ void CObjTitle::Action()
 	{
 		m_key_flag = true;
 	}
+		
+	
 }
-//ドロー
-void CObjTitle::Draw()
-{
-	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
-	Font::StrDraw(L"桃太郎最強伝説", 230, 250, 50, c);
 
-	Font::StrDraw(L"START", 350, 350, 45, c);
+//ドロー
+void CObjGameOver::Draw()
+{
+
+	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+
+	Font::StrDraw(L"GAME OVER", 280, 250, 32, c);
+
+	//ゲームオーバープロジェクト作成
+	CObjGameOver* obj = new CObjGameOver();
+	Objs::InsertObj(obj, OBJ_GAME_OVER, 10);
 }

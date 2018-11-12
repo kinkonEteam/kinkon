@@ -8,11 +8,11 @@ using namespace GameL;
 
 
 //オブジェクト：キャラクターブロック
-class CObjDog : public CObj
+class CObjMonke : public CObj
 {
 public:
-	CObjDog() {};
-	~CObjDog() {};
+	CObjMonke() {};
+	~CObjMonke() {};
 	void Init();	//イニシャライズ
 	void Action();	//アクション
 	void Draw();	//ドロー

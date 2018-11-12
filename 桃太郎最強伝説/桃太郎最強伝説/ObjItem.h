@@ -17,22 +17,20 @@ using namespace GameL;
 //オブジェクト：キャラクターブロック
 class CObjItem : public CObj
 {
-	public:
-		CObjItem(float x,float y);
-		~CObjItem() {};
-		void Init();	//イニシャライズ
-		void Action();	//アクション
-		void Draw();	//ドロー
-	private:
-		//アイテムヒットボックス用
-		float m_x;	
-		float m_y;
-		//マップ位置設定用
-		float m_px;
-		float m_py;
+public:
+	CObjItem() {};
+	~CObjItem() {};
+	void Init();	//イニシャライズ
+	void Action();	//アクション
+	void Draw();	//ドロー
+private:
+	float m_x;	//アイテムヒットボックス用
+	float m_y;	//アイテムヒットボックス用
+	int m_id;	//アイテムID
+	int pb;		//確率用変数
+	bool m_del;	//削除チェック
 
-		int m_id;	//アイテムID
-		int pb;
+
 };
 
 

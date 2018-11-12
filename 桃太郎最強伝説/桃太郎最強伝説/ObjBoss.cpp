@@ -88,6 +88,8 @@ void CObjBoss::Action()
 	{
 		m_ani_frame = 0;
 	}
+
+	//HP‚ª0‚É‚È‚Á‚½‚ç”jŠü
 }
 
 //ƒhƒ[

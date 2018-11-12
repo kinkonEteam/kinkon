@@ -110,17 +110,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CObjFlyKiji.cpp" />
     <ClCompile Include="CObjSword.cpp" />
+    <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="ObjBoss.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="ObjClear.cpp" />
     <ClCompile Include="ObjDog.cpp" />
     <ClCompile Include="ObjEnemy.cpp" />
     <ClCompile Include="ObjEnemy2.cpp" />
     <ClCompile Include="ObjEnemy3.cpp" />
+    <ClCompile Include="ObjGameOver.cpp" />
     <ClCompile Include="ObjHero.cpp" />
     <ClCompile Include="ObjItem.cpp" />
-    <ClCompile Include="ObjTitle.cpp" />
+    <ClCompile Include="ObjMonke.cpp" />
+    <ClCompile Include="ObjPheasant.cpp" />
+    <ClCompile Include="ObjTitle.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="SceneClear.cpp" />
     <ClCompile Include="Scenefloor2.cpp" />
     <ClCompile Include="GameL\Audio.cpp" />
     <ClCompile Include="GameL\DirectXDevice.cpp" />
@@ -155,22 +164,34 @@
     <ClCompile Include="Scenefloor3.cpp" />
     <ClCompile Include="Scenefloor4.cpp" />
     <ClCompile Include="Scenefloor5.cpp" />
+    <ClCompile Include="SceneGameOver.cpp" />
     <ClCompile Include="SceneMain.cpp" />
-    <ClCompile Include="SceneTitle.cpp" />
+    <ClCompile Include="SceneTitle.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="UtilityModule.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CObjFlyKiji.h" />
     <ClInclude Include="CObjSword.h" />
+    <ClInclude Include="Inventory.h" />
     <ClInclude Include="ObjBoss.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>
+    <ClInclude Include="ObjClear.h" />
     <ClInclude Include="ObjDog.h" />
     <ClInclude Include="ObjEnemy.h" />
     <ClInclude Include="ObjEnemy2.h" />
     <ClInclude Include="ObjEnemy3.h" />
+    <ClInclude Include="ObjGameOver.h" />
     <ClInclude Include="ObjHero.h" />
     <ClInclude Include="ObjItem.h" />
-    <ClInclude Include="ObjTitle.h" />
+    <ClInclude Include="ObjMonke.h" />
+    <ClInclude Include="ObjPheasant.h" />
+    <ClInclude Include="ObjTitle.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ScecneClear.h" />
     <ClInclude Include="Scenefloor4.h" />
     <ClInclude Include="Scenefloor2.h" />
     <ClInclude Include="GameHead.h" />
@@ -206,8 +227,11 @@
     <ClInclude Include="Scenefloor1.h" />
     <ClInclude Include="Scenefloor3.h" />
     <ClInclude Include="Scenefloor5.h" />
+    <ClInclude Include="SceneGameOver.h" />
     <ClInclude Include="SceneMain.h" />
-    <ClInclude Include="SceneTitle.h" />
+    <ClInclude Include="SceneTitle.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="UtilityModule.h" />
   </ItemGroup>
   <ItemGroup>
