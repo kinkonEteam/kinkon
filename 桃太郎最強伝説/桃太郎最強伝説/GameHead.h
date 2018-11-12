@@ -21,6 +21,7 @@ enum OBJ_NAME
 	OBJ_ENEMY3,
 	OBJ_DOG,
 	OBJ_MONKE,
+	OBJ_HEROGAUGE,
 	OBJ_PHEASANT,
 	OBJ_TITLE,
 	OBJ_GAME_OVER,
@@ -82,6 +83,7 @@ enum ITEM_ID
 #include "ObjMap5.h"
 #include "ObjBoss.h"
 #include "ObjHero.h"
+#include"ObjHeroGauge.h"
 #include"ObjItem.h"
 #include"ObjDog.h"
 #include"ObjMonke.h"

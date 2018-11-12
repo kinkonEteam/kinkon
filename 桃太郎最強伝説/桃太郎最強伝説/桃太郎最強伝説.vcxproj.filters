@@ -186,6 +186,9 @@
     <ClCompile Include="ObjPheasant.cpp">
       <Filter>ソース ファイル\Character\おとも</Filter>
     </ClCompile>
+    <ClCompile Include="ObjHeroGauge.cpp">
+      <Filter>ソース ファイル\Character\主人公</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameL\Audio.h">
@@ -293,6 +296,12 @@
     <ClInclude Include="ObjHero.h">
       <Filter>ソース ファイル\Character\主人公</Filter>
     </ClInclude>
+    <ClInclude Include="CObjFlyKiji.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
     <ClInclude Include="ObjGameOver.h">
       <Filter>ソース ファイル\GameOver</Filter>
     </ClInclude>
@@ -317,11 +326,8 @@
     <ClInclude Include="ObjPheasant.h">
       <Filter>ソース ファイル\Character\おとも</Filter>
     </ClInclude>
-    <ClInclude Include="Inventory.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="CObjFlyKiji.h">
-      <Filter>ソース ファイル</Filter>
+    <ClInclude Include="ObjHeroGauge.h">
+      <Filter>ソース ファイル\Character\主人公</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

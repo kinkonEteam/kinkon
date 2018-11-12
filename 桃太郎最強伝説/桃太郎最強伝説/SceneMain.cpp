@@ -87,7 +87,9 @@ void CSceneMain::InitScene()
 	//外部グラフィックを読み込み7番に登録(151*200ピクセル)
 	Draw::LoadImage(L"鬼原画 緑鬼 新二.png", 7, TEX_SIZE_151_200);
 	
-	
+	// 外部グラフィックを読み込み7番に登録(151 * 200ピクセル)
+	Draw::LoadImage(L"主人公体力ゲージ.png", 9, TEX_SIZE_151_200);
+
 	//主人公オブジェクト作成
 	CObjHero* obj = new CObjHero();		//オブジェクト作成
 	Objs::InsertObj(obj, OBJ_HERO, 1);	//マネージャに登録
@@ -99,7 +101,7 @@ void CSceneMain::InitScene()
 	//犬オブジェクト作成
 	CObjDog* D = new CObjDog();			//オブジェクト作成
 	Objs::InsertObj(D, OBJ_DOG, 2);		//マネージャに登録
-	
+
 	//サルオブジェクト作成
 	CObjMonke* M = new CObjMonke();			//オブジェクト作成
 	Objs::InsertObj(M, OBJ_MONKE, 2);		//マネージャに登録
@@ -120,13 +122,19 @@ void CSceneMain::InitScene()
 	CObjEnemy3* e3 = new CObjEnemy3();
 	Objs::InsertObj(e3, OBJ_ENEMY3, 1);
 
+	//主人公体力ゲージオブジェクト作成
+	CObjHeroGauge* G = new CObjHeroGauge();//オブジェクト作成
+	Objs::InsertObj(G, OBJ_HEROGAUGE, 8);	//マネージャに登録
+
 	//階層1オブジェクト作成
 	CObjMap1* objb = new CObjMap1(map);
 	Objs::InsertObj(objb, OBJ_MAP1, 1);
+
 }
 
 //ゲームメイン実行中メソッド
 void CSceneMain::Scene()
 {
-
+	
+	
 }
