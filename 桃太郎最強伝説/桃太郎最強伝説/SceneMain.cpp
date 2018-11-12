@@ -94,8 +94,17 @@ void CSceneMain::InitScene()
 	Objs::InsertObj(obj, OBJ_HERO, 1);	//マネージャに登録
 
 	//アイテムオブジェクト作成
-	CObjItem* i = new CObjItem();		//オブジェクト作成
+	CObjPeach* i = new CObjPeach();		//オブジェクト作成
 	Objs::InsertObj(i, OBJ_ITEM, 1);	//マネージャに登録
+
+	CObjYellowPeach* yp = new CObjYellowPeach();		//オブジェクト作成
+	Objs::InsertObj(yp, OBJ_ITEM, 1);	//マネージャに登録
+
+	CObjPlum* pl = new CObjPlum();		//オブジェクト作成
+	Objs::InsertObj(pl, OBJ_ITEM, 1);	//マネージャに登録
+
+	CObjHone* h = new CObjHone();		//オブジェクト作成
+	Objs::InsertObj(h, OBJ_ITEM, 1);	//マネージャに登録
 
 	//犬オブジェクト作成
 	CObjDog* D = new CObjDog();			//オブジェクト作成
