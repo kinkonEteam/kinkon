@@ -64,13 +64,11 @@ void CObjHero::Action()
 			m_Kf = false;
 		}
 	}
-	else//放している場合
+	else //押してない場合
 	{
-		/*if (m_Kf == false) {
-				CObjFlyKiji* kiji = (CObjFlyKiji*)Objs::GetObj(OBJ_FLYKIJI);
-				m_Kf = kiji->GetF();
-		}*/
+		;//何もしない
 	}
+
 	//主人公の移動にベクトルを入れる
 	if (Input::GetVKey(VK_RIGHT) == true)//→
 	{
