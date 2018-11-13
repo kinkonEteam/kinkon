@@ -89,7 +89,7 @@ void CSceneMain::InitScene()
 	Draw::LoadImage(L"鬼原画 緑鬼 新二.png", 7, TEX_SIZE_151_200);
 	
 	//外部グラフィックファイルを読み込み8番に登録
-	Draw::LoadImage(L"鬼原画 赤鬼 新二.png", 8, TEX_SIZE_151_200);
+	Draw::LoadImage(L"鬼原画 赤鬼 新二.png", 9, TEX_SIZE_151_200);
 
 	//主人公オブジェクト作成
 //	CObjHero* obj = new CObjHero();		//オブジェクト作成
@@ -131,6 +131,10 @@ void CSceneMain::InitScene()
 	//緑鬼オブジェクト作成
 	CObjEnemy3* e3 = new CObjEnemy3();
 	Objs::InsertObj(e3, OBJ_ENEMY3, 1);
+
+	//イベントオブジェクト作成
+	CObjEveDog* eve = new CObjEveDog();
+	Objs::InsertObj(eve, OBJ_TALK, 3);
 
 	//主人公体力ゲージオブジェクト作成
 	CObjHeroGauge* G = new CObjHeroGauge();//オブジェクト作成
