@@ -5,15 +5,19 @@
 #include "UtilityModule.h"
 #include "GameL\WinInputs.h"
 #include "GameL\HitBoxManager.h"
-
+#include "Inventory.h"
 //使用するネームスペース
 using namespace GameL;
+
+CObjHero::CObjHero(float x, float y)
+{
+	m_px = x;
+	m_py = y;
+}
 
 //イニシャライズ
 void CObjHero::Init()
 {
-	m_px = 0.0f;		//位置
-	m_py = 0.0f;
 	m_vx = 0.0f;		//移動ベクトル
 	m_vy = 0.0f;
 
@@ -36,7 +40,6 @@ void CObjHero::Action()
 	m_vx = 0.0f;
 	m_vy = 0.0f;
 
-	
 	//攻撃の入力判定、押しっぱなし制御
 	if (Input::GetVKey('A') == true) 
 	{
@@ -49,7 +52,7 @@ void CObjHero::Action()
 			m_Sf = false;
 		}
 	}
-	else
+	else//放している場合
 		m_Sf = true;
 
 	//キジ攻撃の入力判定、押しっぱなし制御
@@ -64,8 +67,10 @@ void CObjHero::Action()
 			m_Kf = false;
 		}
 	}
-	else
-		m_Kf = true;
+	else //押してない場合
+	{
+		;//何もしない
+	}
 
 	//主人公の移動にベクトルを入れる
 	if (Input::GetVKey(VK_RIGHT) == true)//→
@@ -116,77 +121,56 @@ void CObjHero::Action()
 
 	//スクロール
 	CObjMap1*b = (CObjMap1*)Objs::GetObj(OBJ_MAP1);
-	//左方
-//	if (m_px < 80)
-	{
-		m_px = 0;
-		b->SetScroll(b->GetScroll());
-	}
-	//右方
-//	if (m_px > 300)
-	{
 		m_px = 400;
-		b->SetScroll(b->GetScroll());
-	}
-	//上方
-	//	if (m_py > 80)
-	{
-		m_py = 0;
-		b->SetScrolly(b->GetScrolly());
-	}
-	//下方
-	//	if (m_py > 80)
-	{
+		b->SetScrollx(b->GetScrollx());
 		m_py = 300;
 		b->SetScrolly(b->GetScrolly());
-	}
 
-/*	//ブロックとの当たり判定
+	//ブロックとの当たり判定
 	CObjMap1*pb = (CObjMap1*)Objs::GetObj(OBJ_MAP1);
 	pb->Map1Hit(&m_px, &m_py, true,
 		&m_hit_up, &m_hit_down, &m_hit_left, &m_hit_right, &m_vx, &m_vy,
 		&m_block_type
-	);*/
-	
+	);
+
 	//HitBoxの内容を更新
 	CHitBox*hit = Hits::GetHitBox(this);
 	hit->SetPos(m_px, m_py);
+
+	//ELEMENT_ENEMYを持つオブジェクトと接触したら
+	if (hit->CheckElementHit(ELEMENT_ENEMY) == true)
+	{
+		this->SetStatus(false);
+		Hits::DeleteHitBox(this);
+	}
 
 	//エレメント敵に当たるとHP-1
 	if (hit->CheckObjNameHit(ELEMENT_ENEMY) != nullptr)
 	{
 		m_hp -= 1;
 	}
+	//アイテムに当たった場合以下の処理をする
+	if (hit->CheckObjNameHit(ELEMENT_ITEM) != nullptr)
+	{
+		switch (ELEMENT_ITEM)
+		{
+		case PEACH:	
+			m_hp += 1; //HPを1回復
+		break;
 
-	if (hit->CheckObjNameHit(ITEM_PEACH) != nullptr)
-	{
-		m_hp += 1; //HPを1回復
+		case YELLOW_PEACH: //HPを3回復
+			;
+		break;
+
+		case PLUM: //インベントリに追加
+			break;
+
+		case CLUB: //移動速度を0.8倍する。
+			break;
+		}
+
+		
 	}
-	else if (hit->CheckObjNameHit(ITEM_PLUM) != nullptr)
-	{
-		m_hp += 3; //HPを３回復
-	}
-	/*
-	else if (hit->CheckObjNameHit(ITEM_PLUM) != nullptr)
-	{
-		m_hp += 3;
-	}
-	else if (hit->CheckObjNameHit(ITEM_HORN) != nullptr)
-	{
-		m_hp += 3;
-	}
-	else if (hit->CheckObjNameHit(ITEM_CLUB) != nullptr)
-	{
-		m_hp += 3;
-	}
-	else if (hit->CheckObjNameHit(ITEM_GOLD_BULLION) != nullptr)
-	{
-		m_hp += 3;
-	}
-	else if (hit->CheckObjNameHit(ITEM_SILVER_BULLION) != nullptr)
-	{
-		;
-	}　アイテム効果試作*/
 	//HPが0になったら破棄
 	if (m_hp <= 0)
 	{
@@ -207,13 +191,13 @@ void CObjHero::Draw()
 	RECT_F src; //描画元切り取り位置
 	RECT_F dst; //描画先表示位置
 
-				//切り取り位置の設定
+	//切り取り位置の設定
 	src.m_top   =50.0f *  m_posture - 1;	 //微調整-1
 	src.m_left  = 0.0f + (AniData[m_ani_frame] * 48);
 	src.m_right =48.0f + (AniData[m_ani_frame] * 48);
 	src.m_bottom=50.0f * (m_posture + 1) - 3;//微調整-3
 
-				//表示位置の設定
+	//表示位置の設定
 	dst.m_top   = 0.0f + m_py;
 	dst.m_left  = 0.0f + m_px;
 	dst.m_right =50.0f + m_px;

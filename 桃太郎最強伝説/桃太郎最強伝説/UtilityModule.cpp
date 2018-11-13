@@ -56,5 +56,5 @@ bool CheckWindow(float pos_x, float pos_y,
 		return false;   //—ÌˆæŠO
 	}
 
-	return true;       //—ÌˆæŠO
+	return true;        //—Ìˆæ“à
 }

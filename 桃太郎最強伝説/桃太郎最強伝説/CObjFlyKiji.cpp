@@ -20,14 +20,17 @@ CObjFlyKiji::CObjFlyKiji(float x, float y, int pos)//渡されるだけの変数
 //イニシャライズ
 void CObjFlyKiji::Init()
 {
-	m_sx = 0;			//Swordの座標	
-	m_sy = 0;
+	m_px = 0;			//Kijiの座標	
+	m_py = 0;
+	m_vx = 0;    //X方向の速度用変数
+	m_vy = 0;    //Y方向の速度用変数
 	/*
 	m_ani_time = 0;		//アニメーションタイム
 	m_ani_frame = 0;	//フレーム
 	m_s = 1;			//アニメーション緩急*/
+	m_f = false;
 
-	Hits::SetHitBox(this, m_x, m_y, 50, 50, ELEMENT_MAGIC, OBJ_SWORD, 1);
+	Hits::SetHitBox(this, m_x, m_y, 50, 50, ELEMENT_MAGIC, OBJ_FLYKIJI, 1);
 }
 
 //アクション
@@ -41,20 +44,26 @@ void CObjFlyKiji::Action()
 	//主人公向きで表示位置の変更用py,px
 	if (m_pos == 0)     //↓
 	{
-		m_sy = 1;
+		m_py = 1;
 	}
 	else if (m_pos == 1)//←
 	{
-		m_sx = -1;
+		m_px = -1;
 	}
 	else if (m_pos == 2)//→
 	{
-		m_sx = 1;
+		m_px = 1;
 	}
 	else			  //↑
 	{
-		m_sy = -1;
+		m_py = -1;
 	}
+
+	m_vx += m_px;	//プレイヤーの向き情報と長さ1をベクトルに代入
+	m_x += m_vx * 5.0f;	//ベクトルをかけて、速さを調整
+
+	m_vy += m_py;
+	m_y += m_vy * 5.0f;
 
 	/*
 	m_ani_time += m_s;			//削除されるまで常に足し続ける
@@ -65,11 +74,17 @@ void CObjFlyKiji::Action()
 		m_s++;
 	}*/
 
+	//HitBoxの内容を更新
+	CHitBox*hit = Hits::GetHitBox(this);
+	hit->SetPos(m_x + (50.0f * m_px), m_y + (50.0f * m_py));
 
 	//UtilityModuleのチェック関数に場所と領域を渡し、領域外か判定
-	bool check = CheckWindow(m_x, m_y, -32.0f, -32.0f, 800.0f, 600.0f);
+	bool check = CheckWindow(m_x, m_y, 0.0f, 0.0f, 800.0f, 600.0f);
 	if (check == false)
 	{
+		//主人公の位置を取得
+		CObjHero* hero = (CObjHero*)Objs::GetObj(OBJ_HERO);
+		hero->SetKf(true);
 		this->SetStatus(false);  //自身を削除
 		Hits::DeleteHitBox(this);//HitBoxを削除
 	}
@@ -85,17 +100,17 @@ void CObjFlyKiji::Draw()
 	RECT_F dst; //描画先表示位置
 
 				//切り取り位置の設定
-	src.m_top   = 0.0f + (32.0f*m_pos);
-	src.m_left  = 0.0f;
-	src.m_right =32.0f;
-	src.m_bottom=32.0f + (32.0f*m_pos);
+	src.m_top   =  0.0f;
+	src.m_left  = 96.0f + (32.0f * m_px*m_px);
+	src.m_right =128.0f + (32.0f * m_px*m_px);
+	src.m_bottom= 32.0f;
 
-	//表示位置の設定
-	dst.m_top   =( 0.0f + m_y) + (50.0f * m_sy);
-	dst.m_left  =( 0.0f + m_x) + (50.0f * m_sx);
-	dst.m_right =(50.0f + m_x) + (50.0f * m_sx);
-	dst.m_bottom=(50.0f + m_y) + (50.0f * m_sy);
+	//表示 Heroと同じ位置に向き方向に50.0fずらして、
+	dst.m_top   =( 0.0f + m_y) + (50.0f * m_py) + (50.0f * (m_py + m_py * m_py) / 2);
+	dst.m_left  =( 0.0f + m_x) + (50.0f * m_px) + (50.0f * (m_px + m_px * m_px) / 2);
+	dst.m_right =(50.0f + m_x) + (50.0f * m_px) - (50.0f * (m_px + m_px * m_px) / 2);
+	dst.m_bottom=(50.0f + m_y) + (50.0f * m_py) - (50.0f * (m_py + m_py * m_py) / 2);
 
 	//描画
-	Draw::Draw(3, &src, &dst, c, 0.0f);
+	Draw::Draw(2, &src, &dst, c, 0.0f);
 }
