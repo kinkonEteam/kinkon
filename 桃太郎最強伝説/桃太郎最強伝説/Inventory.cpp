@@ -7,26 +7,32 @@
 
 #include <stdlib.h>
 #include <time.h>
-#include "ObjItem.h"
+#include "ObjPeach.h"
 #include "GameHead.h"
+#include "SceneMain.h"
 
 void CObjInventory::Init()
 {
-	PEACH +1;
+	item_list[20] = 0;
 
 }
 
 void CObjInventory::Action()
 {
-	if (PLUM == true)
-	{
 
-	}
 
 
 }
 
 void CObjInventory::Draw()
 {
+	float c[4] = { 1,1,1,1 };
 
+	Font::StrDraw(L"ƒ‰ƒ“ƒLƒ“ƒO", RANKING_POS_X, RANKING_POS_Y, RANKING_FONT_SIZE, c);
+	for (int i = 0; i < 20; i++)
+	{
+		wchar_t str[STR_MAX];
+		swprintf_s(str, L"%s", item_list);
+		Font::StrDraw(str, SCORE_POS_X, SCORE_POS_Y + SCORE_INTERVAL*i, SCORE_FONT_SIZE, c);
+	}
 }

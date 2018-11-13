@@ -21,10 +21,14 @@ enum OBJ_NAME
 	OBJ_ENEMY3,
 	OBJ_DOG,
 	OBJ_MONKE,
+	OBJ_HEROGAUGE,
 	OBJ_PHEASANT,
 	OBJ_TITLE,
 	OBJ_GAME_OVER,
 	OBJ_CLEAR,
+	OBJ_TALK,
+	OBJ_EVEDOG,
+
 };
 //------------------------------------------------
 
@@ -83,7 +87,10 @@ enum ITEM
 #include "ObjMap5.h"
 #include "ObjBoss.h"
 #include "ObjHero.h"
-#include"ObjItem.h"
+#include"ObjPeach.h"
+#include "ObjYellowPeach.h"
+#include "ObjPlum.h"
+#include "ObjHone.h"
 #include"ObjDog.h"
 #include"ObjMonke.h"
 #include"ObjPheasant.h"
@@ -96,6 +103,8 @@ enum ITEM
 #include"Inventory.h"
 #include"ObjGameOver.h"
 #include"ObjClear.h"
+#include "ObjTalk.h"
+#include "CObjEveDog.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -114,5 +123,5 @@ enum ITEM
 
 //シーンスタートクラス---------------------------
 //ゲーム開始時のシーンクラス登録
-#define SET_GAME_START  CScenefloor1
+#define SET_GAME_START  CSceneMain
 //-----------------------------------------------
