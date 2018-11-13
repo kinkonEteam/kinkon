@@ -4,28 +4,35 @@
 enum OBJ_NAME
 {
 	OBJ_NO_NAME,	//オブジェクト名無し(禁止)
-	//ゲームで使うオブジェクトの名前
-	//OBJ_○○と表記
-	OBJ_MAP1,
-	OBJ_MAP2,
-	OBJ_MAP3,
-	OBJ_MAP4,
-	OBJ_MAP5,
-	OBJ_BOSS,
-	OBJ_HERO,
-	OBJ_SWORD,
-	OBJ_FLYKIJI,
-	OBJ_ITEM,
-	OBJ_ENEMY,
-	OBJ_ENEMY2,
-	OBJ_ENEMY3,
-	OBJ_DOG,
-	OBJ_MONKE,
-	OBJ_PHEASANT,
-	OBJ_TITLE,
-	OBJ_GAME_OVER,
-	OBJ_CLEAR,
-	OBJ_TALK,
+					//ゲームで使うオブジェクトの名前
+					//OBJ_○○と表記
+					OBJ_MAP1,
+					OBJ_MAP2,
+					OBJ_MAP3,
+					OBJ_MAP4,
+					OBJ_MAP5,
+					OBJ_BOSS,
+					OBJ_HERO,
+					OBJ_SWORD,
+					OBJ_FLYKIJI,
+					OBJ_ITEM,
+					OBJ_PEACH,
+					OBJ_YELLOW_PEACH,
+					OBJ_PLUM,
+					OBJ_HONE,
+					OBJ_GOLD_BULLION,
+					OBJ_SILVER_BULLION,
+					OBJ_CLUB,
+					OBJ_ENEMY,
+					OBJ_ENEMY2,
+					OBJ_ENEMY3,
+					OBJ_DOG,
+					OBJ_MONKE,
+					OBJ_PHEASANT,
+					OBJ_TITLE,
+					OBJ_GAME_OVER,
+					OBJ_CLEAR,
+					OBJ_TALK,
 
 };
 //------------------------------------------------
@@ -34,18 +41,18 @@ enum OBJ_NAME
 enum HIT_ELEMENTS
 {
 	ELEMENT_NULL,//属性無し 全ての属性と当たり判定が実行される
-	//以下　同じ属性同士では当たり判定は実行されない
-	//属性は追加可能だが、デバック時の色は初期設定分しか無い
-	ELEMENT_PLAYER,
-	ELEMENT_ENEMY,
-	ELEMENT_ITEM,
-	ELEMENT_MAGIC,
-	ELEMENT_FIELD,
-	ELEMENT_RED,
-	ELEMENT_GREEN,
-	ELEMENT_BLUE,
-	ELEMENT_BLACK,
-	ELEMENT_WHITE,
+				 //以下　同じ属性同士では当たり判定は実行されない
+				 //属性は追加可能だが、デバック時の色は初期設定分しか無い
+				 ELEMENT_PLAYER,
+				 ELEMENT_ENEMY,
+				 ELEMENT_ITEM,
+				 ELEMENT_MAGIC,
+				 ELEMENT_FIELD,
+				 ELEMENT_RED,
+				 ELEMENT_GREEN,
+				 ELEMENT_BLUE,
+				 ELEMENT_BLACK,
+				 ELEMENT_WHITE,
 };
 //------------------------------------------------
 
@@ -54,7 +61,7 @@ enum HIT_ELEMENTS
 struct UserData
 {
 	int mSeveData;	//サンプルセーブデータ
-	
+
 };
 //------------------------------------------------
 
@@ -89,6 +96,9 @@ enum ITEM
 #include "ObjYellowPeach.h"
 #include "ObjPlum.h"
 #include "ObjHone.h"
+#include "ObjGoldBullion.h"
+#include "ObjSilverBullion.h"
+#include "ObjClub.h"
 #include"ObjDog.h"
 #include"ObjMonke.h"
 #include"ObjPheasant.h"

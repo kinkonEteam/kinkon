@@ -9,11 +9,11 @@ using namespace GameL;
 #define ITEM_LEFT	(256.0f)
 
 //オブジェクト：キャラクターブロック
-class CObjPeach : public CObj
+class CObjSilverBullion : public CObj
 {
 public:
-	CObjPeach() {};
-	~CObjPeach() {};
+	CObjSilverBullion() {};
+	~CObjSilverBullion() {};
 	void Init();	//イニシャライズ
 	void Action();	//アクション
 	void Draw();	//ドロー

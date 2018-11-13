@@ -7,7 +7,7 @@
 
 #include <stdlib.h>
 #include <time.h>
-#include "ObjPeach.h"
+#include "ObjSilverBullion.h"
 #include "GameHead.h"
 
 
@@ -15,19 +15,19 @@
 using namespace GameL;
 
 //イニシャライズ
-void CObjPeach::Init()
+void CObjSilverBullion::Init()
 {
-	m_x = 0.0f;
+	m_x = 250.0f;
 	m_y = 0.0f;
 
 	//アイテムのヒットボックスを作成
-	Hits::SetHitBox(this, m_x + 4, m_y + 6, 24, 24, ELEMENT_ITEM, OBJ_ITEM, 1);
+	Hits::SetHitBox(this, m_x + 4, m_y + 6, 24, 24, ELEMENT_ITEM, OBJ_SILVER_BULLION, 1);
 
 
 }
 
 //アクション
-void CObjPeach::Action()
+void CObjSilverBullion::Action()
 {
 
 
@@ -42,7 +42,7 @@ void CObjPeach::Action()
 	}
 }
 
-void CObjPeach::Draw()
+void CObjSilverBullion::Draw()
 {
 	//描画カラー情報　R=Red　G=Green　B=Blue　A=alpha(透過情報)
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f, };
@@ -52,10 +52,10 @@ void CObjPeach::Draw()
 
 
 				//切り取り位置の設定
-	src.m_top = 0.0f;
-	src.m_left = 0.0f;
-	src.m_right = 32.0f;
-	src.m_bottom = 32.0f;
+	src.m_top = 164.0f;
+	src.m_left = 164.0f;
+	src.m_right = 188.0f;
+	src.m_bottom = 188.0f;
 
 	//表示位置の設定
 	dst.m_top = 0.0f + m_y;
