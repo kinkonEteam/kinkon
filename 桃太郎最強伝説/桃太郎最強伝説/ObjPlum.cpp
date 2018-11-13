@@ -7,7 +7,7 @@
 
 #include <stdlib.h>
 #include <time.h>
-#include "ObjItem.h"
+#include "ObjPlum.h"
 #include "GameHead.h"
 
 
@@ -15,32 +15,19 @@
 using namespace GameL;
 
 //イニシャライズ
-void CObjItem::Init()
+void CObjPlum::Init()
 {
-	m_x = 128; //当たり判定（場所）（仮）
-	m_y = 128;	//当たり判定（場所）（仮）
-
-	srand((unsigned)time(NULL)); // 乱数の初期化
-
-	pb = rand() % 100;
-
-	if (0 <= pb  && pb <= 50)
-	{
-		m_id = ITEM_CLUB;
-	}
-	else
-	{
-		m_id = ITEM_GOLD_BULLION;
-	}
+	m_x = 100.0f;
+	m_y = 0.0f;
 
 	//アイテムのヒットボックスを作成
-	Hits::SetHitBox(this, m_x, m_y, 32, 32, ELEMENT_ITEM, OBJ_ITEM, 1);
+	Hits::SetHitBox(this, m_x + 8, m_y + 6, 24, 24, ELEMENT_ITEM, OBJ_ITEM, 1);
 
 
 }
 
 //アクション
-void CObjItem::Action()
+void CObjPlum::Action()
 {
 
 
@@ -55,7 +42,7 @@ void CObjItem::Action()
 	}
 }
 
-void CObjItem::Draw()
+void CObjPlum::Draw()
 {
 	//描画カラー情報　R=Red　G=Green　B=Blue　A=alpha(透過情報)
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f, };
@@ -63,18 +50,18 @@ void CObjItem::Draw()
 	RECT_F src; //描画元切り取り位置
 	RECT_F dst; //描画先表示位置
 
-	
-	//切り取り位置の設定
-	src.m_top =ITEM_RESOURCE_TOP;
-	src.m_left = ITEM_RESOURCE_SIZE*(m_id-ITEM_PEACH)+ITEM_LEFT_OFF_SET;
-	src.m_right = src.m_left + ITEM_SIZE + ITEM_LEFT_OFF_SET;
-	src.m_bottom = src.m_top + ITEM_SIZE - ITEM_TOP_OFF_SET;
+
+				//切り取り位置の設定
+	src.m_top = 60.0f;
+	src.m_left = 64.0f;
+	src.m_right = 96.0f;
+	src.m_bottom = 96.0f;
 
 	//表示位置の設定
-	dst.m_top = 128.0f ;
-	dst.m_left = 128.0f;
-	dst.m_right = dst.m_left+ITEM_SIZE;
-	dst.m_bottom = dst.m_top+ITEM_SIZE;
+	dst.m_top = 0.0f + m_y;
+	dst.m_left = 0.0f + m_x;
+	dst.m_right = 32.0f + m_x;
+	dst.m_bottom = 32.0f + m_y;
 
 	//描画
 	Draw::Draw(4, &src, &dst, c, 0.0f);

@@ -16,13 +16,13 @@ class CObjMap1 :public CObj
 		void Draw();	//ドロー
 
 		//左右スクロール用
-		void SetScroll(float s) { m_scroll = s; }
-		float GetScroll() { return m_scroll; }
+		void SetScrollx(float s) { m_scrollx = s; }
+		float GetScrollx() { return m_scrollx; }
 		//上下スクロール用
 		void SetScrolly(float s) { m_scrolly = s; }
 		float GetScrolly() { return m_scrolly; }
 
-		int x, y;	//初期位置設定用変数
+		int blocksize = 50.0f;
 
 		//ブロックとの当たり判定
 		void Map1Hit(
@@ -33,11 +33,16 @@ class CObjMap1 :public CObj
 		);
 	private:
 		void BlockDraw(float x, float y, RECT_F* dst, float c[]);
+		void ItemDraw(float x, float y, RECT_F* dst, float c[]);
+		int m_id;
 		int m_map[56][56];//マップ情報
 
-		float m_scroll;		//左右スクロール用
+		float m_scrollx;		//左右スクロール用
 		float m_scrolly;	//上下スクロール用
 
 		float Dot(float ax, float ay, float bx, float by);	//内積
 		float Cross(float ax, float ay, float bx, float by);//外積
+
+		void setstair();
+		void sethero();
 };

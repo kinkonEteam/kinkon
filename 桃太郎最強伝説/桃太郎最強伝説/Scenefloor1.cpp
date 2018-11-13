@@ -60,15 +60,27 @@ void CScenefloor1::InitScene()
 	Font::SetStrTex(L"0123456789分秒");
 
 	//グラフィック読み込み
-	Draw::LoadImageW(L"マップチップ.png", 1, TEX_SIZE_141_47);	//マップ
-	Draw::LoadImage(L"桃太郎.png", 0, TEX_SIZE_512);	//桃太郎
+	//外部グラフィックを読み込み0番に登録(512×512ピクセル)
+	Draw::LoadImage(L"桃太郎.png", 0, TEX_SIZE_512);
+	//外部グラフィックを読み込み1番に登録(141×47ピクセル)
+	Draw::LoadImageW(L"マップチップ.png", 1, TEX_SIZE_141_47);
+	//外部グラフィックを読み込み2番に登録(512×512ピクセル)
+	Draw::LoadImage(L"OTOMO.GIF", 2, TEX_SIZE_512);
+	//外部グラフィックを読み込み3番に登録(512×512ピクセル)
+	Draw::LoadImage(L"Sword.png", 3, TEX_SIZE_512);
+	//外部グラフィックを読み込み4番に登録(512×512ピクセル)
+	Draw::LoadImage(L"アイテム.png", 4, TEX_SIZE_512);
+	//外部グラフィックを読み込み5番に登録(151×200ピクセル)
+	Draw::LoadImage(L"鬼原画 青鬼 新二.png", 5, TEX_SIZE_151_200);
+	//外部グラフィックを読み込み6番に登録(151×200ピクセル)
+	Draw::LoadImage(L"鬼原画 黄鬼 新二.png", 6, TEX_SIZE_151_200);
+	//外部グラフィックを読み込み7番に登録(151×200ピクセル)
+	Draw::LoadImage(L"鬼原画 緑鬼 新二.png", 7, TEX_SIZE_151_200);
+
 
 	//階層1オブジェクト作成
 	CObjMap1* objb = new CObjMap1(map);
 	Objs::InsertObj(objb, OBJ_MAP1, 1);
-	//主人公オブジェクト作成
-	CObjHero* obj = new CObjHero();//オブジェクト作成
-	Objs::InsertObj(obj, OBJ_HERO, 10);//マネージャに登録
 }
 
 //実行中メソッド
