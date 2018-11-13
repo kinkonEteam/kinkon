@@ -92,7 +92,7 @@ void CSceneMain::InitScene()
 	Draw::LoadImage(L"word.png", 8, TEX_SIZE_512);
 	
 	//外部グラフィックファイルを読み込み8番に登録
-	Draw::LoadImage(L"鬼原画 赤鬼 新二.png", 8, TEX_SIZE_151_200);
+	Draw::LoadImage(L"鬼原画 赤鬼 新二.png", 9, TEX_SIZE_151_200);
 
 	//主人公オブジェクト作成
 //	CObjHero* obj = new CObjHero();		//オブジェクト作成
