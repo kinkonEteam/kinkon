@@ -45,4 +45,5 @@ class CObjMap1 :public CObj
 
 		void setstair();
 		void sethero();
+		void setenemy();
 };
