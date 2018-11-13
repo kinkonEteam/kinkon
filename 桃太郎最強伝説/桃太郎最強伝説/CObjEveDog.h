@@ -5,15 +5,16 @@
 //使用するネームスペース
 using namespace GameL;
 
-//オブジェクト：吹き出し
-class CObjTalk : public CObj
+//オブジェクト：犬イベント
+class CObjEveDog : public CObj
 {
 public:
-	CObjTalk(/*char* t*/) {/* m_pward = t; */ };//コンストラクタ
-	~CObjTalk() {};
+	CObjEveDog() {};	//コンストラクタ
+	~CObjEveDog() {};
 	void Init();	//イニシャライズ
 	void Action();	//アクション
 	void Draw();	//ドロー
 private:
 	char* m_pward;
+	bool m_f;
 };

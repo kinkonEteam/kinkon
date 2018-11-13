@@ -26,6 +26,7 @@ enum OBJ_NAME
 	OBJ_GAME_OVER,
 	OBJ_CLEAR,
 	OBJ_TALK,
+	OBJ_EVEDOG,
 
 };
 //------------------------------------------------
@@ -102,6 +103,7 @@ enum ITEM
 #include"ObjGameOver.h"
 #include"ObjClear.h"
 #include "ObjTalk.h"
+#include "CObjEveDog.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -120,5 +122,5 @@ enum ITEM
 
 //シーンスタートクラス---------------------------
 //ゲーム開始時のシーンクラス登録
-#define SET_GAME_START  CScenefloor1
+#define SET_GAME_START  CSceneMain
 //-----------------------------------------------

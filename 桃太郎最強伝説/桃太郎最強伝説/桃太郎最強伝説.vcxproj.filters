@@ -55,6 +55,9 @@
     <Filter Include="ソース ファイル\Events">
       <UniqueIdentifier>{df7492ec-fcd7-4943-a957-95358be37316}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Events\Dog">
+      <UniqueIdentifier>{f52a0652-4129-45ab-9531-dd62e1d3a741}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameL\Audio.cpp">
@@ -209,6 +212,9 @@
     </ClCompile>
     <ClCompile Include="SceneGameOver.cpp">
       <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjEveDog.cpp">
+      <Filter>ソース ファイル\Events\Dog</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -367,6 +373,9 @@
     </ClInclude>
     <ClInclude Include="ScecneClear.h">
       <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjEveDog.h">
+      <Filter>ソース ファイル\Events\Dog</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

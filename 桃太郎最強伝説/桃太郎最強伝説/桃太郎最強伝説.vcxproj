@@ -112,6 +112,7 @@
   <ItemGroup>
     <ClCompile Include="CObjFlyKiji.cpp" />
     <ClCompile Include="CObjSword.cpp" />
+    <ClCompile Include="CObjEveDog.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="ObjBoss.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -194,6 +195,7 @@
   <ItemGroup>
     <ClInclude Include="CObjFlyKiji.h" />
     <ClInclude Include="CObjSword.h" />
+    <ClInclude Include="CObjEveDog.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="ObjBoss.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
