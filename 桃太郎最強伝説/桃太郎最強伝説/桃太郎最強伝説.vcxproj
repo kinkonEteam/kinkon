@@ -112,6 +112,7 @@
   <ItemGroup>
     <ClCompile Include="CObjFlyKiji.cpp" />
     <ClCompile Include="CObjSword.cpp" />
+    <ClCompile Include="CObjEveDog.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="ObjBoss.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -128,10 +129,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ObjHero.cpp" />
-    <ClCompile Include="ObjHone.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ObjPeach.cpp" />
+    <ClCompile Include="ObjItem.cpp" />
     <ClCompile Include="ObjMonke.cpp" />
     <ClCompile Include="ObjPheasant.cpp" />
     <ClCompile Include="ObjPlum.cpp">
@@ -194,6 +192,7 @@
   <ItemGroup>
     <ClInclude Include="CObjFlyKiji.h" />
     <ClInclude Include="CObjSword.h" />
+    <ClInclude Include="CObjEveDog.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="ObjBoss.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -211,10 +210,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ObjHero.h" />
-    <ClInclude Include="ObjHone.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="ObjPeach.h" />
+    <ClInclude Include="ObjItem.h" />
     <ClInclude Include="ObjMonke.h" />
     <ClInclude Include="ObjPheasant.h" />
     <ClInclude Include="ObjPlum.h">

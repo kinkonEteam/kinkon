@@ -4,35 +4,36 @@
 enum OBJ_NAME
 {
 	OBJ_NO_NAME,	//オブジェクト名無し(禁止)
-					//ゲームで使うオブジェクトの名前
-					//OBJ_○○と表記
-					OBJ_MAP1,
-					OBJ_MAP2,
-					OBJ_MAP3,
-					OBJ_MAP4,
-					OBJ_MAP5,
-					OBJ_BOSS,
-					OBJ_HERO,
-					OBJ_SWORD,
-					OBJ_FLYKIJI,
-					OBJ_ITEM,
-					OBJ_PEACH,
-					OBJ_YELLOW_PEACH,
-					OBJ_PLUM,
-					OBJ_HONE,
-					OBJ_GOLD_BULLION,
-					OBJ_SILVER_BULLION,
-					OBJ_CLUB,
-					OBJ_ENEMY,
-					OBJ_ENEMY2,
-					OBJ_ENEMY3,
-					OBJ_DOG,
-					OBJ_MONKE,
-					OBJ_PHEASANT,
-					OBJ_TITLE,
-					OBJ_GAME_OVER,
-					OBJ_CLEAR,
-					OBJ_TALK,
+	//ゲームで使うオブジェクトの名前
+	//OBJ_○○と表記
+	OBJ_MAP1,
+	OBJ_MAP2,
+	OBJ_MAP3,
+	OBJ_MAP4,
+	OBJ_MAP5,
+	OBJ_BOSS,
+	OBJ_HERO,
+	OBJ_SWORD,
+	OBJ_FLYKIJI,
+	OBJ_ITEM,
+	OBJ_PEACH,
+	OBJ_YELLOW_PEACH,
+	OBJ_PLUM,
+	OBJ_HONE,
+	OBJ_GOLD_BULLION,
+	OBJ_SILVER_BULLION,
+	OBJ_CLUB,
+	OBJ_ENEMY,
+	OBJ_ENEMY2,
+	OBJ_ENEMY3,
+	OBJ_DOG,
+	OBJ_MONKE,
+	OBJ_PHEASANT,
+	OBJ_TITLE,
+	OBJ_GAME_OVER,
+	OBJ_CLEAR,
+	OBJ_TALK,
+	OBJ_EVEDOG,
 
 };
 //------------------------------------------------
@@ -112,6 +113,7 @@ enum ITEM
 #include"ObjGameOver.h"
 #include"ObjClear.h"
 #include "ObjTalk.h"
+#include "CObjEveDog.h"
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
@@ -130,5 +132,5 @@ enum ITEM
 
 //シーンスタートクラス---------------------------
 //ゲーム開始時のシーンクラス登録
-#define SET_GAME_START  CScenefloor1
+#define SET_GAME_START  CSceneMain
 //-----------------------------------------------

@@ -120,6 +120,6 @@ void CObjBoss::Draw()
 	dst.m_bottom = 64.0f;
 
 	//•`‰æ
-	Draw::Draw(8, &src, &dst, c, 0.0f);
+	Draw::Draw(9, &src, &dst, c, 0.0f);
 }
 
