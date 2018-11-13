@@ -110,6 +110,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Project2\Project2\ObjTitle.cpp" />
+    <ClCompile Include="..\..\Project2\Project2\SceneTitle.cpp" />
     <ClCompile Include="CObjFlyKiji.cpp" />
     <ClCompile Include="CObjSword.cpp" />
     <ClCompile Include="CObjEveDog.cpp" />
@@ -118,7 +120,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ObjClub.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ObjDog.cpp" />
     <ClCompile Include="ObjEnemy.cpp" />
@@ -126,20 +128,17 @@
     <ClCompile Include="ObjEnemy3.cpp" />
     <ClCompile Include="ObjGameOver.cpp" />
     <ClCompile Include="ObjGoldBullion.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ObjHero.cpp" />
-    <ClCompile Include="ObjHone.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="ObjPeach.cpp" />
+    <ClCompile Include="ObjHero.cpp" />
+    <ClCompile Include="ObjItem.cpp" />
     <ClCompile Include="ObjMonke.cpp" />
     <ClCompile Include="ObjPheasant.cpp" />
     <ClCompile Include="ObjPlum.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ObjSilverBullion.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ObjTitle.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
@@ -201,7 +200,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ObjClub.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ObjClear.h" />
     <ClInclude Include="ObjDog.h" />
@@ -210,20 +209,17 @@
     <ClInclude Include="ObjEnemy3.h" />
     <ClInclude Include="ObjGameOver.h" />
     <ClInclude Include="ObjGoldBullion.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="ObjHero.h" />
-    <ClInclude Include="ObjHone.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="ObjPeach.h" />
+    <ClInclude Include="ObjHero.h" />
+    <ClInclude Include="ObjItem.h" />
     <ClInclude Include="ObjMonke.h" />
     <ClInclude Include="ObjPheasant.h" />
     <ClInclude Include="ObjPlum.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ObjSilverBullion.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ObjTitle.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>

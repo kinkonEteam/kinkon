@@ -58,6 +58,9 @@
     <Filter Include="ソース ファイル\Events\Dog">
       <UniqueIdentifier>{f52a0652-4129-45ab-9531-dd62e1d3a741}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Item">
+      <UniqueIdentifier>{79618efc-54b2-4b37-871e-5d5e9125fb57}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameL\Audio.cpp">
@@ -189,10 +192,10 @@
     <ClCompile Include="ObjGoldBullion.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="ObjHone.cpp">
-      <Filter>ソース ファイル</Filter>
+    <ClCompile Include="ObjTalk.cpp">
+      <Filter>ソース ファイル\Events</Filter>
     </ClCompile>
-    <ClCompile Include="ObjPeach.cpp">
+    <ClCompile Include="ObjGoldBullion.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="ObjPlum.cpp">
@@ -202,19 +205,25 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="ObjYellowPeach.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Item</Filter>
     </ClCompile>
-    <ClCompile Include="SceneMain.cpp">
-      <Filter>ソース ファイル\Scene</Filter>
+    <ClCompile Include="ObjPlum.cpp">
+      <Filter>ソース ファイル\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjPlum.cpp">
+      <Filter>ソース ファイル\Item</Filter>
     </ClCompile>
     <ClCompile Include="SceneClear.cpp">
       <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="SceneGameOver.cpp">
-      <Filter>ソース ファイル\Scene</Filter>
+    <ClCompile Include="ObjYellowPeach.cpp">
+      <Filter>ソース ファイル\Item</Filter>
     </ClCompile>
     <ClCompile Include="CObjEveDog.cpp">
       <Filter>ソース ファイル\Events\Dog</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjHeroGauge.cpp">
+      <Filter>ソース ファイル\Character\主人公</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -317,8 +326,8 @@
     <ClInclude Include="ObjHero.h">
       <Filter>ソース ファイル\Character\主人公</Filter>
     </ClInclude>
-    <ClInclude Include="SceneTitle.h">
-      <Filter>ソース ファイル\Scene</Filter>
+    <ClInclude Include="ObjGameOver.h">
+      <Filter>ソース ファイル\GameOver</Filter>
     </ClInclude>
     <ClInclude Include="ObjTitle.h">
       <Filter>ソース ファイル\Scene</Filter>
@@ -350,6 +359,10 @@
     <ClInclude Include="ObjGoldBullion.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="ObjTalk.h">
+      <Filter>ソース ファイル\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjClub.h">
     <ClInclude Include="ObjHone.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -358,6 +371,8 @@
     </ClInclude>
     <ClInclude Include="ObjPlum.h">
       <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="ObjGoldBullion.h">
+      <Filter>ソース ファイル\Item</Filter>
     </ClInclude>
     <ClInclude Include="ObjSilverBullion.h">
       <Filter>ヘッダー ファイル</Filter>
@@ -365,17 +380,23 @@
     <ClInclude Include="ObjYellowPeach.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="SceneMain.h">
-      <Filter>ソース ファイル\Scene</Filter>
+    <ClInclude Include="ObjSilverBullion.h">
+      <Filter>ソース ファイル\Item</Filter>
     </ClInclude>
-    <ClInclude Include="SceneGameOver.h">
-      <Filter>ソース ファイル\Scene</Filter>
+    <ClInclude Include="ObjSilverBullion.h">
+      <Filter>ソース ファイル\Item</Filter>
     </ClInclude>
     <ClInclude Include="ScecneClear.h">
       <Filter>ソース ファイル\Scene</Filter>
+    <ClInclude Include="Inventory.h">
+      <Filter>ソース ファイル</Filter>
+    <ClInclude Include="ObjYellowPeach.h">
+      <Filter>ソース ファイル\Item</Filter>
     </ClInclude>
     <ClInclude Include="CObjEveDog.h">
       <Filter>ソース ファイル\Events\Dog</Filter>
+    <ClInclude Include="CObjFlyKiji.h">
+      <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

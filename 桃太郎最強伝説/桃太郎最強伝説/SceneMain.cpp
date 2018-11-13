@@ -20,7 +20,7 @@ using namespace GameL;
 //コンストラクタ
 CSceneMain::CSceneMain()
 {
-	
+
 }
 
 //デストラクタ
@@ -65,12 +65,12 @@ void CSceneMain::InitScene()
 
 
 	//外部グラフィックを読み込み0番に登録(512×512ピクセル)
-	Draw::LoadImage(L"桃太郎.png", 0,TEX_SIZE_512);
+	Draw::LoadImage(L"桃太郎.png", 0, TEX_SIZE_512);
 
 	//外部グラフィックを読み込み1番に登録(512×512ピクセル)
 	Draw::LoadImageW(L"マップチップ.png", 1, TEX_SIZE_141_47);	//マップ
-	
-	//外部グラフィックを読み込み2番に登録(512×512ピクセル)
+
+															//外部グラフィックを読み込み2番に登録(512×512ピクセル)
 	Draw::LoadImage(L"OTOMO.GIF", 2, TEX_SIZE_512);
 
 	//外部グラフィックを読み込み3番に登録(512×512ピクセル)
@@ -87,40 +87,52 @@ void CSceneMain::InitScene()
 
 	//外部グラフィックを読み込み7番に登録(151*200ピクセル)
 	Draw::LoadImage(L"鬼原画 緑鬼 新二.png", 7, TEX_SIZE_151_200);
-	
+
+	//外部グラフィックを読み込み7番に登録(512*512)
+	Draw::LoadImage(L"word.png", 8, TEX_SIZE_512);
+
 	//外部グラフィックファイルを読み込み8番に登録
 	Draw::LoadImage(L"鬼原画 赤鬼 新二.png", 9, TEX_SIZE_151_200);
 
 	//主人公オブジェクト作成
-//	CObjHero* obj = new CObjHero();		//オブジェクト作成
+	//	CObjHero* obj = new CObjHero();		//オブジェクト作成
 	//Objs::InsertObj(obj, OBJ_HERO, 1);	//マネージャに登録
 
 	//アイテムオブジェクト作成
 	CObjPeach* i = new CObjPeach();		//オブジェクト作成
-	Objs::InsertObj(i, OBJ_ITEM, 1);	//マネージャに登録
+	Objs::InsertObj(i, OBJ_PEACH, 1);	//マネージャに登録
 
 	CObjYellowPeach* yp = new CObjYellowPeach();		//オブジェクト作成
-	Objs::InsertObj(yp, OBJ_ITEM, 1);	//マネージャに登録
+	Objs::InsertObj(yp, OBJ_YELLOW_PEACH, 1);	//マネージャに登録
 
 	CObjPlum* pl = new CObjPlum();		//オブジェクト作成
-	Objs::InsertObj(pl, OBJ_ITEM, 1);	//マネージャに登録
+	Objs::InsertObj(pl, OBJ_PLUM, 1);	//マネージャに登録
 
-	CObjHone* h = new CObjHone();		//オブジェクト作成
-	Objs::InsertObj(h, OBJ_ITEM, 1);	//マネージャに登録
+	CObjHone* ho = new CObjHone();		//オブジェクト作成
+	Objs::InsertObj(ho, OBJ_HONE, 1);	//マネージャに登録
 
-	//犬オブジェクト作成
+	CObjGoldBullion* gb = new CObjGoldBullion();		//オブジェクト作成
+	Objs::InsertObj(gb, OBJ_GOLD_BULLION, 1);	//マネージャに登録
+
+	CObjSilverBullion* sb = new CObjSilverBullion();		//オブジェクト作成
+	Objs::InsertObj(sb, OBJ_SILVER_BULLION, 1);	//マネージャに登録
+
+	CObjClub* cl = new CObjClub();		//オブジェクト作成
+	Objs::InsertObj(cl, OBJ_CLUB, 1);	//マネージャに登録
+
+										//犬オブジェクト作成
 	CObjDog* D = new CObjDog();			//オブジェクト作成
 	Objs::InsertObj(D, OBJ_DOG, 2);		//マネージャに登録
-	
+
 	//サルオブジェクト作成
 	CObjMonke* M = new CObjMonke();			//オブジェクト作成
 	Objs::InsertObj(M, OBJ_MONKE, 2);		//マネージャに登録
-	
-	//キジオブジェクト作成
+
+											//キジオブジェクト作成
 	CObjPheasant* P = new CObjPheasant();			//オブジェクト作成
 	Objs::InsertObj(P, OBJ_PHEASANT, 2);		//マネージャに登録
 
-	//青鬼オブジェクト作成
+												//青鬼オブジェクト作成
 	CObjEnemy* e = new CObjEnemy();
 	Objs::InsertObj(e, OBJ_ENEMY, 1);
 
@@ -136,17 +148,22 @@ void CSceneMain::InitScene()
 	CObjEveDog* eve = new CObjEveDog();
 	Objs::InsertObj(eve, OBJ_TALK, 3);
 
+	//主人公体力ゲージオブジェクト作成
+	CObjHeroGauge* G = new CObjHeroGauge();//オブジェクト作成
+	Objs::InsertObj(G, OBJ_HEROGAUGE, 8);	//マネージャに登録
+
 	//階層1オブジェクト作成
 	CObjMap1* objb = new CObjMap1(map);
 	Objs::InsertObj(objb, OBJ_MAP1, 1);
 
 	//ボス敵機オブジェクト
 	CObjBoss*obj_boss_enemy = new CObjBoss(300, 300);
-	Objs::InsertObj(obj_boss_enemy, OBJ_BOSS,2);
+	Objs::InsertObj(obj_boss_enemy, OBJ_BOSS, 2);
 }
 
 //ゲームメイン実行中メソッド
 void CSceneMain::Scene()
 {
-
+	
+	
 }

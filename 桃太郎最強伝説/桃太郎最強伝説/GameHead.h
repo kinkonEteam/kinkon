@@ -16,6 +16,13 @@ enum OBJ_NAME
 	OBJ_SWORD,
 	OBJ_FLYKIJI,
 	OBJ_ITEM,
+	OBJ_PEACH,
+	OBJ_YELLOW_PEACH,
+	OBJ_PLUM,
+	OBJ_HONE,
+	OBJ_GOLD_BULLION,
+	OBJ_SILVER_BULLION,
+	OBJ_CLUB,
 	OBJ_ENEMY,
 	OBJ_ENEMY2,
 	OBJ_ENEMY3,
@@ -35,18 +42,18 @@ enum OBJ_NAME
 enum HIT_ELEMENTS
 {
 	ELEMENT_NULL,//属性無し 全ての属性と当たり判定が実行される
-	//以下　同じ属性同士では当たり判定は実行されない
-	//属性は追加可能だが、デバック時の色は初期設定分しか無い
-	ELEMENT_PLAYER,
-	ELEMENT_ENEMY,
-	ELEMENT_ITEM,
-	ELEMENT_MAGIC,
-	ELEMENT_FIELD,
-	ELEMENT_RED,
-	ELEMENT_GREEN,
-	ELEMENT_BLUE,
-	ELEMENT_BLACK,
-	ELEMENT_WHITE,
+				 //以下　同じ属性同士では当たり判定は実行されない
+				 //属性は追加可能だが、デバック時の色は初期設定分しか無い
+				 ELEMENT_PLAYER,
+				 ELEMENT_ENEMY,
+				 ELEMENT_ITEM,
+				 ELEMENT_MAGIC,
+				 ELEMENT_FIELD,
+				 ELEMENT_RED,
+				 ELEMENT_GREEN,
+				 ELEMENT_BLUE,
+				 ELEMENT_BLACK,
+				 ELEMENT_WHITE,
 };
 //------------------------------------------------
 
@@ -55,7 +62,7 @@ enum HIT_ELEMENTS
 struct UserData
 {
 	int mSeveData;	//サンプルセーブデータ
-	
+
 };
 //------------------------------------------------
 
@@ -90,6 +97,9 @@ enum ITEM
 #include "ObjYellowPeach.h"
 #include "ObjPlum.h"
 #include "ObjHone.h"
+#include "ObjGoldBullion.h"
+#include "ObjSilverBullion.h"
+#include "ObjClub.h"
 #include"ObjDog.h"
 #include"ObjMonke.h"
 #include"ObjPheasant.h"
