@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{4F41B5AD-402E-4C5B-83A6-27366379AD10}</ProjectGuid>
+    <ProjectGuid>{0B058853-ADFC-4047-842C-AD3B4AF5650B}</ProjectGuid>
     <RootNamespace>桃太郎最強伝説</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -110,44 +110,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CObjEveDog.cpp" />
     <ClCompile Include="CObjFlyKiji.cpp" />
     <ClCompile Include="CObjSword.cpp" />
-    <ClCompile Include="Inventory.cpp" />
-    <ClCompile Include="ObjBoss.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ObjClub.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ObjDog.cpp" />
-    <ClCompile Include="ObjEnemy.cpp" />
-    <ClCompile Include="ObjEnemy2.cpp" />
-    <ClCompile Include="ObjEnemy3.cpp" />
-    <ClCompile Include="ObjGameOver.cpp" />
-    <ClCompile Include="ObjGoldBullion.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ObjHero.cpp" />
-    <ClCompile Include="ObjHone.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ObjPeach.cpp" />
-    <ClCompile Include="ObjMonke.cpp" />
-    <ClCompile Include="ObjPheasant.cpp" />
-    <ClCompile Include="ObjPlum.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ObjSilverBullion.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ObjTitle.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ObjYellowPeach.cpp" />
-    <ClCompile Include="SceneClear.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="Scenefloor2.cpp" />
+    <ClCompile Include="Dog.cpp" />
     <ClCompile Include="GameL\Audio.cpp" />
     <ClCompile Include="GameL\DirectXDevice.cpp" />
     <ClCompile Include="GameL\Draw2DTex_Source.cpp" />
@@ -162,74 +128,50 @@
     <ClCompile Include="GameL\UserData.cpp" />
     <ClCompile Include="GameL\WICTextureLoader.cpp" />
     <ClCompile Include="GameL\WinInputs.cpp" />
-    <ClCompile Include="ObjMap1.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ObjMap2.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ObjMap3.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ObjMap4.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="ObjMap5.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="ObjBoss.cpp" />
+    <ClCompile Include="ObjClear.cpp" />
+    <ClCompile Include="ObjClub.cpp" />
+    <ClCompile Include="ObjDog.cpp" />
+    <ClCompile Include="ObjEnemy.cpp" />
+    <ClCompile Include="ObjEnemy2.cpp" />
+    <ClCompile Include="ObjEnemy3.cpp" />
+    <ClCompile Include="ObjGameOver.cpp" />
+    <ClCompile Include="ObjGoldBullion.cpp" />
+    <ClCompile Include="ObjHero.cpp" />
+    <ClCompile Include="ObjHeroGauge.cpp" />
+    <ClCompile Include="ObjHone.cpp" />
+    <ClCompile Include="ObjMap1.cpp" />
+    <ClCompile Include="ObjMap2.cpp" />
+    <ClCompile Include="ObjMap3.cpp" />
+    <ClCompile Include="ObjMap4.cpp" />
+    <ClCompile Include="ObjMap5.cpp" />
+    <ClCompile Include="ObjMonke.cpp" />
+    <ClCompile Include="ObjPeach.cpp" />
+    <ClCompile Include="ObjPheasant.cpp" />
+    <ClCompile Include="ObjPlum.cpp" />
+    <ClCompile Include="ObjSilverBullion.cpp" />
+    <ClCompile Include="ObjTalk.cpp" />
+    <ClCompile Include="ObjTitle.cpp" />
+    <ClCompile Include="ObjYellowPeach.cpp" />
+    <ClCompile Include="SceneClear.cpp" />
     <ClCompile Include="Scenefloor1.cpp" />
+    <ClCompile Include="Scenefloor2.cpp" />
     <ClCompile Include="Scenefloor3.cpp" />
     <ClCompile Include="Scenefloor4.cpp" />
     <ClCompile Include="Scenefloor5.cpp" />
-    <ClCompile Include="SceneGameOver.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="SceneGameOver.cpp" />
     <ClCompile Include="SceneMain.cpp" />
-    <ClCompile Include="SceneTitle.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    <ClCompile Include="SceneTitle.cpp" />
+    <ClCompile Include="temp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="ObjTalk.cpp" />
     <ClCompile Include="UtilityModule.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CObjEveDog.h" />
     <ClInclude Include="CObjFlyKiji.h" />
     <ClInclude Include="CObjSword.h" />
-    <ClInclude Include="Inventory.h" />
-    <ClInclude Include="ObjBoss.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="ObjClub.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="ObjClear.h" />
-    <ClInclude Include="ObjDog.h" />
-    <ClInclude Include="ObjEnemy.h" />
-    <ClInclude Include="ObjEnemy2.h" />
-    <ClInclude Include="ObjEnemy3.h" />
-    <ClInclude Include="ObjGameOver.h" />
-    <ClInclude Include="ObjGoldBullion.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="ObjHero.h" />
-    <ClInclude Include="ObjHone.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="ObjPeach.h" />
-    <ClInclude Include="ObjMonke.h" />
-    <ClInclude Include="ObjPheasant.h" />
-    <ClInclude Include="ObjPlum.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="ObjSilverBullion.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="ObjTitle.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="ObjYellowPeach.h" />
-    <ClInclude Include="ScecneClear.h" />
-    <ClInclude Include="Scenefloor4.h" />
-    <ClInclude Include="Scenefloor2.h" />
     <ClInclude Include="GameHead.h" />
     <ClInclude Include="GameL\Audio.h" />
     <ClInclude Include="GameL\DirectXDevice.h" />
@@ -244,31 +186,43 @@
     <ClInclude Include="GameL\UserData.h" />
     <ClInclude Include="GameL\WICTextureLoader.h" />
     <ClInclude Include="GameL\WinInputs.h" />
-    <ClInclude Include="ObjMap1.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
+    <ClInclude Include="Inventory.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="ObjMap2.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="ObjMap3.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="ObjMap4.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="ObjMap5.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-    </ClInclude>
+    <ClInclude Include="ObjBoss.h" />
+    <ClInclude Include="ObjClear.h" />
+    <ClInclude Include="ObjClub.h" />
+    <ClInclude Include="ObjDog.h" />
+    <ClInclude Include="ObjEnemy.h" />
+    <ClInclude Include="ObjEnemy2.h" />
+    <ClInclude Include="ObjEnemy3.h" />
+    <ClInclude Include="ObjGameOver.h" />
+    <ClInclude Include="ObjGoldBullion.h" />
+    <ClInclude Include="ObjHero.h" />
+    <ClInclude Include="ObjHeroGauge.h" />
+    <ClInclude Include="ObjHone.h" />
+    <ClInclude Include="ObjMap1.h" />
+    <ClInclude Include="ObjMap2.h" />
+    <ClInclude Include="ObjMap3.h" />
+    <ClInclude Include="ObjMap4.h" />
+    <ClInclude Include="ObjMap5.h" />
+    <ClInclude Include="ObjMonke.h" />
+    <ClInclude Include="ObjPeach.h" />
+    <ClInclude Include="ObjPheasant.h" />
+    <ClInclude Include="ObjPlum.h" />
+    <ClInclude Include="ObjSilverBullion.h" />
+    <ClInclude Include="ObjTalk.h" />
+    <ClInclude Include="ObjTite.h" />
+    <ClInclude Include="ObjTitle.h" />
+    <ClInclude Include="ObjYellowPeach.h" />
+    <ClInclude Include="ScecneClear.h" />
     <ClInclude Include="Scenefloor1.h" />
+    <ClInclude Include="Scenefloor2.h" />
     <ClInclude Include="Scenefloor3.h" />
+    <ClInclude Include="Scenefloor4.h" />
     <ClInclude Include="Scenefloor5.h" />
     <ClInclude Include="SceneGameOver.h" />
     <ClInclude Include="SceneMain.h" />
-    <ClInclude Include="SceneTitle.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="ObjTalk.h" />
+    <ClInclude Include="SceneTitle.h" />
     <ClInclude Include="UtilityModule.h" />
   </ItemGroup>
   <ItemGroup>
