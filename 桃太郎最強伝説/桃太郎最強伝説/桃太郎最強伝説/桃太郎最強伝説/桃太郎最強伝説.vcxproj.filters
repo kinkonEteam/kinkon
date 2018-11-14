@@ -212,9 +212,6 @@
     <ClInclude Include="ObjEnemy.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="ObjEnemy2.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="ObjEnemy3.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
@@ -346,6 +343,9 @@
     </ClInclude>
     <ClInclude Include="GameHead.h">
       <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjEnemy2.h">
+      <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
