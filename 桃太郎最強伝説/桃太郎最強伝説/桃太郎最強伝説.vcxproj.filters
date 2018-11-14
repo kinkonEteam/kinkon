@@ -52,8 +52,14 @@
     <Filter Include="ソース ファイル\GameTitle">
       <UniqueIdentifier>{08d31525-e54a-4624-8ff2-92956de210f5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Events">
+      <UniqueIdentifier>{df7492ec-fcd7-4943-a957-95358be37316}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Events\Dog">
+      <UniqueIdentifier>{f52a0652-4129-45ab-9531-dd62e1d3a741}</UniqueIdentifier>
+    </Filter>
     <Filter Include="ソース ファイル\Item">
-      <UniqueIdentifier>{74e159ce-7830-48b1-8ab8-135f7e97ade6}</UniqueIdentifier>
+      <UniqueIdentifier>{c5deee31-a593-482c-9a9a-ffea50a16f10}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -186,31 +192,40 @@
     <ClCompile Include="ObjPheasant.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="ObjTalk.cpp">
+      <Filter>ソース ファイル\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMain.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
     <ClCompile Include="SceneClear.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
     <ClCompile Include="SceneGameOver.cpp">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="ObjPeach.cpp">
-      <Filter>ソース ファイル\Item</Filter>
+    <ClCompile Include="CObjEveDog.cpp">
+      <Filter>ソース ファイル\Events\Dog</Filter>
     </ClCompile>
-    <ClCompile Include="ObjYellowPeach.cpp">
-      <Filter>ソース ファイル\Item</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjPlum.cpp">
+    <ClCompile Include="ObjClub.cpp">
       <Filter>ソース ファイル\Item</Filter>
     </ClCompile>
     <ClCompile Include="ObjHone.cpp">
       <Filter>ソース ファイル\Item</Filter>
     </ClCompile>
+    <ClCompile Include="ObjPeach.cpp">
+      <Filter>ソース ファイル\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjPlum.cpp">
+      <Filter>ソース ファイル\Item</Filter>
+    </ClCompile>
     <ClCompile Include="ObjSilverBullion.cpp">
       <Filter>ソース ファイル\Item</Filter>
     </ClCompile>
-    <ClCompile Include="ObjGoldBullion.cpp">
+    <ClCompile Include="ObjYellowPeach.cpp">
       <Filter>ソース ファイル\Item</Filter>
     </ClCompile>
-    <ClCompile Include="ObjClub.cpp">
+    <ClCompile Include="ObjGoldBullion.cpp">
       <Filter>ソース ファイル\Item</Filter>
     </ClCompile>
   </ItemGroup>
@@ -296,9 +311,6 @@
     <ClInclude Include="CObjSword.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="SceneMain.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="ObjBoss.h">
       <Filter>ソース ファイル\Character\BOSS</Filter>
     </ClInclude>
@@ -341,16 +353,31 @@
     <ClInclude Include="ObjPheasant.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="ScecneClear.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="ObjTalk.h">
+      <Filter>ソース ファイル\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMain.h">
+      <Filter>ソース ファイル\Scene</Filter>
     </ClInclude>
     <ClInclude Include="SceneGameOver.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
     </ClInclude>
-    <ClInclude Include="ObjPeach.h">
-      <Filter>ソース ファイル\Item</Filter>
+    <ClInclude Include="ScecneClear.h">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjEveDog.h">
+      <Filter>ソース ファイル\Events\Dog</Filter>
     </ClInclude>
     <ClInclude Include="ObjYellowPeach.h">
+      <Filter>ソース ファイル\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjSilverBullion.h">
+      <Filter>ソース ファイル\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjPlum.h">
+      <Filter>ソース ファイル\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjPeach.h">
       <Filter>ソース ファイル\Item</Filter>
     </ClInclude>
     <ClInclude Include="ObjHone.h">
@@ -359,13 +386,7 @@
     <ClInclude Include="ObjGoldBullion.h">
       <Filter>ソース ファイル\Item</Filter>
     </ClInclude>
-    <ClInclude Include="ObjSilverBullion.h">
-      <Filter>ソース ファイル\Item</Filter>
-    </ClInclude>
     <ClInclude Include="ObjClub.h">
-      <Filter>ソース ファイル\Item</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjPlum.h">
       <Filter>ソース ファイル\Item</Filter>
     </ClInclude>
   </ItemGroup>
