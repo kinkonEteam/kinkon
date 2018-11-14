@@ -7,6 +7,7 @@
 #include "GameL\HitBoxManager.h"
 
 #include <stdlib.h>
+#include <stdlib.h>
 #include "ObjMonke.h"
 #include "GameHead.h"
 
