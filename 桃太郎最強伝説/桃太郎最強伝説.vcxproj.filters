@@ -45,9 +45,11 @@
     </Filter>
     <Filter Include="ソース ファイル\Character\主人公">
       <UniqueIdentifier>{b43dc6b9-f603-4a00-8e3d-b9d56d22374d}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
     </Filter>
     <Filter Include="ソース ファイル\Scene">
       <UniqueIdentifier>{086c3e0e-0525-4fa1-bd7f-749e0deac220}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
     </Filter>
     <Filter Include="ソース ファイル\GameTitle">
       <UniqueIdentifier>{08d31525-e54a-4624-8ff2-92956de210f5}</UniqueIdentifier>
@@ -153,17 +155,8 @@
     <ClCompile Include="ObjEnemy3.cpp">
       <Filter>ソース ファイル\Character\敵</Filter>
     </ClCompile>
-    <ClCompile Include="ObjHero.cpp">
-      <Filter>ソース ファイル\Character\主人公</Filter>
-    </ClCompile>
     <ClCompile Include="SceneMain.cpp">
       <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneTitle.cpp">
-      <Filter>ソース ファイル\Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjTitle.cpp">
-      <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
     <ClCompile Include="CObjFlyKiji.cpp">
       <Filter>ソース ファイル</Filter>
@@ -209,6 +202,15 @@
     </ClCompile>
     <ClCompile Include="ObjYellowPeach.cpp">
       <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjTitle.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneTitle.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjHero.cpp">
+      <Filter>ソース ファイル\Character\主人公</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -311,15 +313,6 @@
     <ClInclude Include="ObjEnemy3.h">
       <Filter>ソース ファイル\Character\敵</Filter>
     </ClInclude>
-    <ClInclude Include="ObjHero.h">
-      <Filter>ソース ファイル\Character\主人公</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneTitle.h">
-      <Filter>ソース ファイル\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjTitle.h">
-      <Filter>ソース ファイル\Scene</Filter>
-    </ClInclude>
     <ClInclude Include="CObjFlyKiji.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -367,6 +360,15 @@
     </ClInclude>
     <ClInclude Include="ObjYellowPeach.h">
       <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjTitle.h">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneTitle.h">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjHero.h">
+      <Filter>ソース ファイル\Character\主人公</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

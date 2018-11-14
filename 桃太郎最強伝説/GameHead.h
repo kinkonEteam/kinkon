@@ -84,7 +84,7 @@ enum ITEM
 //------------------------------------------------
 
 //ゲームシーンオブジェクトヘッダ------------------
-#include "SceneTitle.h"
+//#include "SceneTitle.h"
 #include "ObjMap1.h"
 #include "ObjMap2.h"
 #include "ObjMap3.h"
@@ -123,7 +123,7 @@ enum ITEM
 #include "Scenefloor5.h"
 
 #include "SceneMain.h"
-#include "SceneTitle.h"
+//#include "SceneTitle.h"
 #include"SceneGameOver.h"
 #include"ScecneClear.h"
 //-----------------------------------------------
